@@ -1,5 +1,5 @@
 # SOL186S Sociología de la Desigualad
-Este repositorio contiene el material del curso SOL186S Sociología de la Desigualad, dictado el segundo semestre 2022 a estudiantes de pregrado del Departamento de Sociología de la Universidad Católica de Chile. Para mayores detalles ver el [`[programa]`](files/syllabus_sol186S.pdf) y [`[calendario]`](#Calendario) del curso.
+Este repositorio contiene el material del curso SOL186S Sociología de la Desigualad, dictado el segundo semestre 2022 a estudiantes de pregrado del Departamento de Sociología de la Universidad Católica de Chile. Para mayores detalles ver el [`[programa]`](files/syllabus.pdf) del curso.
 
 
 ![useR](files/useR.png)
