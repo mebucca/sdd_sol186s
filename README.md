@@ -10,7 +10,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 00: Presentación del curso (10 de agosto):
 
-- Semana 01: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de agosto):[[Frank 2018]]
+- Semana 01: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de agosto): [[Grusky & Hill 2017]](readings/Grusky_Hill_2017.pdf) [[Roemer 1998]](readings/Roemer_1999.pdf) [[Frank 2016]](readings/Frank_2016.pdf) [[Matamala 2019]](readings/Matamala_2019.pdf)
 
 - Semana 02:  Pobreza: conceptos y medición (24 de agosto):
 
