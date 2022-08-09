@@ -1,0 +1,126 @@
+---
+title: "Sociología de la Desigualdad (SOL186S)"
+subtitle: "Presentación del curso"
+author: "Mauricio Bucca & Luis Maldonado, Sociología UC"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default","default-fonts","gentle-r.css"]
+    df_print: default
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunk_output_type: console
+
+
+---
+
+## Profesores
+
+.bold[Mauricio Bucca]
+
+  - Profesor Asistente, Sociología UC
+
+--
+
+  - PhD en Sociología, Cornell University, NY
+    - PhD Minor en Estadística, Departamento de Estadística, Cornell University
+
+--
+
+  - Investigación: movilidad social intergeneracional,  desigualdades en el mercado laboral, creencias sobre las desigualdades, métodos cuantitativos
+  
+  - Métodos: modelación estadística, estrategias empíricas para inferencia causal, métodos experimentales y computacionales
+
+<br>
+--
+
+.bold[Información de contacto]
+ - mail: mebucca@uc.cl
+ - webpage: https://mebucca.github.io/
+
+---
+
+## Profesores
+
+.bold[Luis Maldonado]
+
+  - Profesor Asistente, Sociología UC
+
+--
+
+  - Doctor in Economics and Social Sciences (Dr.rer.pol), University of Cologne, Germany, 2012
+
+--
+
+  - Investigación: estado de bienestar, desigualad económica, pobreza, desastres, métodos cuantitativos-
+  
+  - Métodos: modelación estadística, estrategias empíricas para inferencia causal, estudios Longitudinales, métodos experimentales
+
+<br>
+--
+
+.bold[Información de contacto]
+ - mail: lmaldona@uc.cl
+ - webpage: http://www.luismaldonado.org
+
+---
+
+## Ayudante
+
+<br>
+
+.pull-left[
+.bold[Matías Gómez]
+
+- Sociólogo UC, Magíster en Sociología UC
+
+- Estudiante de doctorado UC
+
+- Investigación: financiarización de los hogares; plataformas de redes sociales y democracia.
+
+]
+.figure-right[
+![ayudante](https://64.media.tumblr.com/2c764e7a70f2d8eec7a72cd5c44b1f00/tumblr_pe8yj3wJUb1tad247o2_r1_540.gif)
+]
+
+---
+
+---
+
+## Material del curso
+
+Todo el material del curso será almacenado y actualizado regularmente en repositorio `Github`:
+
+<br>
+.center[
+
+![github](github.jpg)
+
+https://github.com/mebucca/sdd_sol186s
+]
+
+
+---
+class: inverse, center, middle
+
+.huge[
+**Hasta la próxima clase. Gracias!**
+]
+
+<br>
+Mauricio Bucca <br>
+https://mebucca.github.io/ <br>
+github.com/mebucca
+
+
+<br>
+Luis Maldonado <br>
+https://mebucca.github.io/ <br>
+github.com/mebucca
+
+
