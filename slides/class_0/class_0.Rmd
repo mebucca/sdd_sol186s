@@ -18,19 +18,22 @@ editor_options:
 
 
 ---
+class: inverse, center, middle
+
+# Equipo 
+
+---
 
 ## Profesores
+
+--
 
 .bold[Mauricio Bucca]
 
   - Profesor Asistente, Sociología UC
 
---
-
   - PhD en Sociología, Cornell University, NY
     - PhD Minor en Estadística, Departamento de Estadística, Cornell University
-
---
 
   - Investigación: movilidad social intergeneracional,  desigualdades en el mercado laboral, creencias sobre las desigualdades, métodos cuantitativos
   
@@ -47,17 +50,15 @@ editor_options:
 
 ## Profesores
 
+--
+
 .bold[Luis Maldonado]
 
   - Profesor Asistente, Sociología UC
 
---
-
   - Doctor in Economics and Social Sciences (Dr.rer.pol), University of Cologne, Germany, 2012
 
---
-
-  - Investigación: estado de bienestar, desigualad económica, pobreza, desastres, métodos cuantitativos-
+  - Investigación: estado de bienestar, desigualdad económica, pobreza, desastres, métodos cuantitativos-
   
   - Métodos: modelación estadística, estrategias empíricas para inferencia causal, estudios Longitudinales, métodos experimentales
 
@@ -72,6 +73,7 @@ editor_options:
 
 ## Ayudante
 
+--
 <br>
 
 .pull-left[
@@ -89,14 +91,17 @@ editor_options:
 ]
 
 
+---
+class: inverse, center, middle
+
+# Desigualdad
 
 ---
 
-## La desigualad es un asunto de toda relevancia
+## La desigualdad es un asunto de toda relevancia
 
 
 ![obama](obama.png)
-
 
 ---
 ## ¿Es la desigualdad un problema? 
@@ -110,7 +115,7 @@ editor_options:
 
 ---
 
-## Las desigualdades son un problema complejo.
+## La desigualdad es un problema. Un problema complejo.
 
 .pull-left[
 ![papa](papa.png)
@@ -120,12 +125,207 @@ editor_options:
 ]
 
 ---
-## Contenidos del curso
+class: inverse, center, middle
+
+# Este curso
+
+---
+## Descripción
+
+<br>
+
+- Este curso examina diversas formas de desigualdad económica y social usando una perspectiva macro social, interdisciplinaria y comparada.
+
+<br>
+--
+
+- El curso se estructura en torno a dos grandes bloques temáticos:
+
+<br>
+--
+
+  - El primero discute conceptos de las ciencias sociales para estudiar y medir desigualdad y revisa las principales tendencias y debates en torno a las mismas.
+
+<br>
+--
+  
+  - El segundo bloque examina los marcos institucionales desarrollados por las sociedades occidentales contemporáneas para enfrentar la desigualdad y los problemas sociales asociados a ella. 
+
+---
+## Objetivos
+
+<br>
+--
+
+-  Conocer los principales conceptos utilizados por la sociología y otras ciencias sociales para estudiar y medir la desigualdad.
+
+<br>
+--
+
+-  Conocer las tendencias y debates nacionales e internacionales acerca de la desigualdad.
+
+<br>
+--
+
+- Conocer los marcos institucionales desarrollados por las sociedades occidentales contemporáneas para enfrentar la desigualdad.
+
+
+<br>
+--
+
+-  Preparar a los estudiantes para evaluar críticamente los principales conceptos que son usados para estudiar desigualdades. 
 
 
 
 ---
+class: inverse, center, middle
 
+# Contenidos
+
+---
+## Contenidos
+
+
+ - 1) Aspectos normativos: desigualdad de oportunidades y de resultados.
+
+
+
+.pull-left[
+![outcomes](ineq_outcomes.jpg)
+]
+.pull-right[
+![opportunity](ineq_opp.jpg)
+]
+
+---
+## Contenidos
+
+
+- 2) Pobreza
+
+![poverty](poverty.jpeg)
+
+---
+## Contenidos
+
+
+- 3) Desigualdad económica
+
+![econ_ineq](econ_ineq.png)
+
+
+---
+## Contenidos
+
+
+- 4) Movilidad social
+
+![mobility](https://mrhonner.com/wp-content/uploads/2018/05/economic-mobility-data.gif)
+---
+## Contenidos
+
+
+- 5) Desigualdad y movilidad
+
+![ggc](ggc.png)
+
+---
+## Contenidos
+
+
+- 6) Creencias sobre la desigualdad
+
+![beliefs](beliefs.png)
+
+---
+## Contenidos
+
+
+- 7) Consecuencias de la desigualdad
+
+![consecuencias](consecuencias.jpeg)
+
+---
+## Contenidos
+
+- 8) Redistribución y Estado de bienestar.
+
+![redistribution](welfare.jpeg)
+
+---
+## Contenidos
+
+
+- 9) Preferencias redistributivas.
+
+![preferencias](redistribution.webp)
+
+---
+class: inverse, center, middle
+
+# Aspectos logísticos
+
+---
+## Metodologia de trabajo 
+
+<br>
+--
+
+-  Clases:
+  - Primer módulo: exposición del profesor.
+ - Segundo módulo: presentaciones y discusión de lecturas asignadas 
+
+
+<br>
+--
+-  Atención estudiantes: horario de consulta viernes 10:00-11:00 AM.
+
+<br>
+--
+-  Ayudantía: viernes 8:30 AM.
+
+
+---
+## Evaluación 
+
+<br>
+--
+
+-  Dos informes: 20% cada uno.
+
+<br>
+
+-  Trabajo final: 30%.
+
+<br>
+
+- Presentación: 15%.
+
+
+<br>
+
+- Participación: 15%.
+
+
+---
+## Bibliografía y calendarización
+
+.bold[Semana 01: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de agosto)]
+
+<br>
+Lecturas obligatorias:
+
+<br>
+
+1. David B. Grusky, Jasmine Hill; Inequality in the 21st Century, a reader; Taylor & Francis 2017; Chapter 1: Poverty and Inequality in the 21st Century, p.1-7.
+
+2. John E. Roemer; Equality of Opportunity; Harvard University Press 1998.  Chapter 1 and Chapter 2.
+
+3. Robert H. Frank; Success and Luck: Good Fortune and the Myth of Meritocracy, Chapter 3: How winner-take-all markets magnify luck's role.
+
+4. Daniel Matamala; Pedro, Juan y Diego; La Tercera 2019.
+
+---
 ## Material del curso
 
 Todo el material del curso será almacenado y actualizado regularmente en repositorio `Github`:
@@ -148,13 +348,11 @@ class: inverse, center, middle
 
 <br>
 Mauricio Bucca <br>
-https://mebucca.github.io/ <br>
-github.com/mebucca
+https://mebucca.github.io/
 
 
 <br>
 Luis Maldonado <br>
-https://mebucca.github.io/ <br>
-github.com/mebucca
+http://www.luismaldonado.org 
 
 
