@@ -45,6 +45,10 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 ## Evaluaciones
 
+#### Presentaciones individuales:
+
+- Instrucciones: `[Instrucciones]`](files/protocolo.pdf) 
+
 #### Tareas
 
 - Asignación Trabajo 1: 
