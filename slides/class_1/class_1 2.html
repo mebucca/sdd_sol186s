@@ -119,60 +119,35 @@ Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` represent
 .pull-left[
 
 ```
-##       [,1]
-##  [1,]  493
-##  [2,]  497
-##  [3,]  521
-##  [4,]  489
-##  [5,]  483
-##  [6,]  482
-##  [7,]  498
-##  [8,]  503
-##  [9,]  510
-## [10,]  510
+##           [,1]
+##  [1,] 482.7690
+##  [2,] 492.0513
+##  [3,] 503.2615
+##  [4,] 492.9902
+##  [5,] 492.6557
+##  [6,] 504.6116
+##  [7,] 491.4836
+##  [8,] 503.4962
+##  [9,] 489.9036
+## [10,] 497.9963
 ```
-
 ]
 .pull-right[
-&lt;img src="class_1_files/figure-html/unnamed-chunk-3-1.png" width="250px" /&gt;
+![](class_1_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 
 ```
-## Promedio     Gini      Min      Max 
-##  500.000    0.011  464.000  540.000
+## [1] 500
+```
+
+```
+## [1] 0.01141215
+```
+
+```
+## [1] 464 538
 ```
 ]
 
----
-## Desigualdad, una definición general 
-
-
-Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios.
-
-&lt;br&gt;
-
-.bold[Desigualdad de resultados]
-
-`\(y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}\)`
-
-
-```
-##  [1] 475 433 479 535 530 539 443 394 608 427 537 436 505 378 652 444 436 560 580 510 630 575 557 473 528 786 411 592 512 315
-```
-
-&lt;img src="class_1_files/figure-html/unnamed-chunk-4-1.png" width="250px" /&gt;
-
-```
-## [1] 501
-```
-
-```
-## [1] 0.11
-```
-
-```
-## [1]  86 875
-```
-
 
 ---
 ## Desigualdad, una definición general 
@@ -188,50 +163,88 @@ Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` represent
 
 
 ```
-##  [1] 722 752 757 690 690 661 883 847 538 794 707 823 775 604 630 704 667 539 613 770 578 899 814 672 891 778 550 776 688 779
+##  [1] 533.3201 487.1405 478.7132 551.1930 617.7917 516.7696 409.4085 584.0684 537.9573 354.7941 726.6402 595.9013 420.5837 588.6152 434.0491
+## [16] 466.3586 559.9281 454.3290 469.4904 252.0540 587.9011 548.9836 588.1654 556.6470 566.1082 512.5231 481.7278 612.0874 211.2004 350.7300
 ```
 
-&lt;img src="class_1_files/figure-html/unnamed-chunk-5-1.png" width="250px" /&gt;
+![](class_1_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
 
 ```
-## [1] 703
-```
-
-```
-## [1] 0.079
+## [1] 499
 ```
 
 ```
-## [1]  355 1038
+## [1] 0.1145651
 ```
 
+```
+## [1] 124 883
+```
 
 
 ---
 ## Desigualdad, una definición general 
 
+
 Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios.
 
 &lt;br&gt;
 
-.bold[Desigualdad de resultados] 
+.bold[Desigualdad de resultados]
 
 `\(y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}\)`
 
 
 ```
-##  [1]  28596 -11678   9884    -76   6104  26630  14738    903  10944  22770     69  -5329  12719   3202   5053  25167   9572  12111   9350
-## [20]   3198   7068 -14909  -7246    562  11935  11783  -3689  -4548 -10179   3012
+##  [1] 554.5650 777.5196 501.2149 593.5643 810.8095 668.3620 601.2335 575.7873 735.8438 738.4566 770.6571 622.1879 700.0114 534.8053 733.2463
+## [16] 536.0317 680.6019 658.4469 514.6484 793.9511 732.2699 823.3923 670.6221 511.1913 625.2219 670.5295 775.6701 784.7567 489.8349 749.2978
 ```
 
-&lt;img src="class_1_files/figure-html/unnamed-chunk-6-1.png" width="250px" /&gt;
+![](class_1_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 
 ```
-## [1] 9964
+## [1] 700
 ```
 
 ```
-## [1] 0.57
+## [1] 0.08056118
+```
+
+```
+## [1]  289 1039
+```
+
+---
+## Desigualdad, una definición general 
+
+
+Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios.
+
+&lt;br&gt;
+
+.bold[Desigualdad de resultados]
+
+`\(y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}\)`
+
+`\(y_{i} = \mu + \epsilon_{i}\)` `\(\epsilon_{i} \sim \text{Normal}(0,\sigma)\)`
+
+```
+##  [1] 696.6978 708.3274 655.8653 678.0187 644.7687 727.2858 619.9894 650.3772 741.7814 710.5966 693.2942 764.7311 559.0253 658.9102 746.4995
+## [16] 693.6787 676.6872 644.8654 678.1618 662.5664 713.4062 705.6472 776.3052 749.3705 800.5903 695.0248 738.9921 732.3385 677.2491 681.6439
+```
+
+![](class_1_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+```
+## [1] 700
+```
+
+```
+## [1] 0.04060727
+```
+
+```
+## [1] 530 873
 ```
 
 

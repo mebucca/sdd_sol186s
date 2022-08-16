@@ -22,13 +22,11 @@ class: inverse, center, middle
 
 ---
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library("tidyverse")
 library("ineq")
 
 theme_set(theme_bw())
-options(digits=2)
-
 ```
 
 
@@ -115,22 +113,24 @@ Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa lo
 $y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
 
 .pull-left[
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 N = 10000
 y <- 500 + rnorm(n=N, mean=0,sd=10)
-matrix(head(y, n=10), ncol=1)  
+matrix(head(y, n=10), ncol=1)
 ```
-
 ]
 .pull-right[
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
   geom_vline(xintercept = mean(y), color="red") + xlim(0,1000)
 
-print(c(Promedio=round(mean(y),0), Gini=Gini(y),Min= round(min(y),0), Max= round(max(y),0) ))
+round(mean(y),0)
+Gini(y)
+c(round(min(y),0),round(max(y),0))
 
 ```
 ]
+
 
 ---
 ## Desigualdad, una definición general 
@@ -144,7 +144,7 @@ Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa lo
 
 $y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 y <- 500 + rnorm(n=N, mean=0,sd=100)
 head(y, n=30)
 
@@ -171,7 +171,7 @@ Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa lo
 
 $y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 y <- 500 + rnorm(n=N, mean=0,sd=100)
 y <- y + 200
 
@@ -187,26 +187,33 @@ Gini(y)
 c(round(min(y),0),round(max(y),0))
 ```
 
-
-
 ---
 ## Desigualdad, una definición general 
+
 
 Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos. Consideremos diferentes escenarios.
 
 <br>
 
-.bold[Desigualdad de resultados] 
+.bold[Desigualdad de resultados]
 
 $y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
-y <- 10000 + rnorm(n=N, mean=0,sd=10000)
+$y_{i} = \mu + \epsilon_{i}$ $\epsilon_{i} \sim \text{Normal}(0,\sigma)$
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+y <- 500 + rnorm(n=N, mean=0,sd=50)
+y <- y + 200
+
 head(y, n=30)
 
-tibble(y=y) %>% ggplot(aes(x=y)) + geom_histogram() + xlim(-50000,90000)
+tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
+  geom_vline(xintercept = mean(y), color="red") +
+  geom_vline(xintercept = 250, color="black", linetype="dashed") +
+  xlim(0,1200)
+
 round(mean(y),0)
 Gini(y)
+c(round(min(y),0),round(max(y),0))
 ```
 
 
