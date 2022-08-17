@@ -15,7 +15,6 @@ output:
       slideNumberFormat: "%current%"
 editor_options: 
   chunk_output_type: console
-
 ---
 
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
@@ -38,7 +37,8 @@ options(digits=3, scipen = 100)
 .pull-left[
 ![not](not.png)
 ]
--- 
+
+--
 
 .pull-right[
 ![nailedit](nailedit.jpeg)
@@ -557,6 +557,35 @@ mydata %>% group_by(e) %>% summarise(promedio_salario = mean(salario))
 mydata %>% ggplot(aes(x=salario, group=interaction(e,c), colour=c)) + geom_density()
 ```
 ]
+
+---
+
+## El rol del la suerte
+
+--
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+set.seed(32323)
+
+mydata <- tibble(c=rbinom(N,1,0.5), e=rbinom(N,1,0.58) )
+mydata <- mydata %>% mutate(salario = 100 +  500*e + rnorm(N,0,200)) %>%
+          mutate(e=if_else(e==1,"doctor(a)","enfermer@"), c=if_else(c==1,"hombre","mujer"))
+
+mydata %>% filter(e=="doctor(a)", c=="hombre") %>% head(n=10)
+```
+
+]
+.pull-right[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+mydata %>% filter(e=="doctor(a)", c=="hombre") %>% ggplot(aes(x=salario, colour=c)) + geom_density()
+```
+]
+
+- Que explica las diferencias de salario entre personas con las mismas "circunstancias" y mismo nivel de "esfuerzo"?
+
+- Suerte. Que es? la aleatoriedad de la vida? circunstancias no observadas (e.j. talento)?
+
+- Debemos corregir estas desigualdades? Cuanta desigualdad de este tipo podemos tolerar?
 
 
 ---
