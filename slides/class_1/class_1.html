@@ -25,11 +25,6 @@ class: center, middle, inverse, title-slide
 
 ---
 
-class: inverse, center, middle
-
-# Desigualdad de resultados
-
----
 
 
 
@@ -38,9 +33,23 @@ class: inverse, center, middle
 
 
 ---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left[
+![not](not.png)
+]
+-- 
+
+.pull-right[
+![nailedit](nailedit.jpeg)
+]
+
+
+---
 ## ¿Desigualad con respecto a que? 
 
---
 
 Típicamente,
 
@@ -73,7 +82,7 @@ Típicamente,
 
 - Individuos
 
-- Grupos (género, raza, etc.)
+- Grupos (género, raza, paises, etc.)
 
 ]
 
@@ -82,157 +91,538 @@ Típicamente,
 ]
 
 
+---
+class: inverse, center, middle
+
+# Desigualdad de resultados
 
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
+--
+
+&lt;br&gt;
+
+- `\(i: \{1,2,3, \dots, n\}\)` individuos (u otra unidad)
+
+- `\(X\)` es algún "recurso" (educación, ingresos, felicidad)
+
+--
+
+- Coloquialmente hablando, `\(X\)` se distribuye desigualmente si no todo `\(x_i\)` toma el mismo valor de `\(X\)`. Por ejemplo: `\(x_1 \neq x_2\)`
+
+--
 &lt;br&gt;
 
 ¿Qué tipo de desigualdad? 
 
-&lt;br&gt;
---
 
-- Determinística (matemática)  `\(\mathbf{X} :\{ X_1, X_2,  X_3 \} \quad\)`  donde `\(\quad X_1 \neq  X_2 \neq  X_3\)`   ❌ 
+- Determinística (matemática)   ❌ 
 
-&lt;br&gt;
---
+- Probabilística (estadística):   ✅
 
-- Probabilística (estadística): `\(\mathbf{X} :\{ X_1, X_2, X_3 \} \quad\)` donde `\(\quad X_{i} \sim f_{X}(x)\)`   ✅
+  - No significa que `\(x_{i}\)` toma cualquier valor con igual probabilidad. Significa que el resultado tiene un grado escencial de aleatoridad.
 
-  - No significa que `\(X_{i}\)` toma cualquier valor con igual probabilidad. Significa que el resultado tiene un grado escencial de aleatoridad.
 
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
 ![probabilistic](probabilistic.png)
+
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
 
-Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios.
+Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios:
+
 
 .bold[Igualdad de resultados]
 
-`\(y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}\)`
+`$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$`
+`$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 10)$$`
+
+```
+## # A tibble: 10 × 3
+##       mu      e     y
+##    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+##  1   500 -23.1   477.
+##  2   500  14.9   515.
+##  3   500   9.63  510.
+##  4   500  -2.11  498.
+##  5   500  -3.22  497.
+##  6   500  18.7   519.
+##  7   500  16.4   516.
+##  8   500   1.21  501.
+##  9   500 -11.7   488.
+## 10   500   7.04  507.
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
 
 .pull-left[
 
 ```
-##       [,1]
-##  [1,]  493
-##  [2,]  497
-##  [3,]  521
-##  [4,]  489
-##  [5,]  483
-##  [6,]  482
-##  [7,]  498
-##  [8,]  503
-##  [9,]  510
-## [10,]  510
+## # A tibble: 10 × 3
+##       mu      e     y
+##    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+##  1   500 -23.1   477.
+##  2   500  14.9   515.
+##  3   500   9.63  510.
+##  4   500  -2.11  498.
+##  5   500  -3.22  497.
+##  6   500  18.7   519.
+##  7   500  16.4   516.
+##  8   500   1.21  501.
+##  9   500 -11.7   488.
+## 10   500   7.04  507.
 ```
 
 ]
 .pull-right[
-&lt;img src="class_1_files/figure-html/unnamed-chunk-3-1.png" width="250px" /&gt;
+&lt;img src="class_1_files/figure-html/unnamed-chunk-4-1.png" width="300px" /&gt;
 
 ```
-## Promedio     Gini      Min      Max 
-##  500.000    0.011  464.000  540.000
+## Promedio       SD     Gini  max-min 
+## 500.0000  10.0573   0.0113  84.2423
 ```
 ]
 
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
 
-Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios.
+.bold[Desigualdad de resultados (baja)]
+
+`$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$`
+`$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 100)$$`
+
+
+```
+## # A tibble: 10 × 3
+##       mu      e     y
+##    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+##  1   500   60.3  560.
+##  2   500  -80.1  420.
+##  3   500  -16.2  484.
+##  4   500   89.4  589.
+##  5   500 -194.   306.
+##  6   500   67.0  567.
+##  7   500  -15.8  484.
+##  8   500  155.   655.
+##  9   500  187.   687.
+## 10   500  -50.7  449.
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
+.pull-left[
+
+```
+## # A tibble: 10 × 3
+##       mu      e     y
+##    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+##  1   500   60.3  560.
+##  2   500  -80.1  420.
+##  3   500  -16.2  484.
+##  4   500   89.4  589.
+##  5   500 -194.   306.
+##  6   500   67.0  567.
+##  7   500  -15.8  484.
+##  8   500  155.   655.
+##  9   500  187.   687.
+## 10   500  -50.7  449.
+```
+
+]
+.pull-right[
+&lt;img src="class_1_files/figure-html/unnamed-chunk-7-1.png" width="300px" /&gt;
+
+```
+## Promedio       SD     Gini  max-min 
+##  502.000   99.133    0.111  785.574
+```
+]
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.bold[Desigualdad de resultados (alta)]
+
+`$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$`
+`$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 500)$$`
+
+
+
+```
+## # A tibble: 10 × 3
+##       mu      e      y
+##    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1   500   45.6  546. 
+##  2   500  573.  1073. 
+##  3   500  441.   941. 
+##  4   500 1038.  1538. 
+##  5   500  189.   689. 
+##  6   500  541.  1041. 
+##  7   500  281.   781. 
+##  8   500  411.   911. 
+##  9   500  168.   668. 
+## 10   500 -433.    67.2
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.pull-left[
+
+```
+## # A tibble: 10 × 3
+##       mu      e      y
+##    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1   500   45.6  546. 
+##  2   500  573.  1073. 
+##  3   500  441.   941. 
+##  4   500 1038.  1538. 
+##  5   500  189.   689. 
+##  6   500  541.  1041. 
+##  7   500  281.   781. 
+##  8   500  411.   911. 
+##  9   500  168.   668. 
+## 10   500 -433.    67.2
+```
+
+]
+.pull-right[
+&lt;img src="class_1_files/figure-html/unnamed-chunk-10-1.png" width="300px" /&gt;
+
+```
+## Promedio       SD     Gini  max-min 
+##  496.000  499.481    0.568 3827.097
+```
+]
+
+---
+## Desigualdad de resultados, una definición general 
+
+¿Cuánta desigualdad es "demasiada"? ¿Cuanta desigualdad es aceptable?
+
+.pull-left[
+![householdincome](householdincome.jpeg)
+]
+
+--
 
 &lt;br&gt;
+&lt;br&gt;
 
-.bold[Desigualdad de resultados]
+.pull-right[
+`\(y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿que es esto?}}\)`
+]
 
-`\(y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}\)`
+---
+class: inverse, center, middle
+
+# Desigualdad de oportunidades
+
+---
+
+## ¿Una cancha desnivelada?
+
+&lt;br&gt;
+.pull-left[
+![field](field.jpeg)
+]
 
 
-```
-##  [1] 475 433 479 535 530 539 443 394 608 427 537 436 505 378 652 444 436 560 580 510 630 575 557 473 528 786 411 592 512 315
-```
-
-&lt;img src="class_1_files/figure-html/unnamed-chunk-4-1.png" width="250px" /&gt;
-
-```
-## [1] 501
-```
-
-```
-## [1] 0.11
-```
-
-```
-## [1]  86 875
-```
 
 
 ---
-## Desigualdad, una definición general 
+
+## Resultados y  Oportunidades
+
+--
+
+- En general no existe una diferencia escencial entre resultados y oportunidades. Es un problema de "antes" y "después".
 
 
-Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios.
+
+`$$\text{resultados}_{i} = f(\text{oportunidades}_{i})$$`
+- Excepción: atributos adscritos tales como raza, sexo, etc.
 
 &lt;br&gt;
+--
 
-.bold[Desigualdad de resultados]
+Desigualdad de resultados refleja, en parte, desigualdad de oportunidades. Ejemplos:
 
-`\(y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}\)`
+&lt;br&gt;
+--
+
+- resultados: estado de salud, oportunidades: ingresos
+
+--
+
+- resultados: ingresos, oportunidades: logro educacional
+
+--
+
+- resultados: logro educacional, oportunidades: ingresos de los padres
 
 
-```
-##  [1] 722 752 757 690 690 661 883 847 538 794 707 823 775 604 630 704 667 539 613 770 578 899 814 672 891 778 550 776 688 779
-```
+--
 
-&lt;img src="class_1_files/figure-html/unnamed-chunk-5-1.png" width="250px" /&gt;
+- resultados: ingresos de los padres, oportunidades: logro educacional de los padres
 
-```
-## [1] 703
-```
 
-```
-## [1] 0.079
-```
-
-```
-## [1]  355 1038
-```
-
+- etc.  
 
 
 ---
-## Desigualdad, una definición general 
 
-Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios.
+## Resultados y  Oportunidades
 
 &lt;br&gt;
 
-.bold[Desigualdad de resultados] 
+`$$y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿que es esto?}}$$`
 
-`\(y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}\)`
+&lt;br&gt;
+--
 
+Las teorías sobre (des)igualdad de oportunidades típicamente idenfican dos tipo de fuentes para desigualad de oportunidades: esfuerzo (agencia) y circunstancias (estructura). Formalmente:
+
+&lt;br&gt;
+
+`$$\epsilon_{i} = \color{blue}{\beta  \times \underbrace{E_{i}}_{\text{"esfuerzo": elección autónoma}}} + \color{red}{\theta  \times \underbrace{C_{i}}_{\text{"circunstancias": fuera del control individual}}} + \underbrace{\tau_{i}}_{\text{"suerte" residual}}$$`
+&lt;br&gt;
+--
+
+Luego:
+
+
+`$$y_{i} = \mu + \beta E_{i} + \theta C_{i} +\tau_{i}$$`
+
+---
+
+## Resultados y  Oportunidades
+
+Resultado: salud física (de 0 a 10)
+
+  - "Esfuerzo" (agencia): no fumador (E=1) / fumador (E=0)
+  
+  - "Circunstancias" (estructura): universitario (C=1) / no-universitario (C=0)
+
+Supongamos que la siguiente ecuación describe el estado de salud de una persona:
+
+`$$\text{salud}_{i} =  1 + 2 E_{i} + 3 C_{i} +\tau_{i}$$`
+--
+
+.pull-left[
 
 ```
-##  [1]  28596 -11678   9884    -76   6104  26630  14738    903  10944  22770     69  -5329  12719   3202   5053  25167   9572  12111   9350
-## [20]   3198   7068 -14909  -7246    562  11935  11783  -3689  -4548 -10179   3012
+## # A tibble: 4 × 3
+## # Groups:   c [2]
+##   c        e          promedio_salud
+##   &lt;chr&gt;    &lt;chr&gt;               &lt;dbl&gt;
+## 1 no-univ. fumador              1.01
+## 2 no-univ. no-fumador           3.00
+## 3 univ.    fumador              4.01
+## 4 univ.    no-fumador           5.98
 ```
 
-&lt;img src="class_1_files/figure-html/unnamed-chunk-6-1.png" width="250px" /&gt;
+]
+.pull-right[
+&lt;img src="class_1_files/figure-html/unnamed-chunk-12-1.png" width="300px" /&gt;
+]
+
+---
+
+## Desigualdad de oportunidades
+
+.bold[¿Que tipo de desigualdades son aceptables?]
+  
+--
+
+  - Aquellas que son atribuibles a factores que los individuos pueden controlar ("esfuerzo", "elección autónoma", "agencia")
+  
+  - Desigualdades en resultados que provienen de circunstancias desiguales deben ser corregidas por medio de políticas ("igualar la cancha").
+
+&lt;br&gt;
+--
+
+.bold[Desafios]
+
+
+  - ¿Que factores consideramos "esfuerzo" y cuales "circunstancias? -- problema normativo.
+  
+  - ¿Cuando tenemos una lista suficientemente exaustiva de circunstancias? (comparar peras con peras) -- problema de datos.
+  
+
+---
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+
+Supongamos que la siguiente ecuación describe el salario de una persona:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$`
+--
+
+.pull-left[
 
 ```
-## [1] 9964
+## # A tibble: 2 × 2
+##   c      promedio_salario
+##   &lt;chr&gt;             &lt;dbl&gt;
+## 1 hombre             638.
+## 2 mujer              342.
 ```
 
+]
+.pull-right[
+&lt;img src="class_1_files/figure-html/unnamed-chunk-14-1.png" width="300px" /&gt;
+]
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+Donde el salario de una persona puede ser descrito con la siguiente ecuación:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$`
+
+&lt;br&gt;
+--
+
+.bold[Desafío #1: delimitación entre esfuerzo y circunstancias]:
+
+- No cabe duda que ser hombre o mujer es una circunstancia
+
+- ¿es la ocupación una elección  autónoma?
+  - parcialmente depende de factores cirncunstanciales (capital cultural, recursos padres, normas de género, etc.)
+
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+Donde el salario de una persona puede ser descrito con la siguiente ecuación:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$`
+
+&lt;br&gt;
+--
+
+.bold[Desafío #2: donde terminan circunstancias]:
+
+- No cabe duda que ser hombre o mujer es una circunstancia
+
+- ¿cuanto de lo que parece "suerte" residual son en realidad circunstancias no observadas?
+  - en nuestro ejemplo consideramos que todas personas del mismo sexo tienen las mismas circunstancias, pero no consideramos lugar de residencia, raza, clase social de origen, etc.
+
+
+---
+## Desigualdad de oportunidades
+
+Supongamos que ahora tenemos el modelo correcto:
+
+&lt;br&gt;
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): genero , raza, clase social de origen -- C.
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0), donde 
+    
+    `\(E_{i} = 2 C_{i} + \xi\)`
+  
+&lt;br&gt;  
+--
+
+Por tanto, el salario de una persona puede ser descrito con la siguiente ecuación:
+
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 600 C_{i} +\tau_{i}$$`
+`$$\text{salario}_{i} = 100 + 500 (2C_{i} + \xi) + 600 C_{i} +\tau_{i}$$`
+`$$\text{salario}_{i} = 100 + \color{red}{\underbrace{1600C_{i}}_{\text{circunstancias}}} + \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  + \underbrace{\tau_{i}}_{\text{suerte residual}}$$`
+---
+## Desigualdad de oportunidades
+
+Supongamos que el salario de una persona puede ser descrito con la siguiente ecuación:
+
+`$$\text{salario}_{i} = 100 + \color{red}{\underbrace{1600C_{i}}_{\text{circunstancias}}} + \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  + \underbrace{\tau_{i}}_{\text{suerte residual}}$$`
+&lt;br&gt;
+--
+
+Política de igualación de oportunidades: eliminar parte de desigualdad de resultados que proviene de desigualdad en circunstancias. 
+
+- En nuetro ejemplo, si una política lograra que el genero, raza y clase social de origen no influyeran en el salarion de una persona entonces
+
+`$$\text{desigualdad de salario}: \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  \text{   ,   }  \underbrace{\tau_{i}}_{\text{suerte residual}}$$`
+--
+Posibles políticas:
+
+1) Igualar circunstancias
+
+2) Eliminar efecto de circunstancias desiguales
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+  
+
+Supongamos que la siguiente ecuación describe el salario de una persona:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 0 C_{i} +\tau_{i}$$`
+--
+
+.pull-left[
+
 ```
-## [1] 0.57
+## # A tibble: 2 × 2
+##   e         promedio_salario
+##   &lt;chr&gt;                &lt;dbl&gt;
+## 1 doctor(a)             600.
+## 2 enfermer@             106.
 ```
+
+]
+.pull-right[
+&lt;img src="class_1_files/figure-html/unnamed-chunk-16-1.png" width="300px" /&gt;
+]
+
+
+---
+## Para discutir ...
+
+&lt;br&gt;
+
+![patines](patines.jpeg)
 
 
 ---

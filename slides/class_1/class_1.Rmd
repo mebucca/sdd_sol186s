@@ -15,20 +15,15 @@ output:
       slideNumberFormat: "%current%"
 editor_options: 
   chunk_output_type: console
----
-class: inverse, center, middle
-
-# Desigualdad de resultados
 
 ---
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
 library("tidyverse")
 library("ineq")
 
 theme_set(theme_bw())
-options(digits=2)
-
+options(digits=3, scipen = 100)
 ```
 
 
@@ -36,9 +31,23 @@ options(digits=2)
 
 
 ---
+
+<br>
+<br>
+
+.pull-left[
+![not](not.png)
+]
+-- 
+
+.pull-right[
+![nailedit](nailedit.jpeg)
+]
+
+
+---
 ## ¿Desigualad con respecto a que? 
 
---
 
 Típicamente,
 
@@ -71,7 +80,7 @@ Típicamente,
 
 - Individuos
 
-- Grupos (género, raza, etc.)
+- Grupos (género, raza, paises, etc.)
 
 ]
 
@@ -80,134 +89,482 @@ Típicamente,
 ]
 
 
+---
+class: inverse, center, middle
+
+# Desigualdad de resultados
 
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
+--
+
+<br>
+
+- $i: \{1,2,3, \dots, n\}$ individuos (u otra unidad)
+
+- $X$ es algún "recurso" (educación, ingresos, felicidad)
+
+--
+
+- Coloquialmente hablando, $X$ se distribuye desigualmente si no todo $x_i$ toma el mismo valor de $X$. Por ejemplo: $x_1 \neq x_2$
+
+--
 <br>
 
 ¿Qué tipo de desigualdad? 
 
-<br>
---
 
-- Determinística (matemática)  $\mathbf{X} :\{ X_1, X_2,  X_3 \} \quad$  donde $\quad X_1 \neq  X_2 \neq  X_3$   ❌ 
+- Determinística (matemática)   ❌ 
 
-<br>
---
+- Probabilística (estadística):   ✅
 
-- Probabilística (estadística): $\mathbf{X} :\{ X_1, X_2, X_3 \} \quad$ donde $\quad X_{i} \sim f_{X}(x)$   ✅
+  - No significa que $x_{i}$ toma cualquier valor con igual probabilidad. Significa que el resultado tiene un grado escencial de aleatoridad.
 
-  - No significa que $X_{i}$ toma cualquier valor con igual probabilidad. Significa que el resultado tiene un grado escencial de aleatoridad.
 
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
 ![probabilistic](probabilistic.png)
+
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
 
-Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos. Consideremos diferentes escenarios.
+Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos. Consideremos diferentes escenarios:
+
 
 .bold[Igualdad de resultados]
 
-$y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
+$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$
+$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 10)$$
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+N  <- 10000
+mu <- rep(500,N)
+e  <- rnorm(n=N, mean=0,sd=10)
+y <- mu + e
+
+head(data_frame(mu,e,y), n=10)
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
 
 .pull-left[
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
-N = 10000
-y <- 500 + rnorm(n=N, mean=0,sd=10)
-matrix(head(y, n=10), ncol=1)  
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+head(data_frame(mu,e,y), n=10)
 ```
 
 ]
 .pull-right[
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
 tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
-  geom_vline(xintercept = mean(y), color="red") + xlim(0,1000)
+  geom_vline(xintercept = mean(y), color="red") + xlim(300,700)
 
-print(c(Promedio=round(mean(y),0), Gini=Gini(y),Min= round(min(y),0), Max= round(max(y),0) ))
+print(c(Promedio=round(mean(y),0), SD=sd(y), Gini=Gini(y), `max-min`= max(y + abs(min(y))) - min(y + abs(min(y)))  ))
 
 ```
 ]
 
 ---
-## Desigualdad, una definición general 
+## Desigualdad de resultados, una definición general 
 
 
-Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos. Consideremos diferentes escenarios.
+.bold[Desigualdad de resultados (baja)]
+
+$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$
+$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 100)$$
+
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+N  <- 10000
+mu <- rep(500,N)
+e  <- rnorm(n=N, mean=0,sd=100)
+y <- mu + e
+
+head(data_frame(mu,e,y), n=10)
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+head(data_frame(mu,e,y), n=10)
+```
+
+]
+.pull-right[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
+  geom_vline(xintercept = mean(y), color="red") + xlim(0,1000)
+
+print(c(Promedio=round(mean(y),0), SD=sd(y), Gini=Gini(y), `max-min`= max(y + abs(min(y))) - min(y + abs(min(y)))  ))
+
+```
+]
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.bold[Desigualdad de resultados (alta)]
+
+$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$
+$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 500)$$
+
+
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+N  <- 10000
+mu <- rep(500,N)
+e  <- rnorm(n=N, mean=0,sd=500)
+y <- mu + e
+
+head(data_frame(mu,e,y), n=10)
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+head(data_frame(mu,e,y), n=10)
+```
+
+]
+.pull-right[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
+  geom_vline(xintercept = mean(y), color="red") + xlim(-1500,2000)
+
+print(c(Promedio=round(mean(y),0), SD=sd(y), Gini=Gini(y), `max-min`= max(y + abs(min(y))) - min(y + abs(min(y)))  ))
+
+```
+]
+
+---
+## Desigualdad de resultados, una definición general 
+
+¿Cuánta desigualdad es "demasiada"? ¿Cuanta desigualdad es aceptable?
+
+.pull-left[
+![householdincome](householdincome.jpeg)
+]
+
+--
 
 <br>
+<br>
 
-.bold[Desigualdad de resultados]
+.pull-right[
+$y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿que es esto?}}$
+]
 
-$y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
+---
+class: inverse, center, middle
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
-y <- 500 + rnorm(n=N, mean=0,sd=100)
-head(y, n=30)
+# Desigualdad de oportunidades
 
-tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
-  geom_vline(xintercept = mean(y), color="red") +
-  geom_vline(xintercept = 250, color="black", linetype="dashed") +
-  xlim(0,1000)
+---
 
-round(mean(y),0)
-Gini(y)
-c(round(min(y),0),round(max(y),0))
-```
+## ¿Una cancha desnivelada?
+
+<br>
+.pull-left[
+![field](field.jpeg)
+]
+
+
 
 
 ---
-## Desigualdad, una definición general 
+
+## Resultados y  Oportunidades
+
+--
+
+- En general no existe una diferencia escencial entre resultados y oportunidades. Es un problema de "antes" y "después".
 
 
-Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos. Consideremos diferentes escenarios.
+
+$$\text{resultados}_{i} = f(\text{oportunidades}_{i})$$
+- Excepción: atributos adscritos tales como raza, sexo, etc.
 
 <br>
+--
 
-.bold[Desigualdad de resultados]
+Desigualdad de resultados refleja, en parte, desigualdad de oportunidades. Ejemplos:
 
-$y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
+<br>
+--
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
-y <- 500 + rnorm(n=N, mean=0,sd=100)
-y <- y + 200
+- resultados: estado de salud, oportunidades: ingresos
 
-head(y, n=30)
+--
 
-tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
-  geom_vline(xintercept = mean(y), color="red") +
-  geom_vline(xintercept = 250, color="black", linetype="dashed") +
-  xlim(0,1200)
+- resultados: ingresos, oportunidades: logro educacional
 
-round(mean(y),0)
-Gini(y)
-c(round(min(y),0),round(max(y),0))
-```
+--
 
+- resultados: logro educacional, oportunidades: ingresos de los padres
+
+
+--
+
+- resultados: ingresos de los padres, oportunidades: logro educacional de los padres
+
+
+- etc.  
 
 
 ---
-## Desigualdad, una definición general 
 
-Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos. Consideremos diferentes escenarios.
+## Resultados y  Oportunidades
 
 <br>
 
-.bold[Desigualdad de resultados] 
+$$y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿que es esto?}}$$
 
-$y_{1} \approx y_{2}  \approx y_{3} \approx \dots \approx y_{n}$
+<br>
+--
 
-```{r, echo=F, message=F, warning=F,  out.width = '250px'}
-y <- 10000 + rnorm(n=N, mean=0,sd=10000)
-head(y, n=30)
+Las teorías sobre (des)igualdad de oportunidades típicamente idenfican dos tipo de fuentes para desigualad de oportunidades: esfuerzo (agencia) y circunstancias (estructura). Formalmente:
 
-tibble(y=y) %>% ggplot(aes(x=y)) + geom_histogram() + xlim(-50000,90000)
-round(mean(y),0)
-Gini(y)
+<br>
+
+$$\epsilon_{i} = \color{blue}{\beta  \times \underbrace{E_{i}}_{\text{"esfuerzo": elección autónoma}}} + \color{red}{\theta  \times \underbrace{C_{i}}_{\text{"circunstancias": fuera del control individual}}} + \underbrace{\tau_{i}}_{\text{"suerte" residual}}$$
+<br>
+--
+
+Luego:
+
+
+$$y_{i} = \mu + \beta E_{i} + \theta C_{i} +\tau_{i}$$
+
+---
+
+## Resultados y  Oportunidades
+
+Resultado: salud física (de 0 a 10)
+
+  - "Esfuerzo" (agencia): no fumador (E=1) / fumador (E=0)
+  
+  - "Circunstancias" (estructura): universitario (C=1) / no-universitario (C=0)
+
+Supongamos que la siguiente ecuación describe el estado de salud de una persona:
+
+$$\text{salud}_{i} =  1 + 2 E_{i} + 3 C_{i} +\tau_{i}$$
+--
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+
+mydata <- tibble(c=rbinom(N,1,0.3), e=rbinom(N,1, (exp(0.4*c))/(1+exp(0.4*c))) )
+mydata <- mydata %>% mutate(salud = 1 +  2*e + 3*c + rnorm(N,0,0.5)) %>%
+          mutate(e=if_else(e==1,"no-fumador","fumador"), c=if_else(c==1,"univ.","no-univ."))
+
+mydata %>% group_by(c,e) %>% summarise(promedio_salud = mean(salud))
 ```
+
+]
+.pull-right[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+mydata %>% ggplot(aes(x=salud, group=interaction(e,c), colour=factor(c))) + geom_density()
+```
+]
+
+---
+
+## Desigualdad de oportunidades
+
+.bold[¿Que tipo de desigualdades son aceptables?]
+  
+--
+
+  - Aquellas que son atribuibles a factores que los individuos pueden controlar ("esfuerzo", "elección autónoma", "agencia")
+  
+  - Desigualdades en resultados que provienen de circunstancias desiguales deben ser corregidas por medio de políticas ("igualar la cancha").
+
+<br>
+--
+
+.bold[Desafios]
+
+
+  - ¿Que factores consideramos "esfuerzo" y cuales "circunstancias? -- problema normativo.
+  
+  - ¿Cuando tenemos una lista suficientemente exaustiva de circunstancias? (comparar peras con peras) -- problema de datos.
+  
+
+---
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+
+Supongamos que la siguiente ecuación describe el salario de una persona:
+
+$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$
+--
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+set.seed(32323)
+mydata <- tibble(c=rbinom(N,1,0.5), e=rbinom(N,1, (exp(0.7*c))/(1+exp(0.7*c))) )
+mydata <- mydata %>% mutate(salario = 100 +  500*e + 200*c + rnorm(N,0,200)) %>%
+          mutate(e=if_else(e==1,"doctor(a)","enfermer@"), c=if_else(c==1,"hombre","mujer"))
+
+mydata %>% group_by(c) %>% summarise(promedio_salario = mean(salario))
+```
+
+]
+.pull-right[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+mydata %>% ggplot(aes(x=salario, group=interaction(e,c), colour=c)) + geom_density()
+```
+]
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+Donde el salario de una persona puede ser descrito con la siguiente ecuación:
+
+$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$
+
+<br>
+--
+
+.bold[Desafío #1: delimitación entre esfuerzo y circunstancias]:
+
+- No cabe duda que ser hombre o mujer es una circunstancia
+
+- ¿es la ocupación una elección  autónoma?
+  - parcialmente depende de factores cirncunstanciales (capital cultural, recursos padres, normas de género, etc.)
+
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+Donde el salario de una persona puede ser descrito con la siguiente ecuación:
+
+$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$
+
+<br>
+--
+
+.bold[Desafío #2: donde terminan circunstancias]:
+
+- No cabe duda que ser hombre o mujer es una circunstancia
+
+- ¿cuanto de lo que parece "suerte" residual son en realidad circunstancias no observadas?
+  - en nuestro ejemplo consideramos que todas personas del mismo sexo tienen las mismas circunstancias, pero no consideramos lugar de residencia, raza, clase social de origen, etc.
+
+
+---
+## Desigualdad de oportunidades
+
+Supongamos que ahora tenemos el modelo correcto:
+
+<br>
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): genero , raza, clase social de origen -- C.
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0), donde 
+    
+    $E_{i} = 2 C_{i} + \xi$
+  
+<br>  
+--
+
+Por tanto, el salario de una persona puede ser descrito con la siguiente ecuación:
+
+
+$$\text{salario}_{i} = 100 + 500 E_{i} + 600 C_{i} +\tau_{i}$$
+$$\text{salario}_{i} = 100 + 500 (2C_{i} + \xi) + 600 C_{i} +\tau_{i}$$
+$$\text{salario}_{i} = 100 + \color{red}{\underbrace{1600C_{i}}_{\text{circunstancias}}} + \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  + \underbrace{\tau_{i}}_{\text{suerte residual}}$$
+---
+## Desigualdad de oportunidades
+
+Supongamos que el salario de una persona puede ser descrito con la siguiente ecuación:
+
+$$\text{salario}_{i} = 100 + \color{red}{\underbrace{1600C_{i}}_{\text{circunstancias}}} + \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  + \underbrace{\tau_{i}}_{\text{suerte residual}}$$
+<br>
+--
+
+Política de igualación de oportunidades: eliminar parte de desigualdad de resultados que proviene de desigualdad en circunstancias. 
+
+- En nuetro ejemplo, si una política lograra que el genero, raza y clase social de origen no influyeran en el salarion de una persona entonces
+
+$$\text{desigualdad de salario}: \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  \text{   ,   }  \underbrace{\tau_{i}}_{\text{suerte residual}}$$
+--
+Posibles políticas:
+
+1) Igualar circunstancias
+
+2) Eliminar efecto de circunstancias desiguales
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+  
+
+Supongamos que la siguiente ecuación describe el salario de una persona:
+
+$$\text{salario}_{i} = 100 + 500 E_{i} + 0 C_{i} +\tau_{i}$$
+--
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+set.seed(32323)
+
+mydata <- tibble(c=rbinom(N,1,0.5), e=rbinom(N,1,0.58) )
+mydata <- mydata %>% mutate(salario = 100 +  500*e + rnorm(N,0,200)) %>%
+          mutate(e=if_else(e==1,"doctor(a)","enfermer@"), c=if_else(c==1,"hombre","mujer"))
+
+mydata %>% group_by(e) %>% summarise(promedio_salario = mean(salario))
+```
+
+]
+.pull-right[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+mydata %>% ggplot(aes(x=salario, group=interaction(e,c), colour=c)) + geom_density()
+```
+]
+
+
+---
+## Para discutir ...
+
+<br>
+
+![patines](patines.jpeg)
 
 
 ---
