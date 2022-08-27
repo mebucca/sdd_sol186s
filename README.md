@@ -14,9 +14,9 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 02:  Pobreza: conceptos y medición (24 de agosto):[`[Gasparini 2013]`](readings/Gasparini_2013.pdf)[`[Brady 2019]`](readings/Brady_2019.pdf)[`[Cepal 2021]`](https://drive.google.com/file/d/1T0zHC0od-473Gd8HNbPLx2_RPQ-2NIkh/view)
 
-- Semana 03: Pobreza: tendencias y debates (31 de agosto):
+- Semana 03: Pobreza: tendencias y debates (31 de agosto): [`[Han 2018]`](readings/Han18.pdf)[`[Han 2022]`](readings/Han22.pdf)
 
-- Semana 04: Desigualdad económica: conceptos y medición  (7 de septiembre):
+- Semana 04: Desigualdad económica: conceptos y medición  (7 de septiembre): [`[Gasparini 2013]`](readings/Gasparini_2013.pdf) [`[PNUD 2017]`](readings/pnud17.pdf)
 
 - Semana 05: Desigualdad económica: tendencias y debates  (14 de septiembre):
 
