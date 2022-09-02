@@ -18,7 +18,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 04: Desigualdad económica: conceptos y medición  (7 de septiembre): [`[Gasparini 2013]`](readings/Gasparini_2013.pdf) [`[PNUD 2017]`](readings/Pnud_2017.pdf)
 
-- Semana 05: Desigualdad económica: tendencias y debates  (14 de septiembre):
+- Semana 05: Desigualdad económica: tendencias y debates  (14 de septiembre): [`[Araujo 2009]`](readings/Araujo_2009.pdf) [`[PNUD 2017]`](readings/Pnud_2017.pdf)
 
 - Semana 06: Movilidad social: conceptos y medición   (21 de septiembre):
 
