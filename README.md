@@ -20,7 +20,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 05: Desigualdad económica: tendencias y debates  (14 de septiembre): [`[Araujo 2009]`](readings/Araujo_2009.pdf) [`[PNUD 2017]`](readings/Pnud_2017.pdf)
 
-- Semana 06: Movilidad social: conceptos y medición   (21 de septiembre):
+- Semana 06: Movilidad social: conceptos y medición   (21 de septiembre): [`[Torche 2014]`](readings/Torche_2014.pdf) [`[Hout 2014]`](readings/Hout_2014.pdf) [`[Breen 2010]`](readings/Breen_2010.pdf) [`[Goldthorpe 2013]`](readings/Goldthorpe_2013.pdf) 
 
 - Semana 07: Movilidad social: tendencias y debates (28 de septiembre):
 
