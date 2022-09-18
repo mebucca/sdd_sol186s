@@ -24,7 +24,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 07: Movilidad social: tendencias y debates (28 de septiembre): [`[Breen 2020]`](readings/Breen_2020.pdf) [`[Chetty 2017]`](readings/Chetty_2017.pdf) [`[Zimmerman 2019]`](readings/Zimmerman_2019.pdf) [`[Chetty 2022]`](readings/Chetty_2022.pdf)
 
-- Semana 08: Desigualdad y movilidad  (5 de octubre):
+- Semana 08: Desigualdad y movilidad  (5 de octubre): [`[Corak 2013]`](readings/Corak_2013.pdf) [`[DiPrete 2020]`](readings/DiPrete_2020.pdf) [`[Torche 2005]`](readings/Torche_2005.pdf) [`[Reardon 2011]`](readings/Reardon_2011.pdf)  
 
 - Semana 09: Creencias sobre la desigualdad (11 de octubre):
 
