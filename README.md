@@ -28,7 +28,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 09: Creencias sobre la desigualdad (11 de octubre): [`[Mijs 2021]`](readings/Mijs_2021.pdf) [`[Molina 2019]`](readings/Molina_2019.pdf) [`[Starman 2017]`](readings/Starman_2017.pdf) [`[Trump 2020]`](readings/Trump_2020.pdf)  
 
-- Semana 09: Consecuencias de la desigualdad (19 de octubre): [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[VandeWerfhorst 2012]`](readings/VandeWerfhorst_2012.pdf) [`[Cote_2015]`](readings/Cote_2015.pdf) [`[Scheve_2017]`](readings/Scheve_2017.pdf) [`[Nishi 2015]`](readings/Nishi_2015.pdf)  
+- Semana 09: Consecuencias de la desigualdad (19 de octubre): [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[VandeWerfhorst 2012]`](readings/VandeWerfhorst_2012.pdf) [`[Cote 2015]`](readings/Cote_2015.pdf) [`[Scheve 2017]`](readings/Scheve_2017.pdf) [`[Nishi 2015]`](readings/Nishi_2015.pdf)  
 
 - Semana 11: Redistribución y Estado de bienestar: antecedentes históricos (26 de octubre):
 
