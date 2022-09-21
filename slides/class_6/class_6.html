@@ -4,7 +4,7 @@
     <title>Sociología de la Desigualdad (SOL186S)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Mauricio Bucca, Sociología UC" />
-    <script src="libs/header-attrs-2.15/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="gentle-r.css" type="text/css" />
@@ -25,21 +25,39 @@ class: center, middle, inverse, title-slide
 
 ---
 
+class: center, middle
 
 
+![ad](am_dream.jpeg)
 
-
-![obama](obama.png)
 
 ---
-## Movilidad Social
+## Confusiones comunes sobre movilidad social en discurso público
 
-- movilidad social para todos?
+&lt;br&gt;
+&lt;br&gt;
+--
+
+- Movilidad social = movilidad social ascendente, American Dream, Land of Opportunity, 'rags-to-riches'  
+
+
+--
+
+- Movilidad social para todos
+
+
+--
+
+- (más sutil) Movilidad social = igualdad de oportunidades, meritocracia. 
+
+  - Movilidad como alternativa a desigualdad 
 
 ---
-## Movilidad Social
+class: inverse, center, middle
 
+## Movilidad social/económica intergeneracional 
 
+---
 ### Sociedad A
 
 .pull-left[
@@ -48,6 +66,9 @@ class: center, middle, inverse, title-slide
 |  5 (rank = 2) | 10 (rank = 2) |
 | 10 (rank = 1) | 20 (rank = 1) |
 ]
+
+--
+
 .pull-right[
 
 - Misma desigualdad económica en ambas generaciones (2:1).
@@ -60,9 +81,6 @@ class: center, middle, inverse, title-slide
 ]
 
 ---
-## Movilidad Social
-
-
 ### Sociedad B
 
 .pull-left[
@@ -71,6 +89,9 @@ class: center, middle, inverse, title-slide
 |  5 (rank = 2) | 10 (rank = 2) |
 | 10 (rank = 1) | 5  (rank = 1) |
 ]
+
+--
+
 .pull-right[
 
 - Misma desigualdad económica en ambas generaciones (2:1).
@@ -82,15 +103,60 @@ class: center, middle, inverse, title-slide
 
 ]
 
+---
+## Dos tipos de movilidad social/económica
+
+
+  - Movilidad social absoluta: comparación con respecto a posición de los padres (ascendente,inmovil, descendente): quién se mueve, cuánto y hacia donde. 
+  
+  - Movilidad social absoluta: comparación con respecto a posición relativa de los padres: ¿Cuán son los "accidentes de la cuna" para determinar el destino de una persona?
+
 
 ---
-## Movilidad Social
+## ¿Movilidad social con respecto a que?
+
+&lt;br&gt;
+
+- Clase social (clase ocupacional)
+
+- Status (prestigio)
+
+- Educación
+
+- Ingresos 
+
+- Riqueza
+
+- Salud, etc. 
 
 
-### Elasticidad intergeneracional de ingresos
+---
+class: inverse, center, middle
+
+# Medidas de movilidad social relativa
+## Elasticidad intergeneracional de ingresos
+
+---
+## Elasticidad intergeneracional de ingresos
+
+&lt;br&gt;
 
 `$$y^{\text{child}} = \alpha + \beta y^{\text{par}} + \varepsilon$$`
-`\((1 - \beta)\)` es un índice de movilidad social.
+&lt;br&gt;
+--
+
+- `\(y^{\text{child}}\)` ingreso permanente hijo
+
+- `\(y^{\text{par}}\)` ingreso permanente padres
+
+--
+
+- `\(\beta = \frac{\%\Delta y^{\text{child}}}{\%\Delta y^{\text{par}}}\)` (elasticidad)
+
+--
+
+- `\((1 - \beta)\)` es un índice de movilidad social.
+
 
 ---
 ## Elasticidad intergeneracional de ingresos
@@ -98,41 +164,40 @@ class: center, middle, inverse, title-slide
 
 
 
-beta=1
+.bold[Inmovilidad relativa perfecta]: `\(\beta=1\)`
 
 ![](class_6_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 
 ---
 ## Elasticidad intergeneracional de ingresos
 
-beta=0
+.bold[Movilidad relativa perfecta]: `\(\beta=0\)`
 
 ![](class_6_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
 
 ---
 ## Elasticidad intergeneracional de ingresos
 
-beta=0.5
+.bold[Baja tasa de movilidad relativa]: `\(\beta=0.5\)`
 
 ![](class_6_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 
 ---
-## Elasticidad intergeneracional de ingresos
-
-beta=0.5 + crecimiento
+## Movilidad relativa y movilidad absoluta
 
 .pull-left[
+`\(\beta\)`=0.5 + crecimiento
 ![](class_6_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
+`\(\beta\)`=0.5 + decrecimiento
 ![](class_6_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
 ]
 
 
 ---
-## Dinastias
-
+## Movilidad social en el largo plazo: Dinastias
 
 .pull-left[
 ![presid](presid.jpeg)
@@ -144,7 +209,9 @@ beta=0.5 + crecimiento
 
 
 ---
-## Dinastias
+## Movilidad social en el largo plazo: Dinastias
+
+- En teoría, regresión a la media (proceso Markoviano)
 
 .pull-left[
 ![markov](markov.png)
@@ -156,11 +223,23 @@ beta=0.5 + crecimiento
 ]
 
 ---
-## Dinastias
+## Movilidad social en el largo plazo: Dinastias
+
+- Creciéntemente se está estudiando la movilidad social como un proceso multigeneracional y con influencias más allá de familia nuclear.
 
 .pull-left[
 ![non_markov](non_markov.png)
 ]
+
+.pull-right[
+![net](net.png)
+]
+
+---
+class: inverse, center, middle
+
+# Medidas de movilidad social relativa
+## Correlaciones entre hermanos
 
 ---
 ## Correlaciones entre hermanos
@@ -170,6 +249,26 @@ beta=0.5 + crecimiento
 ## Correlaciones entre hermanos
 
 ![](class_6_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+---
+##Correlaciones entre hermanos
+
+&lt;br&gt;
+.bold[Intuición]:
+
+--
+&lt;br&gt;
+
+- Hermanos comparten genes y ambiente (por ejemplo, familia, escuela, barrio).
+
+--
+
+- Si ambiente y factores genéticos son importantes para la obtención de resultados socioeconómico, los hermanos obtendrían resultados similares entre sí.
+
+--
+
+- Mayor similitud en resultados indicaría mayor influencia atribuible a los antecedentes familiares y comunitarios.
+
 
 ---
 ## Correlaciones entre hermanos
@@ -184,36 +283,22 @@ beta=0.5 + crecimiento
 &lt;br&gt;
 
 `$$\rho = \frac{\sigma^{2}_{a}}{\sigma^{2}_{a}+\sigma^{2}_{\mu}}$$`
+&lt;br&gt;
+--
+
+- Correlación entre hermanos proporciona un límite superior para la influencia intergeneracional combinada de los factores genéticos y ambientales.
+
+- Generalmente arroja un mejor poder predictivo que la IGE.
+
+- *Limitaciones
 
 ---
-## Lecturas
+## Otras medidas importantes
 
-&lt;br&gt;
-Lecturas obligatorias:
 
-&lt;br&gt;
+- Modelos log-lineales para tablas de contigencia cross-clasificando clase social del origen y denstino.
 
-1. David B. Grusky, Jasmine Hill; Inequality in the 21st Century, a reader; Taylor &amp; Francis 2017; Chapter 1: Poverty and Inequality in the 21st Century, p.1-7.
-
-2. John E. Roemer; Equality of Opportunity; Harvard University Press 1998.  Chapter 1 and Chapter 2.
-
-3. Robert H. Frank; Success and Luck: Good Fortune and the Myth of Meritocracy, Chapter 3: How winner-take-all markets magnify luck's role.
-
-4. Daniel Matamala; Pedro, Juan y Diego; La Tercera 2019.
-
----
-## Lecturas
-
-&lt;br&gt;
-Lecturas complementarias:
-
-&lt;br&gt;
-
-1. Christopher Jencks; Inequality. A Reassessment of the Effect of Family and Schooling in America; Basic Books, Inc., Publishers 1971. Chapter 1: From Equal Opportunity to Equal Results, p.3-15.
-
-2. Florencia Torche; Privatization Reform and Inequality of Educational Opportunity: The Case of Chile; Sociology of Education; 2005.
-
-3. Javier Nunez, Andrea Tartakowsky; The relationship between income inequality and inequality of opportunities in a high-inequality country: the case of Chile; Applied Economics Letters; 2011.
+- Matrices de transiciones 
 
 
 ---

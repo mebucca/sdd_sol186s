@@ -15,8 +15,9 @@ output:
       slideNumberFormat: "%current%"
 editor_options: 
   chunk_output_type: console
----
 
+---
+class: center, middle
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
 library("tidyverse")
 library("ineq")
@@ -25,18 +26,36 @@ theme_set(theme_bw())
 options(digits=3, scipen = 100)
 ```
 
+![ad](am_dream.jpeg)
 
-![obama](obama.png)
 
 ---
-## Movilidad Social
+## Confusiones comunes sobre movilidad social en discurso público
 
-- movilidad social para todos?
+<br>
+<br>
+--
+
+- Movilidad social = movilidad social ascendente, American Dream, Land of Opportunity, 'rags-to-riches'  
+
+
+--
+
+- Movilidad social para todos
+
+
+--
+
+- (más sutil) Movilidad social = igualdad de oportunidades, meritocracia. 
+
+  - Movilidad como alternativa a desigualdad 
 
 ---
-## Movilidad Social
+class: inverse, center, middle
 
+## Movilidad social/económica intergeneracional 
 
+---
 ### Sociedad A
 
 .pull-left[
@@ -45,6 +64,9 @@ options(digits=3, scipen = 100)
 |  5 (rank = 2) | 10 (rank = 2) |
 | 10 (rank = 1) | 20 (rank = 1) |
 ]
+
+--
+
 .pull-right[
 
 - Misma desigualdad económica en ambas generaciones (2:1).
@@ -57,9 +79,6 @@ options(digits=3, scipen = 100)
 ]
 
 ---
-## Movilidad Social
-
-
 ### Sociedad B
 
 .pull-left[
@@ -68,6 +87,9 @@ options(digits=3, scipen = 100)
 |  5 (rank = 2) | 10 (rank = 2) |
 | 10 (rank = 1) | 5  (rank = 1) |
 ]
+
+--
+
 .pull-right[
 
 - Misma desigualdad económica en ambas generaciones (2:1).
@@ -79,15 +101,60 @@ options(digits=3, scipen = 100)
 
 ]
 
+---
+## Dos tipos de movilidad social/económica
+
+
+  - Movilidad social absoluta: comparación con respecto a posición de los padres (ascendente,inmovil, descendente): quién se mueve, cuánto y hacia donde. 
+  
+  - Movilidad social absoluta: comparación con respecto a posición relativa de los padres: ¿Cuán son los "accidentes de la cuna" para determinar el destino de una persona?
+
 
 ---
-## Movilidad Social
+## ¿Movilidad social con respecto a que?
+
+<br>
+
+- Clase social (clase ocupacional)
+
+- Status (prestigio)
+
+- Educación
+
+- Ingresos 
+
+- Riqueza
+
+- Salud, etc. 
 
 
-### Elasticidad intergeneracional de ingresos
+---
+class: inverse, center, middle
+
+# Medidas de movilidad social relativa
+## Elasticidad intergeneracional de ingresos
+
+---
+## Elasticidad intergeneracional de ingresos
+
+<br>
 
 $$y^{\text{child}} = \alpha + \beta y^{\text{par}} + \varepsilon$$
-$(1 - \beta)$ es un índice de movilidad social.
+<br>
+--
+
+- $y^{\text{child}}$ ingreso permanente hijo
+
+- $y^{\text{par}}$ ingreso permanente padres
+
+--
+
+- $\beta = \frac{\%\Delta y^{\text{child}}}{\%\Delta y^{\text{par}}}$ (elasticidad)
+
+--
+
+- $(1 - \beta)$ es un índice de movilidad social.
+
 
 ---
 ## Elasticidad intergeneracional de ingresos
@@ -106,7 +173,7 @@ x = rlnorm(n, meanlog = 0, sdlog = 1)
 logx = log(x)
 ```
 
-beta=1
+.bold[Inmovilidad relativa perfecta]: $\beta=1$
 
 ```{r, warning=F, message=F, echo=F}
 logy = 0 + 1*logx + rnorm(n,0,1/2)
@@ -119,7 +186,7 @@ colour=NULL) + theme(legend.position = "none")
 ---
 ## Elasticidad intergeneracional de ingresos
 
-beta=0
+.bold[Movilidad relativa perfecta]: $\beta=0$
 
 ```{r, warning=F, message=F, echo=F}
 logy = 0 + 0*logx + rnorm(n,0,1/2)
@@ -132,7 +199,7 @@ colour=NULL) + theme(legend.position = "none")
 ---
 ## Elasticidad intergeneracional de ingresos
 
-beta=0.5
+.bold[Baja tasa de movilidad relativa]: $\beta=0.5$
 
 ```{r, warning=F, message=F, echo=F}
 logy = 0 + 0.5*logx + rnorm(n,0,1/2)
@@ -143,11 +210,10 @@ colour=NULL) + theme(legend.position = "none")
 ```
 
 ---
-## Elasticidad intergeneracional de ingresos
-
-beta=0.5 + crecimiento
+## Movilidad relativa y movilidad absoluta
 
 .pull-left[
+$\beta$=0.5 + crecimiento
 ```{r, warning=F, message=F, echo=F}
 logy = 2 + 0.5*logx + rnorm(n,0,1/2)
 data <- tibble(x=logx, y=logy, z=round(x,0), mob=if_else(y>x,1,0), zz=ifelse(z==-4,1,ifelse(z==4,2,0))) 
@@ -158,6 +224,7 @@ colour=NULL) + theme(legend.position = "none")
 ]
 
 .pull-right[
+$\beta$=0.5 + decrecimiento
 ```{r, warning=F, message=F, echo=F}
 logy = -2 + 0.5*logx + rnorm(n,0,1/2)
 data <- tibble(x=logx, y=logy, z=round(x,0), mob=if_else(y>x,1,0), zz=ifelse(z==-4,1,ifelse(z==4,2,0))) 
@@ -169,8 +236,7 @@ colour=NULL) + theme(legend.position = "none")
 
 
 ---
-## Dinastias
-
+## Movilidad social en el largo plazo: Dinastias
 
 .pull-left[
 ![presid](presid.jpeg)
@@ -182,7 +248,9 @@ colour=NULL) + theme(legend.position = "none")
 
 
 ---
-## Dinastias
+## Movilidad social en el largo plazo: Dinastias
+
+- En teoría, regresión a la media (proceso Markoviano)
 
 .pull-left[
 ![markov](markov.png)
@@ -200,11 +268,23 @@ data_frame(x=NULL,gen=NULL) %>% data_grid(beta=c(0.3,0.5,0.8), gen=1:20) %>% mut
 ]
 
 ---
-## Dinastias
+## Movilidad social en el largo plazo: Dinastias
+
+- Creciéntemente se está estudiando la movilidad social como un proceso multigeneracional y con influencias más allá de familia nuclear.
 
 .pull-left[
 ![non_markov](non_markov.png)
 ]
+
+.pull-right[
+![net](net.png)
+]
+
+---
+class: inverse, center, middle
+
+# Medidas de movilidad social relativa
+## Correlaciones entre hermanos
 
 ---
 ## Correlaciones entre hermanos
@@ -220,6 +300,26 @@ data %>% ggplot(aes(x=y)) + geom_density(fill="grey", alpha=0.3)   + ylim(0,1.5)
 ```
 
 ---
+##Correlaciones entre hermanos
+
+<br>
+.bold[Intuición]:
+
+--
+<br>
+
+- Hermanos comparten genes y ambiente (por ejemplo, familia, escuela, barrio).
+
+--
+
+- Si ambiente y factores genéticos son importantes para la obtención de resultados socioeconómico, los hermanos obtendrían resultados similares entre sí.
+
+--
+
+- Mayor similitud en resultados indicaría mayor influencia atribuible a los antecedentes familiares y comunitarios.
+
+
+---
 ## Correlaciones entre hermanos
 
 $$y_{ij} = \underbrace{a_{j}}_{\text{componente familiar}} + \underbrace{\mu_{ij}}_{\text{componente idiosincrático}}$$
@@ -232,36 +332,22 @@ $$y_{ij} = \underbrace{a_{j}}_{\text{componente familiar}} + \underbrace{\mu_{ij
 <br>
 
 $$\rho = \frac{\sigma^{2}_{a}}{\sigma^{2}_{a}+\sigma^{2}_{\mu}}$$
+<br>
+--
+
+- Correlación entre hermanos proporciona un límite superior para la influencia intergeneracional combinada de los factores genéticos y ambientales.
+
+- Generalmente arroja un mejor poder predictivo que la IGE.
+
+- *Limitaciones
 
 ---
-## Lecturas
+## Otras medidas importantes
 
-<br>
-Lecturas obligatorias:
 
-<br>
+- Modelos log-lineales para tablas de contigencia cross-clasificando clase social del origen y denstino.
 
-1. David B. Grusky, Jasmine Hill; Inequality in the 21st Century, a reader; Taylor & Francis 2017; Chapter 1: Poverty and Inequality in the 21st Century, p.1-7.
-
-2. John E. Roemer; Equality of Opportunity; Harvard University Press 1998.  Chapter 1 and Chapter 2.
-
-3. Robert H. Frank; Success and Luck: Good Fortune and the Myth of Meritocracy, Chapter 3: How winner-take-all markets magnify luck's role.
-
-4. Daniel Matamala; Pedro, Juan y Diego; La Tercera 2019.
-
----
-## Lecturas
-
-<br>
-Lecturas complementarias:
-
-<br>
-
-1. Christopher Jencks; Inequality. A Reassessment of the Effect of Family and Schooling in America; Basic Books, Inc., Publishers 1971. Chapter 1: From Equal Opportunity to Equal Results, p.3-15.
-
-2. Florencia Torche; Privatization Reform and Inequality of Educational Opportunity: The Case of Chile; Sociology of Education; 2005.
-
-3. Javier Nunez, Andrea Tartakowsky; The relationship between income inequality and inequality of opportunities in a high-inequality country: the case of Chile; Applied Economics Letters; 2011.
+- Matrices de transiciones 
 
 
 ---

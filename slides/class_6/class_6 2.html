@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sociología de la Desigualdad (SOL186S)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Mauricio Bucca, Sociología UC" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="gentle-r.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Sociología de la Desigualdad (SOL186S)
+]
+.subtitle[
+## Movilidad social: conceptos y medición
+]
+.author[
+### Mauricio Bucca, Sociología UC
+]
+
+---
+
+
+
+
+
+![obama](obama.png)
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left[
+![not](not.png)
+]
+
+--
+
+.pull-right[
+![nailedit](nailedit.jpeg)
+]
+
+
+---
+## ¿Desigualad con respecto a que? 
+
+
+Típicamente,
+
+- Logro educacional
+
+- Ocupaciones (clases sociales)
+
+- Ingresos
+
+- Riqueza
+
+- Consumo (bienes privados y públicos)
+
+- Capital social (redes)
+
+- Capital cultural
+
+- Prestigio social (status)
+
+- Salud
+
+- etc ...
+
+---
+## ¿Desigualad entre quienes? 
+
+&lt;br&gt;
+
+.pull-left[
+
+- Individuos
+
+- Grupos (género, raza, paises, etc.)
+
+]
+
+.pull-right[
+![tilly](tilly.png)
+]
+
+
+---
+class: inverse, center, middle
+
+# Desigualdad de resultados
+
+---
+## Desigualdad de resultados, una definición general 
+
+--
+
+&lt;br&gt;
+
+- `\(i: \{1,2,3, \dots, n\}\)` individuos (u otra unidad)
+
+- `\(X\)` es algún "recurso" (educación, ingresos, felicidad)
+
+--
+
+- Coloquialmente hablando, `\(X\)` se distribuye desigualmente si no todo `\(x_i\)` toma el mismo valor de `\(X\)`. Por ejemplo: `\(x_1 \neq x_2\)`
+
+--
+&lt;br&gt;
+
+¿Qué tipo de desigualdad? 
+
+
+- Determinística (matemática)   ❌ 
+
+- Probabilística (estadística):   ✅
+
+  - No significa que `\(x_{i}\)` toma cualquier valor con igual probabilidad. Significa que el resultado tiene un grado escencial de aleatoridad.
+
+
+---
+## Desigualdad de resultados, una definición general 
+
+![probabilistic](probabilistic.png)
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+Supongamos que `\(\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}\)` representa los ingresos de `\(n\)` individuos. Consideremos diferentes escenarios:
+
+
+.bold[Igualdad de resultados]
+
+`$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$`
+`$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 10)$$`
+
+```
+## # A tibble: 10 × 3
+##       mu      e     y
+##    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+##  1   500  -7.69  492.
+##  2   500  -3.22  497.
+##  3   500  12.8   513.
+##  4   500  15.2   515.
+##  5   500   3.05  503.
+##  6   500  13.9   514.
+##  7   500 -21.5   478.
+##  8   500   4.37  504.
+##  9   500   9.61  510.
+## 10   500  14.0   514.
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.pull-left[
+
+```
+## # A tibble: 10 × 3
+##       mu      e     y
+##    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+##  1   500  -7.69  492.
+##  2   500  -3.22  497.
+##  3   500  12.8   513.
+##  4   500  15.2   515.
+##  5   500   3.05  503.
+##  6   500  13.9   514.
+##  7   500 -21.5   478.
+##  8   500   4.37  504.
+##  9   500   9.61  510.
+## 10   500  14.0   514.
+```
+
+]
+.pull-right[
+&lt;img src="class_6_files/figure-html/unnamed-chunk-4-1.png" width="300px" /&gt;
+
+```
+## Promedio       SD     Gini  max-min 
+## 500.0000  10.0038   0.0113  78.1019
+```
+]
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.bold[Desigualdad de resultados (baja)]
+
+`$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$`
+`$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 100)$$`
+
+
+```
+## # A tibble: 10 × 3
+##       mu       e     y
+##    &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1   500  -38.2   462.
+##  2   500  -97.0   403.
+##  3   500   78.3   578.
+##  4   500   56.3   556.
+##  5   500   25.6   526.
+##  6   500   19.0   519.
+##  7   500 -103.    397.
+##  8   500   44.3   544.
+##  9   500   71.9   572.
+## 10   500   -3.74  496.
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
+.pull-left[
+
+```
+## # A tibble: 10 × 3
+##       mu       e     y
+##    &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1   500  -38.2   462.
+##  2   500  -97.0   403.
+##  3   500   78.3   578.
+##  4   500   56.3   556.
+##  5   500   25.6   526.
+##  6   500   19.0   519.
+##  7   500 -103.    397.
+##  8   500   44.3   544.
+##  9   500   71.9   572.
+## 10   500   -3.74  496.
+```
+
+]
+.pull-right[
+&lt;img src="class_6_files/figure-html/unnamed-chunk-7-1.png" width="300px" /&gt;
+
+```
+## Promedio       SD     Gini  max-min 
+##  500.000   99.179    0.112  717.083
+```
+]
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.bold[Desigualdad de resultados (alta)]
+
+`$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$`
+`$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 500)$$`
+
+
+
+```
+## # A tibble: 10 × 3
+##       mu       e       y
+##    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1   500  -582.   -82.0 
+##  2   500   383.   883.  
+##  3   500  -755.  -255.  
+##  4   500   608.  1108.  
+##  5   500  -551.   -51.4 
+##  6   500  -179.   321.  
+##  7   500   -53.7  446.  
+##  8   500  -503.    -3.15
+##  9   500 -1004.  -504.  
+## 10   500   202.   702.
+```
+
+---
+## Desigualdad de resultados, una definición general 
+
+
+.pull-left[
+
+```
+## # A tibble: 10 × 3
+##       mu       e       y
+##    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1   500  -582.   -82.0 
+##  2   500   383.   883.  
+##  3   500  -755.  -255.  
+##  4   500   608.  1108.  
+##  5   500  -551.   -51.4 
+##  6   500  -179.   321.  
+##  7   500   -53.7  446.  
+##  8   500  -503.    -3.15
+##  9   500 -1004.  -504.  
+## 10   500   202.   702.
+```
+
+]
+.pull-right[
+&lt;img src="class_6_files/figure-html/unnamed-chunk-10-1.png" width="300px" /&gt;
+
+```
+## Promedio       SD     Gini  max-min 
+##  517.000  499.470    0.545 3595.906
+```
+]
+
+---
+## Desigualdad de resultados, una definición general 
+
+¿Cuánta desigualdad es "demasiada"? ¿Cuanta desigualdad es aceptable?
+
+.pull-left[
+![householdincome](householdincome.jpeg)
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-right[
+`\(y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿que es esto?}}\)`
+]
+
+---
+class: inverse, center, middle
+
+# Desigualdad de oportunidades
+
+---
+
+## ¿Una cancha desnivelada?
+
+&lt;br&gt;
+.pull-left[
+![field](field.jpeg)
+]
+
+
+
+
+---
+
+## Resultados y  Oportunidades
+
+--
+
+- En general no existe una diferencia escencial entre resultados y oportunidades. Es un problema de "antes" y "después".
+
+
+
+`$$\text{resultados}_{i} = f(\text{oportunidades}_{i})$$`
+- Excepción: atributos adscritos tales como raza, sexo, etc.
+
+&lt;br&gt;
+--
+
+Desigualdad de resultados refleja, en parte, desigualdad de oportunidades. Ejemplos:
+
+&lt;br&gt;
+--
+
+- resultados: estado de salud, oportunidades: ingresos
+
+--
+
+- resultados: ingresos, oportunidades: logro educacional
+
+--
+
+- resultados: logro educacional, oportunidades: ingresos de los padres
+
+
+--
+
+- resultados: ingresos de los padres, oportunidades: logro educacional de los padres
+
+
+- etc.  
+
+
+---
+
+## Resultados y  Oportunidades
+
+&lt;br&gt;
+
+`$$y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿que es esto?}}$$`
+
+&lt;br&gt;
+--
+
+Las teorías sobre (des)igualdad de oportunidades típicamente idenfican dos tipo de fuentes para desigualad de oportunidades: esfuerzo (agencia) y circunstancias (estructura). Formalmente:
+
+&lt;br&gt;
+
+`$$\epsilon_{i} = \color{blue}{\beta  \times \underbrace{E_{i}}_{\text{"esfuerzo": elección autónoma}}} + \color{red}{\theta  \times \underbrace{C_{i}}_{\text{"circunstancias": fuera del control individual}}} + \underbrace{\tau_{i}}_{\text{"suerte" residual}}$$`
+&lt;br&gt;
+--
+
+Luego:
+
+
+`$$y_{i} = \mu + \beta E_{i} + \theta C_{i} +\tau_{i}$$`
+
+---
+
+## Resultados y  Oportunidades
+
+Resultado: salud física (de 0 a 10)
+
+  - "Esfuerzo" (agencia): no fumador (E=1) / fumador (E=0)
+  
+  - "Circunstancias" (estructura): universitario (C=1) / no-universitario (C=0)
+
+Supongamos que la siguiente ecuación describe el estado de salud de una persona:
+
+`$$\text{salud}_{i} =  1 + 2 E_{i} + 3 C_{i} +\tau_{i}$$`
+--
+
+.pull-left[
+
+```
+## # A tibble: 4 × 3
+## # Groups:   c [2]
+##   c        e          promedio_salud
+##   &lt;chr&gt;    &lt;chr&gt;               &lt;dbl&gt;
+## 1 no-univ. fumador             0.990
+## 2 no-univ. no-fumador          3.01 
+## 3 univ.    fumador             4.00 
+## 4 univ.    no-fumador          5.99
+```
+
+]
+.pull-right[
+&lt;img src="class_6_files/figure-html/unnamed-chunk-12-1.png" width="300px" /&gt;
+]
+
+---
+
+## Desigualdad de oportunidades
+
+.bold[¿Que tipo de desigualdades son aceptables?]
+  
+--
+
+  - Aquellas que son atribuibles a factores que los individuos pueden controlar ("esfuerzo", "elección autónoma", "agencia")
+  
+  - Desigualdades en resultados que provienen de circunstancias desiguales deben ser corregidas por medio de políticas ("igualar la cancha").
+
+&lt;br&gt;
+--
+
+.bold[Desafios]
+
+
+  - ¿Que factores consideramos "esfuerzo" y cuales "circunstancias? -- problema normativo.
+  
+  - ¿Cuando tenemos una lista suficientemente exaustiva de circunstancias? (comparar peras con peras) -- problema de datos.
+  
+
+---
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+
+Supongamos que la siguiente ecuación describe el salario de una persona:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$`
+--
+
+.pull-left[
+
+```
+## # A tibble: 2 × 2
+##   c      promedio_salario
+##   &lt;chr&gt;             &lt;dbl&gt;
+## 1 hombre             638.
+## 2 mujer              342.
+```
+
+]
+.pull-right[
+&lt;img src="class_6_files/figure-html/unnamed-chunk-14-1.png" width="300px" /&gt;
+]
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+Donde el salario de una persona puede ser descrito con la siguiente ecuación:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$`
+
+&lt;br&gt;
+--
+
+.bold[Desafío #1: delimitación entre esfuerzo y circunstancias]:
+
+- No cabe duda que ser hombre o mujer es una circunstancia
+
+- ¿es la ocupación una elección  autónoma?
+  - parcialmente depende de factores cirncunstanciales (capital cultural, recursos padres, normas de género, etc.)
+
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+
+Donde el salario de una persona puede ser descrito con la siguiente ecuación:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$`
+
+&lt;br&gt;
+--
+
+.bold[Desafío #2: donde terminan circunstancias]:
+
+- No cabe duda que ser hombre o mujer es una circunstancia
+
+- ¿cuanto de lo que parece "suerte" residual son en realidad circunstancias no observadas?
+  - en nuestro ejemplo consideramos que todas personas del mismo sexo tienen las mismas circunstancias, pero no consideramos lugar de residencia, raza, clase social de origen, etc.
+
+
+---
+## Desigualdad de oportunidades
+
+Supongamos que ahora tenemos el modelo correcto:
+
+&lt;br&gt;
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): genero , raza, clase social de origen -- C.
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0), donde 
+    
+    `\(E_{i} = 2 C_{i} + \xi\)`
+  
+&lt;br&gt;  
+--
+
+Por tanto, el salario de una persona puede ser descrito con la siguiente ecuación:
+
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 600 C_{i} +\tau_{i}$$`
+`$$\text{salario}_{i} = 100 + 500 (2C_{i} + \xi) + 600 C_{i} +\tau_{i}$$`
+`$$\text{salario}_{i} = 100 + \color{red}{\underbrace{1600C_{i}}_{\text{circunstancias}}} + \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  + \underbrace{\tau_{i}}_{\text{suerte residual}}$$`
+---
+## Desigualdad de oportunidades
+
+Supongamos que el salario de una persona puede ser descrito con la siguiente ecuación:
+
+`$$\text{salario}_{i} = 100 + \color{red}{\underbrace{1600C_{i}}_{\text{circunstancias}}} + \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  + \underbrace{\tau_{i}}_{\text{suerte residual}}$$`
+&lt;br&gt;
+--
+
+Política de igualación de oportunidades: eliminar parte de desigualdad de resultados que proviene de desigualdad en circunstancias. 
+
+- En nuetro ejemplo, si una política lograra que el genero, raza y clase social de origen no influyeran en el salarion de una persona entonces
+
+`$$\text{desigualdad de salario}: \color{blue}{\underbrace{500\xi}_{\text{esfuerzo}}}  \text{   ,   }  \underbrace{\tau_{i}}_{\text{suerte residual}}$$`
+--
+Posibles políticas:
+
+1) Igualar circunstancias
+
+2) Eliminar efecto de circunstancias desiguales
+
+---
+
+## Desigualdad de oportunidades
+
+Resultado: salarios
+
+  - "Circunstancias" (estructura): hombre (C=1) / mujer(C=0)
+
+  - "Esfuerzo" (agencia, elección autónoma): doctor(a) (E=1) / enfermer@ (E=0)
+  
+
+Supongamos que la siguiente ecuación describe el salario de una persona:
+
+`$$\text{salario}_{i} = 100 + 500 E_{i} + 0 C_{i} +\tau_{i}$$`
+--
+
+.pull-left[
+
+```
+## # A tibble: 2 × 2
+##   e         promedio_salario
+##   &lt;chr&gt;                &lt;dbl&gt;
+## 1 doctor(a)             600.
+## 2 enfermer@             106.
+```
+
+]
+.pull-right[
+&lt;img src="class_6_files/figure-html/unnamed-chunk-16-1.png" width="300px" /&gt;
+]
+
+---
+
+## El rol del la suerte
+
+--
+.pull-left[
+
+```
+## # A tibble: 10 × 3
+##    c      e         salario
+##    &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;
+##  1 hombre doctor(a)    591.
+##  2 hombre doctor(a)   1117.
+##  3 hombre doctor(a)    600.
+##  4 hombre doctor(a)    542.
+##  5 hombre doctor(a)    514.
+##  6 hombre doctor(a)    486.
+##  7 hombre doctor(a)   1004.
+##  8 hombre doctor(a)    444.
+##  9 hombre doctor(a)    875.
+## 10 hombre doctor(a)    265.
+```
+
+]
+.pull-right[
+&lt;img src="class_6_files/figure-html/unnamed-chunk-18-1.png" width="300px" /&gt;
+]
+
+- Que explica las diferencias de salario entre personas con las mismas "circunstancias" y mismo nivel de "esfuerzo"?
+
+- Suerte. Que es? la aleatoriedad de la vida? circunstancias no observadas (e.j. talento)?
+
+- Debemos corregir estas desigualdades? Cuanta desigualdad de este tipo podemos tolerar?
+
+
+---
+## Para discutir ...
+
+&lt;br&gt;
+
+![patines](patines.jpeg)
+
+
+---
+## Lecturas
+
+&lt;br&gt;
+Lecturas obligatorias:
+
+&lt;br&gt;
+
+1. David B. Grusky, Jasmine Hill; Inequality in the 21st Century, a reader; Taylor &amp; Francis 2017; Chapter 1: Poverty and Inequality in the 21st Century, p.1-7.
+
+2. John E. Roemer; Equality of Opportunity; Harvard University Press 1998.  Chapter 1 and Chapter 2.
+
+3. Robert H. Frank; Success and Luck: Good Fortune and the Myth of Meritocracy, Chapter 3: How winner-take-all markets magnify luck's role.
+
+4. Daniel Matamala; Pedro, Juan y Diego; La Tercera 2019.
+
+---
+## Lecturas
+
+&lt;br&gt;
+Lecturas complementarias:
+
+&lt;br&gt;
+
+1. Christopher Jencks; Inequality. A Reassessment of the Effect of Family and Schooling in America; Basic Books, Inc., Publishers 1971. Chapter 1: From Equal Opportunity to Equal Results, p.3-15.
+
+2. Florencia Torche; Privatization Reform and Inequality of Educational Opportunity: The Case of Chile; Sociology of Education; 2005.
+
+3. Javier Nunez, Andrea Tartakowsky; The relationship between income inequality and inequality of opportunities in a high-inequality country: the case of Chile; Applied Economics Letters; 2011.
+
+
+---
+## Material del curso
+
+Todo el material del curso será almacenado y actualizado regularmente en repositorio `Github`:
+
+&lt;br&gt;
+.center[
+
+![github](github.jpg)
+
+https://github.com/mebucca/sdd_sol186s
+]
+
+
+---
+class: inverse, center, middle
+
+.huge[
+**Hasta la próxima clase. Gracias!**
+]
+
+&lt;br&gt;
+Mauricio Bucca &lt;br&gt;
+https://mebucca.github.io/
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
