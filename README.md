@@ -24,9 +24,9 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 07: Movilidad social: tendencias y debates (28 de septiembre): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_7/class_7#1) [`[Breen 2020]`](readings/Breen_2020.pdf) [`[Chetty 2017]`](readings/Chetty_2017.pdf) [`[Zimmerman 2019]`](readings/Zimmerman_2019.pdf) [`[Chetty 2022]`](readings/Chetty_2022.pdf)
 
-- Semana 08: Desigualdad y movilidad  (5 de octubre): [`[Corak 2013]`](readings/Corak_2013.pdf) [`[DiPrete 2020]`](readings/DiPrete_2020.pdf) [`[Torche 2005]`](readings/Torche_2005.pdf) [`[Reardon 2011]`](readings/Reardon_2011.pdf)  
+- Semana 08: Desigualdad y movilidad  (5 de octubre): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_8/class_8#1) [`[Corak 2013]`](readings/Corak_2013.pdf) [`[DiPrete 2020]`](readings/DiPrete_2020.pdf) [`[Torche 2005]`](readings/Torche_2005.pdf) [`[Reardon 2011]`](readings/Reardon_2011.pdf)  
 
-- Semana 09: Creencias sobre la desigualdad (11 de octubre): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_8/class_8#1) [`[Mijs 2021]`](readings/Mijs_2021.pdf) [`[Molina 2019]`](readings/Molina_2019.pdf) [`[Starman 2017]`](readings/Starman_2017.pdf) [`[Trump 2020]`](readings/Trump_2020.pdf)  
+- Semana 09: Creencias sobre la desigualdad (11 de octubre):  [`[Mijs 2021]`](readings/Mijs_2021.pdf) [`[Molina 2019]`](readings/Molina_2019.pdf) [`[Starman 2017]`](readings/Starman_2017.pdf) [`[Trump 2020]`](readings/Trump_2020.pdf)  
 
 - Semana 09: Consecuencias de la desigualdad (19 de octubre): [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[VandeWerfhorst 2012]`](readings/VandeWerfhorst_2012.pdf) [`[Cote 2015]`](readings/Cote_2015.pdf) [`[Scheve 2017]`](readings/Scheve_2017.pdf) [`[Nishi 2015]`](readings/Nishi_2015.pdf)  
 
