@@ -52,7 +52,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 #### Tareas
 
 - Asignación Trabajo 1: 
-- Asignación Trabajo 2: 
+- Asignación Trabajo 2: [`[Trabajo 2]`](hw/t2.pdf)
 
 
 #### Trabajo Final
