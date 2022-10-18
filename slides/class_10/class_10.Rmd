@@ -1,0 +1,83 @@
+---
+title: "Sociología de la Desigualdad (SOL186S)"
+subtitle: "Consecuencias de la desigualdad"
+author: "Mauricio Bucca, Sociología UC"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default","default-fonts","gentle-r.css"]
+    df_print: default
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunk_output_type: console
+---
+class: middle
+## ¿Importa la desigualad?
+
+--
+
+.center[![kaiser](kaiser.png)]
+
+---
+class: middle
+## ¿Importa la desigualad?
+
+.pull-left[![kaiser](kaiser.png)]
+.pull-right[![naildit](nailedit.jpeg)]
+
+---
+## Consequencias de la desigualdad
+
+- desigualdad oportunidades educacionales
+- expectativas de vida
+- felicidad
+- crimen 
+- influencia politica
+
+---
+## Consequencias de la desigualdad
+
+- resource theory: 
+  - unequal distribution of individual resources
+  - unequal distribution of infrastructure and facilities
+
+- social and psychological consequences of inequality
+  - psychological consequences:negative feeling, relative deprivation, etc. stress, desapego, etc.
+  - social consequences: homofilia, inter-contacto, etc --> sensaci'on de falta de poder y desapegro de vida social.
+
+- civic engagement y pro-social behavior 
+
+
+
+---
+## Material del curso
+
+Todo el material del curso será almacenado y actualizado regularmente en repositorio `Github`:
+
+<br>
+.center[
+
+![github](github.jpg)
+
+https://github.com/mebucca/sdd_sol186s
+]
+
+
+---
+class: inverse, center, middle
+
+.huge[
+**Hasta la próxima clase. Gracias!**
+]
+
+<br>
+Mauricio Bucca <br>
+https://mebucca.github.io/
+
+
+
