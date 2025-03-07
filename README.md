@@ -46,23 +46,12 @@ La evaluación del curso se compone de los siguientes elementos:
 | **Evaluación**            | **Ponderación** |
 |:--------------------------|:----------------|
 | Participación             | 10%             |
-| Presentación              | 15%             |
+| [`[Presentación]`](files/protocolo.pdf)               | 15%             |
 | Prueba                    | 30%             |
 | Propuesta de investigación| 15%             |
 | Trabajo Final             | 30%             |
 
-#### Participación
-Se evaluará la asistencia y la participación activa en las discusiones en clase. Para aprobar el curso, los y las estudiantes deben asistir al menos al 50% de las clases.
-
-#### Presentaciones
-Cada grupo de dos estudiantes deberá exponer un texto de la bibliografía obligatoria. La presentación deberá incluir un resumen de los principales argumentos, una evaluación crítica y preguntas para la discusión. [`[Instrucciones]`](files/protocolo.pdf) 
-
-#### Prueba
-Evaluación individual que abarcará todos los contenidos discutidos en clases hasta la fecha de la prueba.
-
-#### Proyecto de investigación
-- **Propuesta**: Documento breve con pregunta de investigación y justificación teórica.
-- **Trabajo Final**: Reporte de investigación de máximo 5 páginas que desarrolle la propuesta, incluyendo motivación sustantiva, descripción de datos, metodología y hallazgos.
+---
 
 ## Atención a estudiantes
 
