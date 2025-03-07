@@ -1,8 +1,8 @@
 # SOL186S Sociología de la Desigualdad
 Este repositorio contiene el material del curso SOL186S Sociología de la Desigualad, dictado en 2025 a estudiantes de pregrado del Departamento de Sociología de la Universidad Católica de Chile. Para mayores detalles ver el [`[programa]`](files/syllabus.pdf) del curso.
 
-Profesor: Mauricio Bucca  
-Ayudante: Vicente Leal
+**Profesor**: Mauricio Bucca  
+**Ayudante**: Vicente Leal
 
 ![ineq](files/ineq.png)
 
