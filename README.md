@@ -56,5 +56,5 @@ La evaluación del curso se compone de los siguientes elementos:
 ## Atención a estudiantes
 
 - **Horario de consulta del profesor**: Lunes de 14:30 a 15:30, previa coordinación. [`[Agendar]`](https://calendly.com/mebucca/30min) 
-- **Email**: Incluir **SOL186S** en el asunto del correo. <a href="mailto:mauricio.bucca@uc.cl?subject=SOL186S">Escribir</a>
+- **Email**: Incluir **SOL186S** en el asunto del correo. [Escribir](mailto:email@example.com?subject=SOL186S)
 
