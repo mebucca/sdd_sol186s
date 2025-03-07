@@ -55,7 +55,7 @@ La evaluación del curso se compone de los siguientes elementos:
 
 ## Atención a estudiantes
 
-- **Horario de consulta del profesor**: Lunes de 14:30 a 15:30, previa coordinación. [`[Agendar]`](https://tr.cloudmagic.com/h/v6/link-track/1.0/1715787874679036-29f77735-5ed3-cd32-a7f1-3eeb6ce21d3d/1715787858/a9176d9ca40c56a3a25036e2348750e7/bd38530f6096be632fbc0538fb755858/17d2192eea70e942aa36823fd1eaf8b7?redirect_uri=https://calendly.com/mebucca/30min) 
+- **Horario de consulta del profesor**: Lunes de 14:30 a 15:30, previa coordinación. [`[Agendar]`](https://calendly.com/mebucca/30min) 
 - **Email**: Incluir **SOL186S** en el asunto del correo. [`[Escribir]`](mailto:mebucca@uc.cl) 
 
 
