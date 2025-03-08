@@ -48,8 +48,8 @@ La evaluación del curso se compone de los siguientes elementos:
 | Participación             | 10%             |
 | [Presentación](files/protocolo.pdf)               | 15%             |
 | Prueba                    | 30%             |
-| Propuesta de investigación| 15%             |
-| Trabajo Final             | 30%             |
+| [Propuesta de investigación](files/propuesta.pdf) | 15%             |
+| [Trabajo Final](files/trabajofinal.pdf)                | 30%             |
 
 ---
 
