@@ -18,7 +18,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 04: Desigualdad económica: conceptos y medición (31 de marzo): [`[Blau 1977]`](readings/Blau_1977.pdf) [`[Tilly 1998]`](readings/Tilly_1998.pdf) [`[Allison 1978]`](readings/Allison_1978.pdf)
 
-- Semana 05: Desigualdad económica: tendencias y debates (7 de abril): [`[Piketty 2014]`](readings/Piketty_2014.pdf) [`[Piketty & Saez 2014]`](readings/Piketty_2018.pdf) [`[Gasparini & Lustig 2011]`](readings/Gasparini_2011.pdf)
+- Semana 05: Desigualdad económica: tendencias y debates (7 de abril): [`[Piketty 2014]`](readings/Piketty_2014.pdf) [`[Piketty 2018]`](readings/Piketty_2018.pdf) [`[Gasparini & Lustig 2011]`](readings/Gasparini_2011.pdf)
 
 - Semana 06: Movilidad social: conceptos y medición (14 de abril): [`[Torche 2014]`](readings/Torche_2014.pdf) [`[Breen 2010]`](readings/Breen_2010.pdf)
 
