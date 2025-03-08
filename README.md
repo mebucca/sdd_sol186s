@@ -28,7 +28,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 09: Consecuencias de las desigualdades (12 de mayo): [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[Bradbury & Triest 2016]`](readings/Bradbury_2016.pdf) [`[Scheve & Stasavage 2017]`](readings/Scheve_2017.pdf)
 
-- Semana 10: Estado de bienestar (2 de junio): [`[Esping-Andersen 2001 (cap. 1-3)]`](readings/Esping-Andersen_2001a.pdf) [`[Esping-Andersen 2001 (cap. 8-9)]`](readings/Esping-Andersen_2001b.pdf)
+- Semana 10: Estado de bienestar (2 de junio): [`[Esping-Andersen 2001 (cap. 1-3)]`](readings/EspingAndersen_2001.pdf) [`[Esping-Andersen 2001 (cap. 8-9)]`](readings/EspingAndersen_2001.pdf)
 
 - Semana 11: Estado de bienestar y la paradoja de la redistribución (9 de junio): [`[Korpi & Palme 1998]`](readings/Korpi_Palme_1998.pdf) [`[Alesina & Glaeser 2004]`](readings/Alesina_Glaeser_2004.pdf)
 
