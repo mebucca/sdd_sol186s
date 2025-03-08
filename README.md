@@ -26,7 +26,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 08: Relación entre pobreza, desigualdad y movilidad (5 de mayo): [`[Bourguignon 2004]`](readings/Bourguignon_2004.pdf) [`[Corak 2013]`](readings/Corak_2013.pdf) [`[Torche 2005]`](readings/Torche_2005.pdf)
 
-- Semana 09: Consecuencias de las desigualdades (12 de mayo): [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[Bradbury & Triest 2016]`](readings/Bradbury_Triest_2016.pdf) [`[Scheve & Stasavage 2017]`](readings/Scheve_Stasavage_2017.pdf)
+- Semana 09: Consecuencias de las desigualdades (12 de mayo): [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[Bradbury & Triest 2016]`](readings/Bradbury_2016.pdf) [`[Scheve & Stasavage 2017]`](readings/Scheve_2017.pdf)
 
 - Semana 10: Estado de bienestar (2 de junio): [`[Esping-Andersen 2001 (cap. 1-3)]`](readings/Esping-Andersen_2001a.pdf) [`[Esping-Andersen 2001 (cap. 8-9)]`](readings/Esping-Andersen_2001b.pdf)
 
