@@ -1,8 +1,8 @@
 # SOL186S Sociología de la Desigualdad
 Este repositorio contiene el material del curso SOL186S Sociología de la Desigualad, dictado en 2025 a estudiantes de pregrado del Departamento de Sociología de la Universidad Católica de Chile. Para mayores detalles ver el [`[programa]`](files/syllabus.pdf) del curso.
 
-Profesor: Mauricio Bucca  
-Ayudante: Vicente Leal
+**Profesor**: Mauricio Bucca  
+**Ayudante**: Vicente Leal
 
 ![ineq](files/ineq.png)
 
@@ -48,14 +48,13 @@ La evaluación del curso se compone de los siguientes elementos:
 | Participación             | 10%             |
 | [Presentación](files/protocolo.pdf)               | 15%             |
 | Prueba                    | 30%             |
-| Propuesta de investigación| 15%             |
-| Trabajo Final             | 30%             |
+| [Propuesta de investigación](files/propuesta.pdf) | 15%             |
+| [Trabajo Final](files/trabajofinal.pdf)                | 30%             |
 
 ---
 
 ## Atención a estudiantes
 
-- **Horario de consulta del profesor**: Lunes de 14:30 a 15:30, previa coordinación. [`[Agendar]`](https://tr.cloudmagic.com/h/v6/link-track/1.0/1715787874679036-29f77735-5ed3-cd32-a7f1-3eeb6ce21d3d/1715787858/a9176d9ca40c56a3a25036e2348750e7/bd38530f6096be632fbc0538fb755858/17d2192eea70e942aa36823fd1eaf8b7?redirect_uri=https://calendly.com/mebucca/30min) 
-- **Email**: Incluir **SOL186S** en el asunto del correo. [`[Escribir]`](mailto:mebucca@uc.cl) 
-
+- **Horario de consulta del profesor**: Lunes de 14:30 a 15:30, previa coordinación. [`[Agendar]`](https://calendly.com/mebucca/30min) 
+- **Email**: Incluir **SOL186S** en el asunto del correo. [`[Escribir]`](mailto:mebucca@uc.cl?subject=SOL186S)
 
