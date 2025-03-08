@@ -1,0 +1,30 @@
+---
+title: "Sociología de la Desigualdad"
+subtitle: "SOL186S"
+format: pdf
+fontsize: 10pt
+geometry: letterpaper
+mainfont: "Times New Roman"
+monofont: "Times New Roman"
+sansfont: "Times New Roman"
+---
+
+## Protocolo de Presentaciones
+
+Las presentaciones en el curso de Sociología de la Desigualdad deben seguir las siguientes reglas:
+
+-   La presentación debe hacer referencia al texto asignado a los/las estudiante. Se pueden hacer referencia a otros textos, pero el foco debe estar en el texto seleccionado.
+
+-   La presentación no debe durar más de 7 minutos.
+
+-   Se puede utilizar material de apoyo. Por ejemplo, ppt. Para ello, se debe enviar la presentación a más tardar a las 09:40 AM del día de la presentación.
+
+-   Contenido de la presentación. Recomendamos estructurar la presentación del siguiente modo:
+
+    1.  **Introducción**: indicar claramente el tema y pregunta de investigación del texto referenciado. Además, mencionar y discutir la justificación de la relevancia de la pregunta investigación.
+
+    2.  **Argumento**: identificar y discutir el o los argumentos/hipótesis centrales del texto.
+
+    3.  **Metodología y resultados** (solo textos con investigación empírica): identificar los principales elementos del diseño metodológico, esto es, datos usados/técnicas de recolección de datos, variables centrales bajo análisis o conceptos generados, y métodos de análisis. Además, presentar un resumen de los principales resultados de la investigación.
+
+    4.  **Conclusiones y reflexión propia**: identificar las principales conclusiones del texto y sumar reflexión propia sobre las conclusiones mencionadas.

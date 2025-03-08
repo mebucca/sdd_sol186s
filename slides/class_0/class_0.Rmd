@@ -1,11 +1,12 @@
 ---
 title: "Sociología de la Desigualdad (SOL186S)"
 subtitle: "Presentación del curso"
-author: "Mauricio Bucca & Luis Maldonado, Sociología UC"
+author: "<br> Mauricio Bucca <br> [github.com/mebucca](https://github.com/mebucca) <br> mebucca@uc.cl"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["default","default-fonts","gentle-r.css"]
+    css: ["gentle-r.css", "xaringan-themer.css"]
     df_print: default
     nature:
       ratio: 16:9
@@ -15,16 +16,34 @@ output:
       slideNumberFormat: "%current%"
 editor_options: 
   chunk_output_type: console
-
-
 ---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(xaringanthemer)
+primary_color = "#1A5B6E"  # Deep teal - professional yet distinctive
+secondary_color = "#E9793E"  # Warm orange for contrast and highlights
+background_color = "#F7F8F9"  # Light off-white for better readability
+header_font = google_font("Archivo")
+text_font = google_font("Inconsolata")
+link_color = "#2E9CAB"  # Lighter teal for links
+style_duo_accent(primary_color = primary_color, 
+                 secondary_color = secondary_color,
+                 background_color = background_color,
+                 header_font_google = header_font,
+                 text_font_google = text_font, 
+                 link_color = link_color
+)
+``` 
+
+
 class: inverse, center, middle
 
 # Equipo 
 
 ---
 
-## Profesores
+## Profesor
 
 --
 
@@ -47,43 +66,17 @@ class: inverse, center, middle
  - webpage: https://mebucca.github.io/
 
 ---
-
-## Profesores
-
---
-
-.bold[Luis Maldonado]
-
-  - Profesor Asistente, Sociología UC
-
-  - Doctor in Economics and Social Sciences (Dr.rer.pol), University of Cologne, Germany, 2012
-
-  - Investigación: estado de bienestar, desigualdad económica, pobreza, desastres, métodos cuantitativos-
-  
-  - Métodos: modelación estadística, estrategias empíricas para inferencia causal, estudios Longitudinales, métodos experimentales
-
-<br>
---
-
-.bold[Información de contacto]
- - mail: lmaldona@uc.cl
- - webpage: http://www.luismaldonado.org
-
----
-
 ## Ayudante
 
 --
 <br>
 
 .pull-left[
-.bold[Matías Gómez]
+.bold[Vicente Leal]
 
-- Sociólogo UC, Magíster en Sociología UC
 
-- Estudiante de doctorado UC
+- Estudiante de Sociología UC, 5to año.
 
-- Investigación: financiarización de los hogares; plataformas de redes sociales y democracia.
 
 ]
 .figure-right[
@@ -98,7 +91,9 @@ class: inverse, center, middle
 
 ---
 
+.center[
 ![obama](obama.png)
+]
 
 ---
 ## ¿Es la desigualdad un problema? 
@@ -183,8 +178,7 @@ class: inverse, center, middle
 ## Contenidos
 
 
- - 1) Aspectos normativos: desigualdad de oportunidades y de resultados.
-
+ - Aspectos normativos: desigualdad de oportunidades y de resultados.
 
 
 .pull-left[
@@ -198,7 +192,7 @@ class: inverse, center, middle
 ## Contenidos
 
 
-- 2) Pobreza
+- Pobreza
 
 ![poverty](poverty.jpeg)
 
@@ -206,7 +200,7 @@ class: inverse, center, middle
 ## Contenidos
 
 
-- 3) Desigualdad económica
+- Desigualdad económica
 
 ![econ_ineq](econ_ineq.png)
 
@@ -215,14 +209,14 @@ class: inverse, center, middle
 ## Contenidos
 
 
-- 4) Movilidad social
+- Movilidad social
 
 ![mobility](https://mrhonner.com/wp-content/uploads/2018/05/economic-mobility-data.gif)
 ---
 ## Contenidos
 
 
-- 5) Desigualdad y movilidad
+- Relación entre Pobreza, Desigualdad y Movilidad
 
 ![ggc](ggc.png)
 
@@ -230,97 +224,17 @@ class: inverse, center, middle
 ## Contenidos
 
 
-- 6) Creencias sobre la desigualdad
-
-![beliefs](beliefs.png)
-
----
-## Contenidos
-
-
-- 7) Consecuencias de la desigualdad
+- Consecuencias de la desigualdad
 
 ![consecuencias](consecuencias.jpeg)
 
 ---
 ## Contenidos
 
-- 8) Redistribución y Estado de bienestar.
+- Redistribución y Estado de bienestar.
 
 ![redistribution](welfare.jpeg)
 
----
-## Contenidos
-
-
-- 9) Preferencias redistributivas.
-
-![preferencias](redistribution.webp)
-
----
-class: inverse, center, middle
-
-# Aspectos logísticos
-
----
-## Metodologia de trabajo 
-
-<br>
---
-
--  Clases:
-  - Primer módulo: exposición del profesor.
- - Segundo módulo: presentaciones y discusión de lecturas asignadas 
-
-
-<br>
---
--  Atención estudiantes: horario de consulta viernes 10:00-11:00 AM.
-
-<br>
---
--  Ayudantía: viernes 8:30 AM.
-
-
----
-## Evaluación 
-
-<br>
---
-
--  Dos informes: 20% cada uno.
-
-<br>
-
--  Trabajo final: 30%.
-
-<br>
-
-- Presentación: 15%.
-
-
-<br>
-
-- Participación: 15%.
-
-
----
-## Bibliografía y calendarización
-
-.bold[Semana 01: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de agosto)]
-
-<br>
-Lecturas obligatorias:
-
-<br>
-
-1. David B. Grusky, Jasmine Hill; Inequality in the 21st Century, a reader; Taylor & Francis 2017; Chapter 1: Poverty and Inequality in the 21st Century, p.1-7.
-
-2. John E. Roemer; Equality of Opportunity; Harvard University Press 1998.  Chapter 1 and Chapter 2.
-
-3. Robert H. Frank; Success and Luck: Good Fortune and the Myth of Meritocracy, Chapter 3: How winner-take-all markets magnify luck's role.
-
-4. Daniel Matamala; Pedro, Juan y Diego; La Tercera 2019.
 
 ---
 ## Material del curso
@@ -339,17 +253,11 @@ https://github.com/mebucca/sdd_sol186s
 ---
 class: inverse, center, middle
 
-.huge[
-**Hasta la próxima clase. Gracias!**
-]
+
+##Hasta la próxima clase!
 
 <br>
 Mauricio Bucca <br>
 https://mebucca.github.io/
-
-
-<br>
-Luis Maldonado <br>
-http://www.luismaldonado.org 
 
 

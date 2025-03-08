@@ -1,0 +1,64 @@
+---
+title: "Propuesta de Investigación"
+subtitle: "Sociología de la Desigualdad (SOL186S)"
+format: pdf
+fontsize: 10pt
+geometry: letterpaper
+mainfont: "Times New Roman"
+monofont: "Times New Roman"
+sansfont: "Times New Roman"
+---
+
+## Descripción General
+  
+Como paso previo al trabajo final del curso, los estudiantes deben elaborar una propuesta de investigación que esboce el tema, los datos y la aproximación metodológica que utilizarán. Esta propuesta permitirá recibir retroalimentación temprana del equipo docente antes de desarrollar el análisis completo, asegurando así la viabilidad y pertinencia del proyecto.
+
+## Objetivos de la Propuesta
+
+- Delimitar un problema de investigación relacionado con la desigualdad social
+- Identificar y justificar la fuente de datos apropiada para abordar el problema
+- Recibir orientación metodológica antes de iniciar el análisis detallado
+- Desarrollar habilidades de planificación de investigación empírica
+
+## Contenido de la Propuesta
+
+La propuesta debe incluir las siguientes secciones:
+  
+### 1. Planteamiento del Problema (2 puntos)
+  
+- Formular la pregunta o problema de investigación
+- Explicar la relevancia social y teórica del tema seleccionado
+- Vincular el problema con al menos uno de los temas estudiados durante el curso
+- Presentar brevemente los antecedentes teóricos o empíricos que informan la pregunta
+- Especificar las hipótesis o expectativas iniciales (si corresponde)
+
+### 2. Datos y Variables (2 puntos)
+
+- Identificar la(s) base(s) de datos CASEN que se utilizará(n), especificando el año o años
+- Describir la población o submuestra que se analizará
+- Identificar las principales variables dependientes e independientes
+
+### 3. Metodología Propuesta (1,5 puntos)
+
+- Describir brevemente la estrategia analítica que se utilizará
+- Especificar las técnicas estadísticas previstas (análisis descriptivo, regresión, etc.)
+
+### 4. Plan de Trabajo (0,5 puntos)
+
+- Presentar un cronograma tentativo para el desarrollo del trabajo final
+- Especificar la distribución de tareas entre los miembros del grupo
+
+## Formato y Entrega
+
+- **Extensión**: 800-1000 palabras (excluyendo referencias)
+- **Formato**: Documento PDF según las especificaciones del trabajo final
+
+### Ejemplos de Preguntas de Investigación
+
+A continuación, se presentan algunos ejemplos de preguntas de investigación apropiadas:
+  
+- ¿Cómo varía la brecha salarial de género según el nivel educativo en Chile?
+- ¿Existe una relación entre el territorio de residencia y el acceso a servicios educativos de calidad?
+- ¿En qué medida el origen étnico afecta las oportunidades laborales, controlando por nivel educativo?
+- ¿Cómo ha evolucionado la desigualdad de ingresos entre zonas rurales y urbanas en la última década?
+- ¿Qué factores predicen mejor la movilidad educativa intergeneracional en diferentes regiones de Chile?

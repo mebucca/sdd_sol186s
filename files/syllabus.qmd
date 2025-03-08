@@ -1,0 +1,181 @@
+---
+title: ""
+author: ""
+format: pdf
+fontsize: 10pt
+geometry: letterpaper
+mainfont: "Times New Roman"
+monofont: "Times New Roman"
+sansfont: "Times New Roman"
+---
+
+```{r, echo=FALSE, message=F, warning=F}
+# Table with course details
+library("tidyverse")
+tab <- t(data.frame(
+  CURSO = "SOCIOLOGÍA DE LA DESIGUALDAD",
+  SIGLA = "SOL186S",
+  AÑO = "2025",
+  PROFESOR = "MAURICIO BUCCA",
+  CRÉDITOS = "10",
+  HORARIO = "LUNES, MÓDULOS 2 y 3",
+  REQUISITOS = "",
+  CARÁCTER = "OPTATIVO",
+  AYUDANTE = "VICENTE LEAL"
+))
+
+# Use the align parameter to set left alignment for both columns
+knitr::kable(tab, align = c("l", "l"))
+```
+
+# I. DESCRIPCIÓN
+
+La desigualdad es uno de los desafíos más urgentes de nuestro tiempo. Este curso analiza distintas formas de desigualdad económica y social desde una perspectiva macrosocial, interdisciplinaria y comparada. Se ofrece una visión general de sus causas, consecuencias y de los mecanismos que la generan.  
+
+El curso se estructura en dos bloques temáticos principales:  
+  
+  1. **Conceptos y medición de la desigualdad**: Se abordarán los conceptos clave de las ciencias sociales para el estudio y la medición de la desigualdad, junto con las principales tendencias y debates en torno a ella.  
+2. **Consecuencias, marcos institucionales y políticas públicas**: Se examinarán los efectos sociales de la desigualdad y los marcos institucionales que las sociedades occidentales contemporáneas han desarrollado para enfrentarla.  
+
+El objetivo es que las y los estudiantes se familiaricen con los debates fundamentales sobre la desigualdad socioeconómica y desarrollen una capacidad crítica para evaluar estrategias dirigidas a su reducción.
+
+
+# II. OBJETIVOS  
+
+1. Comprender los conceptos clave empleados por la sociología y otras ciencias sociales para analizar y medir la desigualdad.  
+2. Examinar las principales tendencias y debates sobre la desigualdad a nivel nacional e internacional.  
+3. Analizar los marcos institucionales creados por las sociedades occidentales contemporáneas para abordar la desigualdad.  
+4. Desarrollar una capacidad crítica para evaluar los enfoques teóricos y las estrategias implementadas en el estudio y tratamiento de las desigualdades.
+
+# III. CONTENIDOS
+
+1. Aspectos normativos: desigualdad de resultados y oportunidades.
+2. Pobreza: conceptos, medición y tendencias.
+3. Desigualdad económica: conceptos, medición y debates.
+4. Movilidad social: conceptos, medición y tendencias.
+5. Consecuencias de la desigualdad.
+6. Redistribución y Estado de bienestar.
+
+# IV. METODOLOGÍA
+
+El curso combina los siguientes métodos de enseñanza:
+  
+  1. **Clases**:
+  - Exposiciones teóricas.
+  - Presentaciones de estudiantes.
+
+2. **Evaluaciones**:
+  - Prueba escrita.
+  - Presentación
+  - Participación en clases
+  - Trabajo de investigación (propuesta y ejecución).
+
+
+# V. EVALUACIÓN
+
+La evaluación del curso se compone de los siguientes elementos:
+  
+  | **Evaluación**            | **Ponderación** |
+  |:--------------------------:|:---------------:|
+  | Participación             | 10%             |
+  | Presentación              | 15%             |
+  | Prueba                    | 30%             |
+  | Propuesta de investigación| 15%             |
+  | Trabajo Final             | 30%             |
+  
+
+Específicamente: 
+
+- **Participación**: Se evaluará la asistencia y la participación activa en las discusiones en clase. Se espera que los estudiantes contribuyan con preguntas, comentarios y análisis críticos de las lecturas y presentaciones.  
+- **Presentación de texto**: Cada grupo de dos estudiantes deberá exponer un texto de la bibliografía obligatoria, el cual será asignado aleatoriamente. La presentación deberá incluir un resumen de los principales argumentos, una evaluación crítica y preguntas para la discusión. Además, al inicio de cada sesión, dos estudiantes serán seleccionados aleatoriamente para comentar la presentación e iniciar el debate en clase.
+
+- **Prueba**: Evaluación individual que abarcará todos los contenidos discutidos en clases hasta la fecha de la prueba. Se enfocará en la comprensión de los textos, los conceptos clave y su aplicación.
+
+- **Propuesta de investigación**: Documento breve en el que los estudiantes deberán formular una pregunta de investigación relevante para la temática del curso y justificarla teóricamente. Además, deberán identificar una fuente de datos adecuada para abordar la pregunta planteada.
+
+- **Trabajo final**: Reporte de investigación de un máximo de 5 páginas, en el que los estudiantes desarrollen su propuesta de investigación. El documento deberá incluir una motivación sustantiva, la descripción de los datos utilizados, la metodología aplicada y los principales hallazgos. Se espera que el análisis sea claro, riguroso y bien fundamentado en la literatura discutida en clase.
+
+  Para aprobar el curso, los y las estudiantes deben obtener una nota final de 4.0 o superior y asistir al menos al 50% de las clases. En caso de asistencia inferior al 50%, la nota final se calculará mediante la siguiente fórmula:
+  
+  $$\text{Nota Final} = 0.5 \times 1 + 0.5 \times \text{Nota Evaluaciones}$$
+  
+  Esta fórmula significa que el 50% de la nota final será un 1.0 (por baja asistencia) y el otro 50% corresponderá al promedio de las evaluaciones realizadas.
+
+# VI. ATENCIÓN ESTUDIANTES
+
+- **Horario de consulta del profesor**: Lunes de 14:30 a 15:30. Para agendar una reunión, los/las estudiantes deben contactar al profesor con al menos un día de anticipación.
+- **Email**: Escribir para agendar reuniones en el horario de consulta. Incluir **SOL186S** en el asunto del correo. Los correos serán respondidos de lunes a viernes en horario laboral.
+
+
+# VII. BIBLIOGRAFÍA Y CALENDARIZACIÓN
+
+1. **Presentación del curso** (10 de marzo)
+
+2. **Aspectos normativos del debate: desigualdad de oportunidades y de resultados** (17 de marzo)
+- **Lecturas obligatorias**:
+  - Sen, A. (1992). Inequality Reexamined. Harvard University Press. Capítulo 1: Equality of What?
+  - Roemer, J. E. (1998). *Equality of Opportunity*. Harvard University Press. Capítulos 1 y 2.
+  - Matamala, D. (2019). *Pedro, Juan y Diego*. La Tercera.  
+
+3. **Pobreza: conceptos, medición y debates** (24 de marzo)
+- **Lecturas obligatorias**:
+  - Brady, D. (2019). *Theories of the Causes of Poverty*. Annual Review of Sociology, 45, 155-175.
+  - Desmond, M., Western, B. (2018). Poverty in America: New directions and debates. Annual Review of Sociology, 44, 305-318.
+  - Han, C. (2018). *Precarity, precariousness, and vulnerability*. Annual Review of Anthropology, 47, 331-343. 
+
+4. **Desigualdad económica: conceptos y medición** (31 de marzo)
+- **Lecturas obligatorias**:
+  - Blau, P. M. (1977). A macrosociological theory of social structure. American Journal of Sociology, 83(1), 26-54
+  - Tilly, C. (1998). *Durable Inequalities*. University of California Press. Capítulo 1.
+  - Allison, P. D. (1978). *Measures of inequality*. American Sociological Review.  
+
+5. **Desigualdad económica: tendencias y debates** (7 de abril)
+- **Lecturas obligatorias**:
+  - Piketty, T. (2014). Capital in the Twenty-First Century. Harvard University Press. Introdución.
+  - Piketty, T., & Saez, E. (2014). *Inequality in the long run*. Science.
+  - Gasparini, L., & Lustig, N. (2011). *The Rise and Fall of Income Inequality in Latin America*.  
+
+6. **Movilidad social: conceptos y medición** (14 de abril)
+- **Lecturas obligatorias**:
+  - Torche, F. (2014). *Analyses of Intergenerational Mobility: An Interdisciplinary Review*. The ANNALS of the American Academy of Political and Social Science.
+  - Breen, R. (2010). *Social mobility and equality of opportunity*. Geary Lecture.  
+
+7. **Movilidad social: tendencias y debates** (21 de abril)
+- **Lecturas obligatorias**:
+  - Hout, M. (2014). *A Summary of What We Know about Social Mobility*. The ANNALS of the American Academy of Political and Social Science.
+  - Chetty, R., et al. (2017). *The fading American dream: Trends in absolute income mobility since 1940*. Science.
+  - Zimmerman, S. (2019). *Elite Colleges and Upward Mobility to Top Jobs and Top Incomes (in Chile)*. American Economic Review, 109(8)
+
+8. **Relación entre pobreza, desigualdad y movilidad** (5 de mayo)
+- **Lecturas obligatorias**:
+  - Bourguignon, F. (2004). The Poverty-Growth-Inequality Triangle. World Bank Policy Research Working Paper No. 1251.
+  - Corak, M. (2013). *Income inequality, equality of opportunity, and intergenerational mobility*. The Journal of Economic Perspectives.
+  - Torche, F. (2005). *Unequal But Fluid: Social Mobility in Chile in Comparative Perspective*. American Sociological Review.
+  
+
+9. **Consecuencias de las desigualdades** (12 de mayo)
+- **Lecturas obligatorias**:
+  - Jencks, C. (2002). *Does Inequality Matter?* Daedalus.
+  - Bradbury, K., & Triest, R. K. (2016). Inequality of Opportunity and Aggregate Economic Performance. RSF: The Russell Sage Foundation Journal of the Social Sciences, 2(2), 178-201.
+  - Scheve, K., & Stasavage, D. (2017). *Wealth Inequality and Democracy*. Annual Review of Political Science.
+
+10. **Estado de bienestar** (2 de junio)
+- **Lecturas obligatorias**:
+  - Esping-Andersen, G. (2001). *Fundamentos sociales de las Economías postindustriales*. Ariel. Capítulos 1, 2, 3
+  - Esping-Andersen, G. (2001). *Fundamentos sociales de las Economías postindustriales*. Ariel. Capítulos  8 y 9  
+
+11. **Estado de bienestar y la paradoja de la redistribución** (9 de junio)
+- **Lecturas obligatorias**:
+  - Korpi, W., & Palme, J. (1998). *The paradox of redistribution and strategies of equality: Welfare state institutions, inequality, and poverty in the Western countries*. American Sociological Review.
+  - Alesina, A., & Glaeser, E. L. (2004). Fighting Poverty in the U.S. and Europe: A World of Difference. Oxford University Press. Capítulos Introducción, 1, 7.
+
+12. **Políticas Redistributivas: invitado sector público y privado** (16 de junio). Asistencia y participación obligatoria
+- **Lecturas obligatorias**:
+  - Larrañaga, O., & Rodríguez, M. E. (s.f.). Desigualdad de ingresos y pobreza en Chile 1990 a 2013. Programa de las Naciones Unidas para el Desarrollo - Chile, Área de Reducción de la Pobreza y la Desigualdad. Documento de Trabajo.
+  - Repetto, A. (2016). Crecimiento, pobreza y desigualdad: la vía chilena. Economía y Política, 3(1), 71-101.
+
+13. **Cierre** (23 de junio)
+- **Lecturas obligatorias**:
+  - DiPrete, T. A., & Fox-Williams, B. N. (2021). *The relevance of inequality research in sociology for inequality reduction*. Socius, 7: 1-30.
+  - Grusky, D., et al. (2019). *The Rise of Opportunity Markets: How Did It Happen & What Can We Do?* Daedalus.
+  
