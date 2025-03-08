@@ -12,7 +12,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 01: Presentación del curso (10 de marzo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_0/class_0#1) 
 
-- Semana 02: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de marzo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_1/class_1#1) [`[Sen 1992]`](readings/Sen_1992.pdf) [`[Roemer 1998]`](readings/Roemer_1998.pdf) [`[Matamala 2019]`](readings/Matamala_2019.pdf)
+- Semana 02: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de marzo): [`[Sen 1992]`](readings/Sen_1992.pdf) [`[Roemer 1998]`](readings/Roemer_1998.pdf) [`[Matamala 2019]`](readings/Matamala_2019.pdf)
 
 - Semana 03: Pobreza: conceptos, medición y debates (24 de marzo): [`[Brady 2019]`](readings/Brady_2019.pdf) [`[Desmond 2018]`](readings/Desmond_2018.pdf) [`[Han 2018]`](readings/Han_2018.pdf)
 
