@@ -1,0 +1,143 @@
+---
+title: "Instrucciones Trabajo Final"
+subtitle: "Sociología de la Desigualdad (SOL186S)"
+format: pdf
+fontsize: 10pt
+geometry: letterpaper
+mainfont: "Times New Roman"
+monofont: "Times New Roman"
+sansfont: "Times New Roman"
+---
+
+## Descripción General
+
+El trabajo final constituye la principal evaluación del curso y busca que los estudiantes pongan en práctica los contenidos teóricos y metodológicos vistos durante el semestre. Este ejercicio permite desarrollar habilidades analíticas aplicadas al estudio sociológico de la desigualdad.
+
+El trabajo consiste en un análisis empírico cuantitativo basado en datos de la Encuesta de Caracterización Socioeconómica Nacional (CASEN). Este análisis debe abordar alguna dimensión de la desigualdad social discutida en el curso.
+
+Los estudiantes pueden trabajar en grupos de dos o tres personas, fomentando así el trabajo colaborativo y la discusión entre pares.
+
+
+## Instrucciones Detalladas
+
+El trabajo de investigación debe estructurarse en las siguientes secciones:
+
+### a. Introducción (1 punto)
+
+En esta sección se debe:
+
+- Plantear claramente el tema o pregunta de investigación que se abordará
+- Justificar la relevancia social y teórica del problema de investigación
+- Presentar brevemente la estructura del trabajo
+- Anticipar los principales hallazgos del análisis
+
+Esta sección debe ubicar al lector en el contexto del problema y despertar su interés.
+
+### b. Antecedentes en la Literatura (0,5 puntos)
+
+Esta sección debe:
+
+- Discutir al menos 3 textos relevantes estudiados durante el curso
+- Identificar las principales teorías, conceptos o debates relacionados con el tema
+- Establecer conexiones entre los distintos textos y autores
+- Señalar cómo la investigación propuesta se inserta en estos debates
+
+La revisión debe ser sintética pero sustantiva, mostrando comprensión de los textos citados.
+
+### c. Método (1 punto)
+
+En este apartado se debe:
+
+- Describir la fuente de datos (CASEN), incluyendo año(s) de aplicación utilizados
+- Explicar y justificar la selección de casos o submuestras (si corresponde)
+- Definir operacionalmente las variables dependientes e independientes del análisis
+- Detallar la(s) técnica(s) estadística(s) empleada(s) y justificar su elección
+- Mencionar las estrategias utilizadas para abordar valores perdidos o problemas en los datos
+
+Esta sección debe proporcionar suficiente información para que otro investigador pudiera replicar el análisis.
+
+### d. Resultados (3 puntos)
+
+Esta es la sección principal del trabajo y debe:
+
+- Presentar los hallazgos del análisis empírico de manera clara y ordenada
+- Incluir tablas y/o gráficos adecuadamente etiquetados y formateados
+- Interpretar los resultados estadísticos en lenguaje accesible
+- Relacionar los hallazgos con la pregunta de investigación planteada
+- Contrastar los resultados con lo esperado según la literatura revisada
+
+Los resultados deben presentarse de forma lógica, avanzando de lo más simple a lo más complejo.
+
+### e. Discusión Final (0,5 puntos)
+
+En esta sección se debe:
+
+- Sintetizar los principales hallazgos del análisis
+- Relacionar estos hallazgos con la literatura revisada
+- Discutir las implicaciones teóricas y prácticas de los resultados
+- Reconocer las limitaciones del estudio
+- Sugerir posibles líneas para investigaciones futuras
+
+La discusión debe mostrar capacidad reflexiva y crítica respecto a los propios resultados.
+
+### f. Referencias (1 punto)
+
+- Incluir todas las fuentes citadas en el texto en formato APA (7ª edición)
+- Asegurar que cada referencia listada haya sido efectivamente citada en el texto
+- Presentar la información bibliográfica completa y correctamente formateada
+
+Se recomienda utilizar gestores de referencias como Zotero o Mendeley para facilitar esta tarea.
+
+### g. Apéndice: Código
+
+- Incluir el código completo (Stata, R o Python) utilizado para el análisis
+- Comentar adecuadamente el código para facilitar su comprensión
+- Asegurar que el código sea reproducible, incluyendo la importación de datos y creación de variables
+
+## Formato y Organización
+
+### Formato del Informe
+
+El trabajo debe ajustarse a las siguientes especificaciones:
+
+- **Extensión máxima**: 4000 palabras (excluyendo tablas, figuras y referencias)
+- **Tipografía**: Times New Roman, tamaño 12
+- **Espaciado**: Doble espacio para el texto principal
+- **Tablas y figuras**: Numeradas consecutivamente, con títulos descriptivos y fuentes cuando corresponda
+- **Numeración**: Páginas numeradas consecutivamente
+- **Formato de entrega**: Archivo PDF enviado a través de Canvas
+
+
+### Organización del Trabajo en Grupo
+
+- Los grupos de trabajo deben estar conformados por 2 o 3 estudiantes
+- La inscripción de grupos debe realizarse a través del siguiente formulario: [Formulario de inscripción de grupos](https://docs.google.com/spreadsheets/d/1o-NkNVycA54aErmqywMwaixRhmaiOO6C73MqTn5HGEM/edit?usp=sharing)
+- Los grupos deben distribuir equitativamente las tareas entre sus integrantes
+- El equipo docente estará disponible para consultas durante el proceso de elaboración del trabajo
+
+## Recursos Adicionales
+
+- Para obtener orientación sobre la escritura académica, recomendamos consultar: [Recursos de escritura académica](http://www.jessicacalarco.com/teaching-resources)
+- Las bases de datos CASEN pueden descargarse desde el sitio web del Ministerio de Desarrollo Social: [https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen)
+
+
+## Contacto
+
+Si tiene dudas o requiere orientación adicional, puede contactar al equipo docente:
+
+**Email**: Incluir **SOL186S** en el asunto del correo. [Escribir](mailto:mebucca@uc.cl?subject=SOL186S)
+
+## Rúbrica de Evaluación
+
+La evaluación del trabajo final se realizará de acuerdo con la siguiente rúbrica:
+
+| Sección | Criterios | Puntaje |
+|---------|-----------|---------|
+| **Introducción** | • Planteamiento claro del problema/tema de investigación<br>• Justificación convincente de su relevancia social y teórica<br>• Presentación de la estructura del trabajo | 1 punto |
+| **Revisión de la literatura** | • Discusión de al menos 3 textos relevantes del curso<br>• Identificación de las principales teorías y debates<br>• Conexión entre los textos revisados y el problema de investigación | 0,5 punto |
+| **Método** | • Descripción adecuada de la base de datos CASEN<br>• Definición operacional clara de las variables utilizadas<br>• Justificación de las técnicas estadísticas empleadas | 1 punto |
+| **Resultados** | • Presentación clara y ordenada de los hallazgos<br>• Uso adecuado de tablas y/o gráficos<br>• Interpretación precisa de los resultados estadísticos<br>• Vinculación de los hallazgos con la pregunta de investigación<br>• Contraste de resultados con la literatura | 3 puntos |
+| **Discusión final** | • Síntesis efectiva de los principales hallazgos<br>• Reflexión sobre las implicaciones de los resultados<br>• Reconocimiento de limitaciones<br>• Sugerencias para investigaciones futuras | 0,5 punto |
+| **Referencias** | • Formato APA correcto y consistente<br>• Correspondencia entre citas en el texto y lista de referencias<br>• Información bibliográfica completa | 1 punto |
+| **Total** |  | **7 puntos** |
+

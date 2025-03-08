@@ -63,7 +63,6 @@ El curso combina los siguientes métodos de enseñanza:
   1. **Clases**:
   - Exposiciones teóricas.
   - Presentaciones de estudiantes.
-  - Charlas con invitados/as especialistas.
 
 2. **Evaluaciones**:
   - Prueba escrita.
@@ -127,7 +126,7 @@ Específicamente:
 4. **Desigualdad económica: conceptos y medición** (31 de marzo)
 - **Lecturas obligatorias**:
   - Blau, P. M. (1977). A macrosociological theory of social structure. American Journal of Sociology, 83(1), 26-54
-  - Tilly, C. (1998). *Durable Inequalities*. University of California Press.
+  - Tilly, C. (1998). *Durable Inequalities*. University of California Press. Capítulo 1.
   - Allison, P. D. (1978). *Measures of inequality*. American Sociological Review.  
 
 5. **Desigualdad económica: tendencias y debates** (7 de abril)
