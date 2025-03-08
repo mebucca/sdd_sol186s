@@ -12,13 +12,13 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 01: Presentación del curso (10 de marzo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_0/class_0#1) 
 
-- Semana 02: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de marzo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_1/class_1#1) [`[Sen 1992]`](readings/Sen_1992.pdf) [`[Roemer 1998]`](readings/Roemer_1998.pdf) [`[Matamala 2019]`](readings/Matamala_2019.pdf)
+- Semana 02: Aspectos normativos del debate: desigualdad de oportunidades y de resultados (17 de marzo): [`[Sen 1992]`](readings/Sen_1992.pdf) [`[Roemer 1998]`](readings/Roemer_1998.pdf) [`[Matamala 2019]`](readings/Matamala_2019.pdf)
 
 - Semana 03: Pobreza: conceptos, medición y debates (24 de marzo): [`[Brady 2019]`](readings/Brady_2019.pdf) [`[Desmond 2018]`](readings/Desmond_2018.pdf) [`[Han 2018]`](readings/Han_2018.pdf)
 
 - Semana 04: Desigualdad económica: conceptos y medición (31 de marzo): [`[Blau 1977]`](readings/Blau_1977.pdf) [`[Tilly 1998]`](readings/Tilly_1998.pdf) [`[Allison 1978]`](readings/Allison_1978.pdf)
 
-- Semana 05: Desigualdad económica: tendencias y debates (7 de abril): [`[Piketty 2014]`](readings/Piketty_2014.pdf) [`[Piketty & Saez 2014]`](readings/Piketty_Saez_2014.pdf) [`[Gasparini & Lustig 2011]`](readings/Gasparini_2011.pdf)
+- Semana 05: Desigualdad económica: tendencias y debates (7 de abril): [`[Piketty 2014]`](readings/Piketty_2014.pdf) [`[Piketty & Saez 2014]`](readings/Piketty_2018.pdf) [`[Gasparini & Lustig 2011]`](readings/Gasparini_2011.pdf)
 
 - Semana 06: Movilidad social: conceptos y medición (14 de abril): [`[Torche 2014]`](readings/Torche_2014.pdf) [`[Breen 2010]`](readings/Breen_2010.pdf)
 
