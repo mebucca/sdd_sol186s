@@ -32,7 +32,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 11: Estado de bienestar y la paradoja de la redistribución (9 de junio): [`[Korpi & Palme 1998]`](readings/Korpi_1998.pdf) [`[Alesina & Glaeser 2004]`](readings/Alesina_2004.pdf)
 
-- Semana 12: Políticas Redistributivas: invitado sector público y privado (16 de junio): [`[Larrañaga & Rodríguez]`](readings/Larranaga_pdf) [`[Repetto 2016]`](readings/Repetto_2016.pdf)
+- Semana 12: Políticas Redistributivas: invitado sector público y privado (16 de junio): [`[Larrañaga & Rodríguez]`](readings/Larrañaga_pdf) [`[Repetto 2016]`](readings/Repetto_2016.pdf)
 
 - Semana 13: Cierre (23 de junio): [`[DiPrete & Fox-Williams 2021]`](readings/DiPrete_Fox-Williams_2021.pdf) [`[Grusky 2019]`](readings/Grusky_2019.pdf)
 
