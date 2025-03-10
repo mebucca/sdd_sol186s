@@ -95,11 +95,14 @@ Específicamente:
 
 - **Trabajo final**: Reporte de investigación de un máximo de 5 páginas, en el que los estudiantes desarrollen su propuesta de investigación. El documento deberá incluir una motivación sustantiva, la descripción de los datos utilizados, la metodología aplicada y los principales hallazgos. Se espera que el análisis sea claro, riguroso y bien fundamentado en la literatura discutida en clase.
 
-  Para aprobar el curso, los y las estudiantes deben obtener una nota final de 4.0 o superior y asistir al menos al 50% de las clases. En caso de asistencia inferior al 50%, la nota final se calculará mediante la siguiente fórmula:
+  Para aprobar el curso, los y las estudiantes deben obtener una nota final de 4.0 o superior y asistir al menos al 50% de las clases. La nota final se calculará mediante la siguiente fórmula:
   
-  $$\text{Nota Final} = 0.5 \times 1 + 0.5 \times \text{Nota Evaluaciones}$$
-  
-  Esta fórmula significa que el 50% de la nota final será un 1.0 (por baja asistencia) y el otro 50% corresponderá al promedio de las evaluaciones realizadas.
+$$\text{Nota Final} = \begin{cases}
+0.5 \times 1 + 0.5 \times \text{Nota Evaluaciones} & \text{si asistencia} < 50\% \\
+\text{Nota Evaluaciones} & \text{si asistencia} \geq 50\%
+\end{cases}$$  
+
+
 
 # VI. ATENCIÓN ESTUDIANTES
 
