@@ -44,21 +44,21 @@
 
   /* Colors */
   --text-color: #000000;
-  --header-color: #3A4B8D;
-  --background-color: #f8f7f3;
-  --link-color: #E0D77F;
-  --text-bold-color: #3A4B8D;
+  --header-color: #37E;
+  --background-color: #F7F8F9;
+  --link-color: #111230;
+  --text-bold-color: #37E;
   --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #000000;
-  --inverse-background-color: #E94B3C;
+  --inverse-background-color: #AAA93E;
   --inverse-header-color: #000000;
-  --inverse-link-color: #E0D77F;
-  --title-slide-background-color: #3A4B8D;
-  --title-slide-text-color: #FFFFFF;
-  --header-background-color: #3A4B8D;
-  --header-background-text-color: #f8f7f3;
-  --primary: #3A4B8D;
-  --secondary: #E94B3C;
+  --inverse-link-color: #111230;
+  --title-slide-background-color: #37E;
+  --title-slide-text-color: #000000;
+  --header-background-color: #37E;
+  --header-background-text-color: #F7F8F9;
+  --primary: #37E;
+  --secondary: #AAA93E;
   --white: #FFFFFF;
   --black: #000000;
 }
@@ -101,10 +101,10 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #3A4B8D;
+  color: #37E;
 }
 .remark-slide-number {
-  color: #3A4B8D;
+  color: #37E;
   opacity: 1;
   font-size: 0.9rem;
 }
@@ -152,10 +152,10 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #3A4B8D99;
+  color: #37E99;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #3A4B8D;
+  color: #37E;
 }
 .right-column {
   width: 75%;
@@ -177,7 +177,7 @@ img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px #E94B3C80;
+  border-left: solid 5px #AAA93E80;
   padding-left: 1em;
 }
 .remark-slide table {
@@ -194,7 +194,7 @@ th, td {
 .remark-slide table:not(.table-unshaded) thead,
 .remark-slide table:not(.table-unshaded) tfoot,
 .remark-slide table:not(.table-unshaded) tr:nth-child(even) {
-  background: #FADBD8;
+  background: #EEEDD8;
 }
 table.dataTable tbody {
   background-color: var(--background-color);
@@ -204,7 +204,7 @@ table.dataTable.display tbody tr.odd {
   background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
-  background-color: #FADBD8;
+  background-color: #EEEDD8;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);

@@ -1,0 +1,153 @@
+---
+title: "Sociología de la Desigualdad (SOL186S)"
+subtitle: "Desigualdad de resultados y oportunidades"
+author: "<br> Mauricio Bucca <br> [github.com/mebucca](https://github.com/mebucca) <br> mebucca@uc.cl"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["gentle-r.css", "xaringan-themer.css"]
+    df_print: default
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(xaringanthemer)
+primary_color = "#37E"  # Deep teal - professional yet distinctive
+secondary_color = "#AAA93E"  # Warm orange for contrast and highlights
+background_color = "#F7F8F9"  # Light off-white for better readability
+header_font = google_font("Archivo")
+text_font = google_font("Inconsolata")
+link_color = "#111230"  # Lighter teal for links
+style_duo_accent(primary_color = primary_color, 
+                 secondary_color = secondary_color,
+                 background_color = background_color,
+                 header_font_google = header_font,
+                 text_font_google = text_font, 
+                 link_color = link_color
+)
+```
+
+class: inverse, center, middle
+
+# Sociología de la Desigualdad  
+## Semana 02: Pobreza - Conceptos y Medición  
+### `r format(Sys.time(), '%B, %Y')`  
+
+---
+## Contenidos  
+
+1. **Conceptos**  
+2. **Bienestar**: conceptualizaciones directas e indirectas  
+3. **Pobreza**  
+    - Pobreza absoluta  
+    - Pobreza relativa  
+4. **Privación**  
+
+
+---
+## Conceptos  
+
+- Conceptualizaciones de bienestar: directas e indirectas  
+- Pobreza: absoluta vs. relativa  
+- Privación  
+- **Pregunta central**: ¿Cuál es el estándar de vida aceptable?  
+
+
+---
+## Bienestar: Conceptualizaciones Directas e Indirectas  
+
+- Los recursos no tienen valor intrínseco, sino instrumental (ej. el dinero no se come, pero compra comida).  
+- **Conceptualizaciones directas**: bienes o actividades con valor intrínseco.  
+- **Conceptualizaciones indirectas**: enfocadas en recursos (ej. ingreso).  
+- **Pregunta**: ¿Relación entre desigualdad de oportunidades/resultados y conceptualización directa/indirecta?  
+
+
+---
+## Definición de Pobreza  
+
+### En términos de subsistencia  
+- Un hogar es pobre si no tiene los recursos necesarios para un nivel mínimo de consumo.  
+- **Rowntree (citado en Ringen, 1988)**: pobreza es cuando "los ingresos totales son insuficientes para obtener lo mínimo necesario para la eficiencia física".  
+- **Preguntas clave**: ¿Qué se considera necesidad mínima? ¿Relación con PIB?  
+
+---
+## Definición de Pobreza  
+
+### En términos de privación  
+- "Un hogar es pobre si su nivel de consumo está muy por debajo de lo que se considera decente en su sociedad, excluyéndolos de la vida ordinaria" (Ringen, 1988).  
+- **Beduek (2018)**: la privación material es la falta forzada de bienes y servicios esenciales.  
+- **Pregunta**: ¿Relación entre conceptualización directa/indirecta y privación/subsistencia?  
+
+---
+## Pobreza Absoluta  
+
+- Se basa en una concepción indirecta del bienestar: ingreso.  
+- **Medición**: Encuesta CASEN.  
+- **Fuentes del ingreso**: trabajo, rentas, transferencias estatales y pensiones.  
+- **Criterios**: unidad de análisis, ajuste por economías de escala.  
+- **Identificación**: Línea de pobreza nacional/internacional (ver Observatorio Social del Ministerio de Desarrollo Social y Familia).  
+- **Agregación**:  
+  - **Tasa de pobreza (Headcount ratio)**: % de personas pobres.  
+  - **Brecha de pobreza (poverty gap)**: intensidad de la pobreza.  
+- **Factores de variabilidad** en la tasa de pobreza absoluta.  
+- **Triángulo pobreza-crecimiento-desigualdad (Bourguignon, 2004)**:  
+
+  *Cambio en pobreza = F(cambio en ingreso promedio, cambio en distribución del ingreso)*.  
+
+---
+## Pobreza Relativa  
+
+- Se mide en relación al resto de la población.  
+- Captura cambios de necesidades en el tiempo.  
+- **Línea de pobreza relativa**: usada por OECD.  
+- **Diferencias con la pobreza absoluta**:  
+  - **Tiempo**: adaptabilidad a cambios económicos.  
+- **Contexto**: comparación social.  
+- **Políticas sociales**: impacto y ajuste a necesidades actuales.  
+
+---
+## Privación  
+
+- **Ilustra una conceptualización directa del bienestar**.  
+- Evalúa qué es considerado necesario para un estándar de vida aceptable.  
+- **Ejemplo**: tener vacaciones.  
+  1. El entrevistado cree que es parte del estándar de vida aceptable.  
+  2. El entrevistado tiene o no acceso a ello.  
+
+---
+## Privación  
+
+### Medición de la Privación en la UE (Eurostat, 2019)  
+- % de población sin acceso a al menos 3 de estos 10 ítems:  
+  1. Pagar el alquiler.  
+  2. Pagar créditos hipotecarios.  
+  3. Mantener el hogar calefaccionado.  
+  4. Costear gastos no esperados.  
+  5. Comer regularmente carne o proteínas.  
+  6. Tomar vacaciones.  
+  7. Tener un set de TV.  
+  8. Máquina lavadora.  
+  9. Automóvil.  
+  10. Teléfono.  
+
+- **Desafíos**: ¿Estos ítems reflejan un estándar de vida aceptable?  
+  - Falta de explicación teórica sobre por qué las evaluaciones varían entre individuos.  
+  
+- **Aplicación en Chile**.  
+
+---
+
+## Literatura  
+- **Ringen, S. (1988)**. Direct and indirect measures of poverty. *Journal of Social Policy*, 17(3), 351-365.  
+- **Beduek, S. (2018)**. Understanding material deprivation for 25 EU countries. *European Sociological Review*, 34(2), 121-137.  
+- **Bourguignon, F. (2004)**. The poverty-growth-inequality triangle (*Working Paper* No. 125).  
+- **Larrañaga, O. & Rodríguez, M. E. (2014)**. Desigualdad de Ingresos y Pobreza en Chile 1990 (*Documento de Trabajo*).

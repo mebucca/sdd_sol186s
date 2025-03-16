@@ -1,11 +1,12 @@
 ---
 title: "Sociología de la Desigualdad (SOL186S)"
 subtitle: "Desigualdad de resultados y oportunidades"
-author: "Mauricio Bucca, Sociología UC"
+author: "<br> Mauricio Bucca <br> [github.com/mebucca](https://github.com/mebucca) <br> mebucca@uc.cl"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["default","default-fonts","gentle-r.css"]
+    css: ["gentle-r.css", "xaringan-themer.css"]
     df_print: default
     nature:
       ratio: 16:9
@@ -17,12 +18,80 @@ editor_options:
   chunk_output_type: console
 ---
 
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(xaringanthemer)
+primary_color = "#3A4B8D"   # Deep teal - professional yet distinctive
+secondary_color = "#E94B3C"  # Warm orange for contrast and highlights
+background_color = "#f8f7f3"  # Light off-white for better readability
+header_font = google_font("Archivo")
+text_font = google_font("Inconsolata")
+link_color = "#E0D77F"  # Lighter teal for links
+style_duo_accent(primary_color = primary_color, 
+                 secondary_color = secondary_color,
+                 background_color = background_color,
+                 header_font_google = header_font,
+                 text_font_google = text_font, 
+                 link_color = link_color
+)
+
+
+primary_color = "#3A4B8D"
+secondary_color =  "#E94B3C"
+
+
+# Custom theme function for statistical plots
+theme_statplot <- function(base_size = 30, 
+                           base_family = "",
+                           primary_color = primary_color,  # Default to first color from Set1 palette
+                           secondary_color = secondary_color,  # Default to first color from Set1 palette
+                           bar_alpha = 0.8) {
+  
+  # Start with theme_minimal as the base and use + instead of %+replace%
+  theme_minimal(base_size = base_size, base_family = base_family) + 
+    
+    theme(
+      # Panel customization
+      panel.background = element_rect(color = "black", fill = NA, size = 1),
+      panel.grid.major = element_line(color = "grey90", size = 0.2),
+      panel.grid.minor = element_line(color = "grey95", size = 0.1),
+      
+      # Axis customization
+      axis.line = element_line(color = "black", size = 0.5),
+      axis.ticks = element_line(color = "black", size = 0.5),
+      axis.title = element_text(face = "bold", size = rel(1.1)),
+      axis.text = element_text(color = "black", size = rel(0.9)),
+      
+      # Legend customization
+      legend.background = element_rect(fill = NA, color = NA),
+      legend.key = element_rect(fill = NA, color = NA),
+      legend.title = element_text(face = "bold"),
+      
+      # Plot title and caption
+      plot.title = element_text(face = "bold", size = rel(1.3), hjust = 0),
+      plot.subtitle = element_text(size = rel(1.1), hjust = 0),
+      plot.caption = element_text(size = rel(0.8), hjust = 1),
+      
+      # Margins
+      plot.margin = margin(10, 10, 10, 10)
+    )
+}
+
+
+
+
+``` 
+
+
+class: inverse, center, middle
+
+
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
 library("tidyverse")
 library("ineq")
 
-theme_set(theme_bw())
 options(digits=3, scipen = 100)
+
 ```
 
 
@@ -46,8 +115,10 @@ options(digits=3, scipen = 100)
 
 
 ---
-## ¿Desigualad con respecto a que? 
+## ¿Desigualdad con respecto a qué? 
 
+<br>
+--
 
 Típicamente,
 
@@ -72,9 +143,10 @@ Típicamente,
 - etc ...
 
 ---
-## ¿Desigualad entre quienes? 
+## ¿Desigualdad entre quienes? 
 
 <br>
+--
 
 .pull-left[
 
@@ -95,158 +167,282 @@ class: inverse, center, middle
 # Desigualdad de resultados
 
 ---
-## Desigualdad de resultados, una definición general 
-
---
+## Desigualdad de resultados 
 
 <br>
+--
+
+**Definición general:**
+
 
 - $i: \{1,2,3, \dots, n\}$ individuos (u otra unidad)
 
-- $X$ es algún "recurso" (educación, ingresos, felicidad)
+- $\mathbf{y}$ es algún "recurso" (educación, ingresos, felicidad)
 
---
+- Coloquialmente hablando, $\mathbf{y}$ se distribuye desigualmente si no todo $x_i$ toma el mismo valor.
 
-- Coloquialmente hablando, $X$ se distribuye desigualmente si no todo $x_i$ toma el mismo valor de $X$. Por ejemplo: $x_1 \neq x_2$
-
---
 <br>
+--
 
-¿Qué tipo de desigualdad? 
 
+**¿Qué tipo de desigualdad?**
 
 - Determinística (matemática)   ❌ 
 
 - Probabilística (estadística):   ✅
 
-  - No significa que $x_{i}$ toma cualquier valor con igual probabilidad. Significa que el resultado tiene un grado escencial de aleatoridad.
-
 
 ---
-## Desigualdad de resultados, una definición general 
+## Desigualdad de resultados 
 
+.center[
 ![probabilistic](probabilistic.png)
+]
+
 
 ---
-## Desigualdad de resultados, una definición general 
+## Desigualdad de resultados 
 
 
-Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos. Consideremos diferentes escenarios:
+  - Cada resultado individual $y_i$ es aleatorio: proviene de una distribución de probabilidad
+  
+  - Los valores observados son realizaciones de estas distribuciones subyacentes
+  
+  - No implica que todos los valores sean igualmente probables, sino que existe un componente estocástico en la determinación de resultados
 
+<br>
+--
 
-.bold[Igualdad de resultados]
+Por ejemplo, $y_{i}$ representa el ingreso del individuo $i$:
 
-$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$
-$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 10)$$
+.center[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-N  <- 10000
-mu <- rep(500,N)
-e  <- rnorm(n=N, mean=0,sd=10)
-y <- mu + e
+# Cargar la librería ggplot2
+library(ggplot2)
 
-head(data_frame(mu,e,y), n=10)
+# Establecer una semilla para reproducibilidad
+set.seed(123)
+
+# Parámetros de la distribución normal
+media <- 500
+desviacion_estandar <- 50
+
+# Crear datos para la distribución normal
+x <- seq(media - 3*desviacion_estandar, media + 3*desviacion_estandar, length.out = 1000)
+y <- dnorm(x, mean = media, sd = desviacion_estandar)
+
+# Generar un valor aleatorio que representa el ingreso realizado del individuo i
+ingreso_realizado <- rnorm(1, mean = media, sd = desviacion_estandar)
+
+# Crear un data frame para ggplot
+datos <- data.frame(x = x, y = y)
+
+# Graficar la distribución y el ingreso realizado
+ggplot(datos, aes(x = x, y = y)) +
+  geom_line(color = secondary_color, size = 2) +
+  geom_area(fill = primary_color, alpha = 0.3) +
+  geom_vline(xintercept = media, linetype = "dashed", color = "darkgray") +
+  geom_point(aes(x = ingreso_realizado, y = dnorm(ingreso_realizado, mean = media, sd = desviacion_estandar)), 
+             color = primary_color, size = 7) +
+  labs(x = "Ingreso",
+       y = "Densidad") +
+  theme_statplot(primary_color = primary_color)
 ```
+]
+
+
+
 
 ---
-## Desigualdad de resultados, una definición general 
+## Desigualdad de resultados
 
+
+- Supongamos que $\mathbf{y}: \{y_{1}, y_{2}, y_{3}, \dots, y_{n}\}$ representa los ingresos de $n$ individuos en una sociedad.
+
+
+- Donde cada ingreso $y_{i}$ es una realización aleatoria de la misma distribución con la misma media $\mu$
+
+<br>
+
+$$y_{i} = \underbrace{\mu}_{\text{fijo}} + \underbrace{\epsilon_{i}}_{\text{Normal}(0,\sigma)}$$
+<br>
+--
+
+.center[
+```{r, echo=F, message=F, warning=F,  out.width = '300px'}
+# Crear datos para la distribución normal
+x <- seq(media - 3*desviacion_estandar, media + 3*desviacion_estandar, length.out = 1000)
+y <- dnorm(x, mean = media, sd = desviacion_estandar)
+
+# Generar varios ingresos realizados (puntos)
+set.seed(42)  # Diferente semilla para variedad
+n_puntos <- 15
+ingresos_realizados <- rnorm(n_puntos, mean = media, sd = desviacion_estandar)
+
+# Crear un data frame para ggplot
+datos <- data.frame(x = x, y = y)
+
+# Crear un data frame para los puntos
+puntos <- data.frame(
+  x = ingresos_realizados,
+  y = dnorm(ingresos_realizados, mean = media, sd = desviacion_estandar)
+)
+
+
+# Graficar la distribución y los ingresos realizados
+ggplot(datos, aes(x = x, y = y)) +
+  geom_area(fill = primary_color, alpha = 0.3) +
+  geom_line(color = secondary_color, size = 2) +
+  geom_vline(xintercept = media, color = "black", size=3) +
+  geom_point(data = puntos, aes(x = x, y = y), 
+             color = primary_color, size = 7, alpha = 0.7) +
+  labs(x = "Ingreso",
+       y = "Densidad") +
+  theme_statplot(primary_color = primary_color)
+```
+]
+
+---
+## Desigualdad de resultados
+
+
+Ahora consideremos diferentes escenarios: .bold[1) (casi) Igualdad]
+
+
+
+$$y_{i} = \mu + \epsilon_{i}, \quad  \text{ donde} \quad  \mu=500 \quad  \text{y} \quad \epsilon_{i} \sim \text{Normal}(0, \sigma = 10)$$
 
 .pull-left[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-head(data_frame(mu,e,y), n=10)
-```
+# Set up parameters
+N <- 10000
+mu <- rep(500, N)
 
+# Calculate normal density using dnorm
+e <- rnorm(n = N, mean = 0, sd = 10)  # Density of error term
+
+# Calculate y (now representing density at mu + x)
+y <- mu + e  # Adding density to mean (note: this is not statistically meaningful 
+             # but keeps the variable structure)
+
+# Create a data frame with the original variable names
+result_df <- tibble(mu = mu, e = e, y = y)
+
+# Display the first 10 rows
+head(result_df, n = 15)
+```
 ]
+
 .pull-right[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
-  geom_vline(xintercept = mean(y), color="red") + xlim(300,700)
 
+result_df %>% ggplot(aes(x=y)) +
+  geom_density(fill = primary_color, alpha = 0.3) +
+  geom_vline(xintercept =mu, color = secondary_color, size=2) +
+  theme_statplot(primary_color = primary_color)
+  
 print(c(Promedio=round(mean(y),0), SD=sd(y), Gini=Gini(y), `max-min`= max(y + abs(min(y))) - min(y + abs(min(y)))  ))
 
 ```
 ]
 
 ---
-## Desigualdad de resultados, una definición general 
+## Desigualdad de resultados
 
 
-.bold[Desigualdad de resultados (baja)]
+Ahora consideremos diferentes escenarios: .bold[2) Baja Desigualdad]
 
-$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$
-$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 100)$$
-
-```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-N  <- 10000
-mu <- rep(500,N)
-e  <- rnorm(n=N, mean=0,sd=100)
-y <- mu + e
-
-head(data_frame(mu,e,y), n=10)
-```
-
----
-## Desigualdad de resultados, una definición general 
+$$y_{i} = \mu + \epsilon_{i}, \quad  \text{ donde} \quad  \mu=500 \quad  \text{y} \quad \epsilon_{i} \sim \text{Normal}(0, \sigma = 100)$$
 
 .pull-left[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-head(data_frame(mu,e,y), n=10)
-```
+# Set up parameters
+N <- 10000
+mu <- rep(500, N)
 
+# Calculate normal density using dnorm
+e <- rnorm(n = N, mean = 0, sd = 100)  # Density of error term
+
+# Calculate y (now representing density at mu + x)
+y <- mu + e  # Adding density to mean (note: this is not statistically meaningful 
+             # but keeps the variable structure)
+
+# Create a data frame with the original variable names
+result_df <- tibble(mu = mu, e = e, y = y)
+
+# Display the first 10 rows
+head(result_df, n = 15)
+```
 ]
+
 .pull-right[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
-  geom_vline(xintercept = mean(y), color="red") + xlim(0,1000)
 
+result_df %>% ggplot(aes(x=y)) +
+  geom_density(fill = primary_color, alpha = 0.3) +
+  geom_vline(xintercept =mu, color = secondary_color, size=2) +
+  theme_statplot(primary_color = primary_color)
+  
 print(c(Promedio=round(mean(y),0), SD=sd(y), Gini=Gini(y), `max-min`= max(y + abs(min(y))) - min(y + abs(min(y)))  ))
 
 ```
 ]
 
 ---
-## Desigualdad de resultados, una definición general 
+## Desigualdad de resultados
 
 
-.bold[Desigualdad de resultados (alta)]
+Ahora consideremos diferentes escenarios: .bold[3) Alta Desigualdad]
 
-$$y_{i} = 500 + \epsilon_{i}, \text{ donde }$$
-$$\epsilon_{i} \sim \text{Normal}(\mu=0, \sigma = 500)$$
-
-
-```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-N  <- 10000
-mu <- rep(500,N)
-e  <- rnorm(n=N, mean=0,sd=500)
-y <- mu + e
-
-head(data_frame(mu,e,y), n=10)
-```
-
----
-## Desigualdad de resultados, una definición general 
-
+$$y_{i} = \mu + \epsilon_{i}, \quad  \text{ donde} \quad  \mu=500 \quad  \text{y} \quad \epsilon_{i} \sim \text{Normal}(0, \sigma = 500)$$
 
 .pull-left[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-head(data_frame(mu,e,y), n=10)
-```
+# Set up parameters
+N <- 10000
+mu <- rep(500, N)
 
+# Calculate normal density using dnorm
+e <- rnorm(n = N, mean = 0, sd = 500)  # Density of error term
+
+# Calculate y (now representing density at mu + x)
+y <- mu + e  # Adding density to mean (note: this is not statistically meaningful 
+             # but keeps the variable structure)
+
+# Create a data frame with the original variable names
+result_df <- tibble(mu = mu, e = e, y = y)
+
+# Display the first 10 rows
+head(result_df, n = 15)
+```
 ]
+
 .pull-right[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-tibble(y=y) %>% ggplot(aes(x=y)) + geom_density(color="blue")+
-  geom_vline(xintercept = mean(y), color="red") + xlim(-1500,2000)
 
+result_df %>% ggplot(aes(x=y)) +
+  geom_density(fill = primary_color, alpha = 0.3) +
+  geom_vline(xintercept =mu, color = secondary_color, size=2) +
+  theme_statplot(primary_color = primary_color)
+  
 print(c(Promedio=round(mean(y),0), SD=sd(y), Gini=Gini(y), `max-min`= max(y + abs(min(y))) - min(y + abs(min(y)))  ))
 
 ```
 ]
 
----
-## Desigualdad de resultados, una definición general 
 
-¿Cuánta desigualdad es "demasiada"? ¿Cuanta desigualdad es aceptable?
+---
+## Desigualdad de resultados
+
+--
+
+- ¿Cuánta desigualdad es "alta"? 
+
+--
+
+- ¿Cuanta desigualdad es "aceptable"?
+
+--
 
 .pull-left[
 ![householdincome](householdincome.jpeg)
@@ -258,7 +454,13 @@ print(c(Promedio=round(mean(y),0), SD=sd(y), Gini=Gini(y), `max-min`= max(y + ab
 <br>
 
 .pull-right[
-$y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿que es esto?}}$
+$y_{i} = \mu + \underbrace{\epsilon_{i}}_{\text{¿?}}$
+
+
+- ¿Cuánta desigualdad existe?
+
+- ¿Cuál es el origen de dicha desigualdad?
+
 ]
 
 ---
@@ -271,7 +473,7 @@ class: inverse, center, middle
 ## ¿Una cancha desnivelada?
 
 <br>
-.pull-left[
+.center[
 ![field](field.jpeg)
 ]
 
@@ -299,15 +501,15 @@ Desigualdad de resultados refleja, en parte, desigualdad de oportunidades. Ejemp
 <br>
 --
 
-- resultados: estado de salud, oportunidades: ingresos
+- .bold[resultados:] estado de salud, .bold[oportunidades:] ingresos
 
 --
 
-- resultados: ingresos, oportunidades: logro educacional
+- .bold[resultados:] ingresos, .bold[oportunidades:] logro educacional
 
 --
 
-- resultados: logro educacional, oportunidades: ingresos de los padres
+- .bold[resultados:] logro educacional, .bold[oportunidades:] ingresos de los padres
 
 
 --
@@ -344,7 +546,7 @@ $$y_{i} = \mu + \beta E_{i} + \theta C_{i} +\tau_{i}$$
 
 ---
 
-## Resultados y  Oportunidades
+## Resultados y  Oportunidades, escenario I
 
 Resultado: salud física (de 0 a 10)
 
@@ -370,7 +572,8 @@ mydata %>% group_by(c,e) %>% summarise(promedio_salud = mean(salud))
 ]
 .pull-right[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-mydata %>% ggplot(aes(x=salud, group=interaction(e,c), colour=factor(c))) + geom_density()
+mydata %>% ggplot(aes(x=salud, group=interaction(e,c), colour=factor(c))) + geom_density() +   theme_statplot(primary_color = primary_color) + theme(legend.position = "none")
+
 ```
 ]
 
@@ -398,7 +601,7 @@ mydata %>% ggplot(aes(x=salud, group=interaction(e,c), colour=factor(c))) + geom
   
 
 ---
-## Desigualdad de oportunidades
+## Desigualdad de oportunidades, escenario II
 
 Resultado: salarios
 
@@ -419,13 +622,15 @@ mydata <- tibble(c=rbinom(N,1,0.5), e=rbinom(N,1, (exp(0.7*c))/(1+exp(0.7*c))) )
 mydata <- mydata %>% mutate(salario = 100 +  500*e + 200*c + rnorm(N,0,200)) %>%
           mutate(e=if_else(e==1,"doctor(a)","enfermer@"), c=if_else(c==1,"hombre","mujer"))
 
-mydata %>% group_by(c) %>% summarise(promedio_salario = mean(salario))
+mydata %>% group_by(c,e) %>% summarise(promedio_salario = mean(salario))
 ```
 
 ]
 .pull-right[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-mydata %>% ggplot(aes(x=salario, group=interaction(e,c), colour=c)) + geom_density()
+mydata %>% ggplot(aes(x=salario, group=interaction(e,c), colour=c)) + geom_density() + 
+theme_statplot(primary_color = primary_color) + theme(legend.position = "none")
+
 ```
 ]
 
@@ -443,7 +648,7 @@ Donde el salario de una persona puede ser descrito con la siguiente ecuación:
 
 $$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$
 
-<br>
+<br> <br>  
 --
 
 .bold[Desafío #1: delimitación entre esfuerzo y circunstancias]:
@@ -468,7 +673,7 @@ Donde el salario de una persona puede ser descrito con la siguiente ecuación:
 
 $$\text{salario}_{i} = 100 + 500 E_{i} + 200 C_{i} +\tau_{i}$$
 
-<br>
+<br> <br>  
 --
 
 .bold[Desafío #2: donde terminan circunstancias]:
@@ -548,13 +753,13 @@ mydata <- tibble(c=rbinom(N,1,0.5), e=rbinom(N,1,0.58) )
 mydata <- mydata %>% mutate(salario = 100 +  500*e + rnorm(N,0,200)) %>%
           mutate(e=if_else(e==1,"doctor(a)","enfermer@"), c=if_else(c==1,"hombre","mujer"))
 
-mydata %>% group_by(e) %>% summarise(promedio_salario = mean(salario))
+mydata %>% group_by(e,c) %>% summarise(promedio_salario = mean(salario))
 ```
 
 ]
 .pull-right[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-mydata %>% ggplot(aes(x=salario, group=interaction(e,c), colour=c)) + geom_density()
+mydata %>% ggplot(aes(x=salario, group=interaction(e,c), colour=c)) + geom_density() + theme_statplot() + theme(legend.position = "none")
 ```
 ]
 
@@ -577,7 +782,7 @@ mydata %>% filter(e=="doctor(a)", c=="hombre") %>% head(n=10)
 ]
 .pull-right[
 ```{r, echo=F, message=F, warning=F,  out.width = '300px'}
-mydata %>% filter(e=="doctor(a)", c=="hombre") %>% ggplot(aes(x=salario, colour=c)) + geom_density()
+mydata %>% filter(e=="doctor(a)", c=="hombre") %>% ggplot(aes(x=salario, colour=c)) + geom_density() + theme_statplot() + theme(legend.position = "none")
 ```
 ]
 
@@ -628,25 +833,10 @@ Lecturas complementarias:
 
 
 ---
-## Material del curso
-
-Todo el material del curso será almacenado y actualizado regularmente en repositorio `Github`:
-
-<br>
-.center[
-
-![github](github.jpg)
-
-https://github.com/mebucca/sdd_sol186s
-]
-
-
----
 class: inverse, center, middle
 
-.huge[
-**Hasta la próxima clase. Gracias!**
-]
+
+##Hasta la próxima clase!
 
 <br>
 Mauricio Bucca <br>
