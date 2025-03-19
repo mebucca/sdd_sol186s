@@ -75,14 +75,15 @@ El curso combina los siguientes métodos de enseñanza:
 
 La evaluación del curso se compone de los siguientes elementos:
   
-  | **Evaluación**            | **Ponderación** |
-  |:--------------------------:|:---------------:|
-  | Participación             | 10%             |
-  | Presentación              | 15%             |
-  | Prueba                    | 30%             |
-  | Propuesta de investigación| 15%             |
-  | Trabajo Final             | 30%             |
-  
+
+| **Evaluación**            | **Ponderación** | **Fecha** |
+|:--------------------------:|:---------------:|:---------:|
+| Participación             | 10%             |           |
+| Presentación              | 15%             |           |
+| Prueba                    | 30%             |  26 de Mayo   |
+| Propuesta de investigación| 15%             |  13 de Junio |
+| Trabajo Final             | 30%             |  7 de Julio     |
+
 
 Específicamente: 
 
@@ -162,20 +163,22 @@ $$\text{Nota Final} = \begin{cases}
   - Bradbury, K., & Triest, R. K. (2016). Inequality of Opportunity and Aggregate Economic Performance. RSF: The Russell Sage Foundation Journal of the Social Sciences, 2(2), 178-201.
   - Scheve, K., & Stasavage, D. (2017). *Wealth Inequality and Democracy*. Annual Review of Political Science.
 
-10. **Estado de bienestar** (2 de junio)
+
+10. **Ejercicio empírico** usando datos CASEN (19 de mayo)
+- **Lecturas obligatorias**:
+  - Larrañaga, O., & Rodríguez, M. E. (s.f.). Desigualdad de ingresos y pobreza en Chile 1990 a 2013. Programa de las Naciones Unidas para el Desarrollo - Chile, Área de Reducción de la Pobreza y la Desigualdad. Documento de Trabajo.
+  - Repetto, A. (2016). Crecimiento, pobreza y desigualdad: la vía chilena. Economía y Política, 3(1), 71-101.
+
+11. **Estado de bienestar** (9 de junio)
 - **Lecturas obligatorias**:
   - Esping-Andersen, G. (2001). *Fundamentos sociales de las Economías postindustriales*. Ariel. Capítulos 1, 2, 3
   - Esping-Andersen, G. (2001). *Fundamentos sociales de las Economías postindustriales*. Ariel. Capítulos  8 y 9  
 
-11. **Estado de bienestar y la paradoja de la redistribución** (9 de junio)
+12. **Estado de bienestar y la paradoja de la redistribución** (16 de junio)
 - **Lecturas obligatorias**:
   - Korpi, W., & Palme, J. (1998). *The paradox of redistribution and strategies of equality: Welfare state institutions, inequality, and poverty in the Western countries*. American Sociological Review.
   - Alesina, A., & Glaeser, E. L. (2004). Fighting Poverty in the U.S. and Europe: A World of Difference. Oxford University Press. Capítulos Introducción, 1, 7.
 
-12. **Políticas Redistributivas: invitado sector público y privado** (16 de junio). Asistencia y participación obligatoria
-- **Lecturas obligatorias**:
-  - Larrañaga, O., & Rodríguez, M. E. (s.f.). Desigualdad de ingresos y pobreza en Chile 1990 a 2013. Programa de las Naciones Unidas para el Desarrollo - Chile, Área de Reducción de la Pobreza y la Desigualdad. Documento de Trabajo.
-  - Repetto, A. (2016). Crecimiento, pobreza y desigualdad: la vía chilena. Economía y Política, 3(1), 71-101.
 
 13. **Cierre** (23 de junio)
 - **Lecturas obligatorias**:
