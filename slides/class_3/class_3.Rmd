@@ -1,0 +1,1156 @@
+---
+title: "Sociología de la Desigualdad (SOL186S)"
+subtitle: "Desigualdad: conceptos y medición"
+author: "<br> Mauricio Bucca <br> [github.com/mebucca](https://github.com/mebucca) <br> mebucca@uc.cl"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["gentle-r.css", "xaringan-themer.css"]
+    df_print: default
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(xaringanthemer)
+primary_color = "#E74C3C"    # Vibrant yellow, reflecting Sicily’s sun and citrus fruits
+secondary_color = "#F1B40F" # Rich red, inspired by Sicilian red wines and sunsets
+background_color = "#F4F6F6"  # Light off-white with a hint of warmth
+header_font = google_font("Archivo")
+text_font = google_font("Inconsolata")
+link_color = "#8E44AD"  # Deep purple, reminiscent of Sicily’s lavender and sea
+
+style_duo_accent(primary_color=primary_color, 
+                 secondary_color=secondary_color,
+                 background_color=background_color,
+                 header_font_google=header_font,
+                 text_font_google=text_font, 
+                 link_color=link_color)
+
+options(digits=3, scipen = 100)
+
+```
+
+class: inverse, center, middle
+
+# Conceptos de desigualdad
+
+---
+
+<br>
+<br>
+<br>
+<br>
+
+.center[
+![income](https://irpp.org/wp-content/uploads/2017/02/income-inequality-coins.jpg)
+]
+
+
+---
+
+<br>
+<br>
+
+.center[
+![segreg](https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20220607075756965-0486:S0023879100006038:S0023879100006038-g4.png)
+]
+
+
+---
+
+<br>
+<br>
+
+.center[
+![health](https://s3-eu-central-1.amazonaws.com/cartoons-s3/styles/product_detail_image/s3/arman55.jpg?itok=M2CRRXA6)
+]
+
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+.center[
+![justice](https://scontent.fscl22-1.fna.fbcdn.net/v/t39.30808-6/472331992_944848241084899_154278352269234686_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFu5epXu7W3FLvBzyhPRvBvhylKKExt-5yHKUooTG37nN-B4wOKsxIMR8CUWK3m6bc&_nc_ohc=JtYw3RbbTgwQ7kNvgGye9Wa&_nc_oc=Adk9GmFbFXRBNl5OKPPnu8S_QwUxUn0cR9u4JZQQSeaNSwpUf5kJcVk-rMYD2il9ycY&_nc_zt=23&_nc_ht=scontent.fscl22-1.fna&_nc_gid=9NyLFBu7urNP7bvhOIKRhQ&oh=00_AYFXB3c9-n6MlTnvM3EbGZ-mMSB7d73mcKJfLzP7bC5Edg&oe=67EF64B1)
+]
+
+
+
+---
+## ¿Desigualdad con respecto a qué? 
+
+<br>
+--
+
+
+- Ingresos
+
+- Logro educacional
+
+- Ocupaciones (clases sociales)
+
+- Riqueza
+
+- Consumo (bienes privados y públicos)
+
+- Capital social (redes)
+
+- Capital cultural
+
+- Prestigio social (status)
+
+- Salud
+
+- etc ...
+
+---
+## ¿Desigualdad entre quienes? 
+
+<br>
+--
+
+.pull-left[
+
+- Individuos
+
+- Grupos (género, raza, paises, etc.)
+
+]
+
+.pull-right[
+![tilly](tilly.png)
+]
+
+
+
+---
+## Desigualdad de resultados 
+
+<br>
+--
+
+Cuando hablamos de "desigualdad" nos referimos a la distribución (entre individuos, grupos, paises, etc.) de un determinado .bold[resultado] socioconómico.
+
+<br>
+--
+
+.bold[Definición general:]
+
+
+- $i: \{1,2,3, \dots, n\}$ individuos (u otra unidad)
+
+- $\mathbf{y}$ es algún resultado socioeconómico (educación, ingresos, felicidad)
+
+- Cada resultado individual $y_i$ es una realización de una distribución de probabilidad
+
+
+<br>
+--
+
+.bold[Ejemplo: distribución de ingresos]
+
+- $y_i$ representa el ingreso del individuo $i$ en un país
+
+- Los $y_i$'s son diferentes entre si (por aleatoridad o factores sistemáticos)
+
+
+---
+## Distribución de Ingresos: Ilustración
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+library(ggplot2)
+library(scales)
+library(dplyr)
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos para la distribución log-normal
+max_ingreso <- ingreso_medio * 3
+x <- seq(0, max_ingreso, length.out = 1000)
+density <- dlnorm(x, meanlog = mu, sdlog = sigma)
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso, y = densidad)) +
+  geom_line(size = 1.2, color = "#331234") +
+  
+  # Línea de la media
+  geom_vline(xintercept = ingreso_medio, color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = max(density) * 0.9, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  # Línea de la mediana
+  geom_vline(xintercept = mediana, color = secondary_color, linetype = "dashed", size = 1) +
+  annotate("text", x = mediana * 1.1, y = max(density) * 0.8, 
+           label = "Mediana", color = secondary_color, hjust = 0, size = 4) +
+  
+  scale_x_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(ingreso_medio), big.mark = "."),
+                      " | Mediana: $", format(round(mediana), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-left[
+<br>
+
+- ¿Cuán desigual es la distrbución del ingreso?
+
+- ¿Cual es la forma de la desigualdad?
+
+]
+
+
+---
+class: inverse, center, middle
+
+# Medidas de desigualdad
+
+---
+## Medidas de desigualdad
+
+
+<br>
+
+- Las medidas de desigualdad son herramientas cuantitativas utilizadas para evaluar la distribución de un recurso (como el ingreso o la riqueza) dentro de una población.
+
+- Específicamente, cuantifican el grado de dispersión o concentración de un recurso.
+
+
+- Permiten comparar la desigualdad entre diferentes sociedades, grupos o períodos de tiempo.
+
+
+---
+## Medidas de desigualdad
+
+<br>
+
+Ejemplos de medidas de desigualdad:
+
+- Coeficiente de variación
+
+- Razón 90/10
+
+- Índice de Gini
+
+- Entropía de Theil
+
+- etc.
+
+<br>
+--
+
+- Distintas medidas tienes distintas propiedades
+
+- La elección de la medida depende del contexto y del tipo de análisis que se quiera realizar.
+
+
+---
+## Medidas de desigualdad
+
+<br>
+
+
+Algunas propiedades deseables para que una medida de desigualdad sea adecuada (Allison (1978):
+
+1. .bold[Invariante a la escala]: La medida no debe cambiar si todos los ingresos se multiplican por una constante.
+
+2. .bold[Principio de transferencia] (Pigou-Dalton): Si un ingreso se transfiere de una persona más rica a una más pobre sin alterar su orden relativo, la desigualdad debe disminuir.
+
+
+3. .bold[Descomponibilidad]: Debe ser posible descomponer la desigualdad en partes atribuibles a diferentes subgrupos de la población.
+
+
+---
+## Medidas de desigualdad: ejemplo
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos para la distribución log-normal
+max_ingreso <- ingreso_medio * 3
+x <- seq(0, max_ingreso, length.out = 1000)
+density <- dlnorm(x, meanlog = mu, sdlog = sigma)
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso, y = densidad)) +
+  geom_line(size = 1.2, color = "#331234") +
+  
+  # Línea de la media
+  geom_vline(xintercept = ingreso_medio, color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = max(density) * 0.9, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  
+  scale_x_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(ingreso_medio), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-right[
+
+<br>
+
+<br>
+
+- ¿Que estadístico típicamente usamos para medir el grado de dispersón en una distribución?
+
+]
+
+
+
+---
+## Desviación Estándar
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos para la distribución log-normal
+max_ingreso <- ingreso_medio * 3
+x <- seq(0, max_ingreso, length.out = 1000)
+density <- dlnorm(x, meanlog = mu, sdlog = sigma)
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso, y = densidad)) +
+  geom_line(size = 1.2, color = "#331234") +
+  
+  # Línea de la media
+  geom_vline(xintercept = ingreso_medio, color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = max(density) * 0.9, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  scale_x_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(ingreso_medio), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-right[
+
+$$\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}$$
+
+Donde:
+
+- $x_i$ es el ingreso de la persona $i$.
+
+- $\mu$ es la media de los ingresos
+
+<br>
+
+La desviación estándar (σ) mide la dispersión .bold[respecto a la media]
+]
+
+---
+## Desviación Estándar
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos para la distribución log-normal
+max_ingreso <- ingreso_medio * 3
+x <- seq(0, max_ingreso, length.out = 1000)
+density <- dlnorm(x, meanlog = mu, sdlog = sigma)
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso, y = densidad)) +
+  geom_line(size = 1.2, color = "#331234") +
+  
+  # Línea de la media
+  geom_vline(xintercept = ingreso_medio, color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = max(density) * 0.9, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(ingreso_medio), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-right[
+
+- Supongamos que los ingresos de todas las personas del país crecen en 50% entre un período y otro
+
+- En otras palabras: todos los ingresos son multiplicados por 1.5
+
+- ¿Cambia el grado de desigualdad? 
+
+- ¿Cambia la desviación estándar?
+
+]
+
+---
+## Desviación Estándar
+
+.pull-left[
+
+.bold[País en período 1]
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos simulados con rlnorm()
+set.seed(123)  # Fijar semilla para reproducibilidad
+x <- rlnorm(100000, meanlog = mu, sdlog = sigma)  # Más datos para suavizar
+
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso)) +
+    geom_density(color = "#331234", size = 1.2) +
+    xlim(0,3000000) + 
+
+  # Línea de la media
+  geom_vline(xintercept = round(mean(df$ingreso)), color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = 0.00000148, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(mean(df$ingreso)), big.mark = "."), 
+                      " | Desv. Est.: $", format(round(sd(df$ingreso)), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-right[
+
+.bold[País en período 2]
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+df <- data.frame(
+  ingreso = x*1.5,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso)) +
+    geom_density(color = "#331234", size = 1.2) +
+    xlim(0,3000000*1.5) + 
+
+  # Línea de la media
+  geom_vline(xintercept = round(mean(df$ingreso)), color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = 0.00000148, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(mean(df$ingreso)), big.mark = "."), 
+                      " | Desv. Est.: $", format(round(sd(df$ingreso)), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+```
+
+]
+
+---
+## Desviación Estándar
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos simulados con rlnorm()
+set.seed(123)  # Fijar semilla para reproducibilidad
+x <- rlnorm(100000, meanlog = mu, sdlog = sigma)  # Más datos para suavizar
+
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso)) +
+    geom_density(color = "#331234", size = 1.2) +
+    xlim(0,3000000) + 
+
+  # Línea de la media
+  geom_vline(xintercept = round(mean(df$ingreso)), color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = 0.00000148, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(mean(df$ingreso)), big.mark = "."), 
+                      " | Desv. Est.: $", format(round(sd(df$ingreso)), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-right[
+
+.bold[Problema:]
+
+- La desviación estándar no es invariante a la escala
+
+]
+
+
+
+---
+##Coeficiente de Variación (CV)
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos para la distribución log-normal
+max_ingreso <- ingreso_medio * 3
+x <- seq(0, max_ingreso, length.out = 1000)
+density <- dlnorm(x, meanlog = mu, sdlog = sigma)
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso, y = densidad)) +
+  geom_line(size = 1.2, color = "#331234") +
+  
+  # Línea de la media
+  geom_vline(xintercept = ingreso_medio, color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = max(density) * 0.9, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  scale_x_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(ingreso_medio), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-right[
+
+- Para transformar la información contenida en la desviación estándar ajustando por la escala de los datos se usa típicamente el .bold[coeficiente de variación (CV)]:
+
+
+$$CV = \frac{\sigma}{\mu} \times 100\%$$
+
+Donde:
+
+- $x_i$ es el ingreso de la persona $i$
+
+- $\sigma$ es la desviación estándar
+
+- $\mu$ es la media de los ingresos
+
+<br>
+
+El CV mide dispersión relativa que expresa la desviación estándar como un porcentaje de la media.
+
+]
+
+
+---
+##Coeficiente de Variación (CV)
+
+.pull-left[
+```{r, echo=F, message=F, warning=F,  out.width = '500px'}
+
+# Valores fijos para los parámetros
+ingreso_medio <- 600000   # Ingreso medio mensual circa 2022
+sd <- 650000              # Desviación estándar circa 2022
+
+# Calcular la mediana para una distribución log-normal
+calcular_sigma_desde_sd <- function(ingreso_medio, sd) {
+  cv <- sd / ingreso_medio
+  sigma <- sqrt(log(1 + cv^2))
+  return(sigma)
+}
+
+calcular_mu_desde_media <- function(ingreso_medio, sigma) {
+  mu <- log(ingreso_medio) - sigma^2 / 2
+  return(mu)
+}
+
+sigma <- calcular_sigma_desde_sd(ingreso_medio, sd)
+mu <- calcular_mu_desde_media(ingreso_medio, sigma)
+mediana <- exp(mu)  # Mediana de una log-normal
+
+# Generar datos para la distribución log-normal
+max_ingreso <- ingreso_medio * 3
+x <- seq(0, max_ingreso, length.out = 1000)
+density <- dlnorm(x, meanlog = mu, sdlog = sigma)
+
+df <- data.frame(
+  ingreso = x,
+  densidad = density
+)
+
+# Crear el gráfico
+p <- ggplot(df, aes(x = ingreso, y = densidad)) +
+  geom_line(size = 1.2, color = "#331234") +
+  
+  # Línea de la media
+  geom_vline(xintercept = ingreso_medio, color = link_color, linetype = "dashed", size = 1) +
+  annotate("text", x = ingreso_medio * 1.1, y = max(density) * 0.9, 
+           label = "Media", color = link_color, hjust = 0, size = 4) +
+  
+  scale_x_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  
+  labs(
+    title = "Distribución del Ingreso",
+    subtitle = paste0("Media: $", format(round(ingreso_medio), big.mark = ".")),
+    x = "Ingreso Mensual (CLP)",
+    y = "Densidad"
+  ) +
+  
+  theme_minimal(base_size = 14)
+
+# Mostrar el gráfico
+print(p)
+
+```
+]
+
+--
+
+.pull-right[
+
+.bold[Problema:] No respeta estríctamente el principio de transferencia.
+
+- En particular: sin consideramos 2 personas por encima (o por debajo) de la media, donde la persona más rica le transfiere ingresos a la persona más pobre, el $CV$ no disminuye.
+
+
+]
+
+---
+## Curva de Lorenz 
+
+
+.pull-left[
+```{r, echo=F, message=F, warning=F}
+library(ggplot2)
+library(ineq)
+
+# Simulación de datos de ingreso
+set.seed(123)
+ingresos <- sort(rlnorm(1000, meanlog = log(300000), sdlog = 1))
+
+# Calcular curva de Lorenz
+L <- Lc(ingresos)
+
+# Convertir a data frame
+df_lorenz <- data.frame(
+  p = L$p,   # Proporción de la población
+  Lp = L$L   # Proporción del ingreso acumulado
+)
+
+# Gráfico con elementos explicativos
+ggplot(df_lorenz, aes(x = p, y = Lp)) +
+  
+  # Curva de Lorenz
+  geom_line(color = "#331234", size = 1.2) +
+  
+  # Línea de igualdad perfecta (45°)
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+  
+  annotate("text", x = 0.9, y = 0.9, label = "Línea de Igualdad", color = "gray", fontface = "bold", angle = 45) +
+  
+  # Ejes y título
+  labs(
+    title = "Curva de Lorenz",
+    x = "Proporción de la Población",
+    y = "Proporción del Ingreso Acumulado"
+  ) +
+  
+  theme_minimal(base_size = 14)
+```
+]
+
+
+.pull-right[
+- La **Curva de Lorenz** representa la distribución acumulada del ingreso en una población.
+
+- Ordena a los individuos de menor a mayor ingreso y muestra el porcentaje acumulado de ingreso en función del porcentaje acumulado de la población.
+
+- Si hubiera .bold[igualdad perfecta] la curva del Lorenz sería un linea de 45°: 
+
+  - "el 1% de la población acumula del 1% de los ingresos" ...
+  - "el 2% de la población acumula del 2% de los ingresos" ...
+  - "el p% de la población acumula del p% de los ingresos" ...
+
+
+]
+
+
+
+
+---
+
+## Curva de Lorenz & Coeficiente de Gini
+
+.pull-left[
+```{r, echo=F, message=F, warning=F}
+library(ggplot2)
+library(ineq)
+
+# Simulación de datos de ingreso
+set.seed(123)
+ingresos <- sort(rlnorm(1000, meanlog = log(300000), sdlog = 1))
+
+# Calcular curva de Lorenz
+L <- Lc(ingresos)
+
+# Convertir a data frame
+df_lorenz <- data.frame(
+  p = L$p,   # Proporción de la población
+  Lp = L$L   # Proporción del ingreso acumulado
+)
+
+# Gráfico con elementos explicativos
+ggplot(df_lorenz, aes(x = p, y = Lp)) +
+  
+  # Curva de Lorenz
+  geom_line(color = "#331234", size = 1.2) +
+  
+  # Línea de igualdad perfecta (45°)
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+  
+  # Área del Índice de Gini (sombreado)
+  geom_ribbon(aes(ymin = Lp, ymax = p), fill = "#6A0DAD", alpha = 0.3) +
+  
+  # Etiquetas clave
+
+  annotate("text", x = 0.9, y = 0.9, label = "Línea de Igualdad", color = "gray", fontface = "bold", angle = 45) +
+  
+  # Etiqueta de la fórmula
+annotate("text", x = 0.3, y = 0.7, 
+         label = expression(L(p) == frac(integral(F^{-1}(x) * dx, 0, p), 
+                                         integral(F^{-1}(x) * dx, 0, 1))), 
+         parse = TRUE, size = 5, fontface = "bold") +
+  
+  # Ejes y título
+  labs(
+    title = "Curva de Lorenz",
+    x = "Proporción de la Población",
+    y = "Proporción del Ingreso Acumulado"
+  ) +
+  
+  theme_minimal(base_size = 14)
+```
+]
+
+
+.pull-right[
+
+**Fórmula general:**
+
+$$
+L(p) = \frac{\int_0^p F^{-1}(x)dx}{\int_0^1 F^{-1}(x)dx}
+$$
+
+Donde:
+
+- $L(p)$ es la fracción acumulada del ingreso hasta el percentil $p$.
+
+- $F^{-1}(x)$ es la función cuantil del ingreso.
+
+]
+
+
+---
+## Curva de Lorenz & Coeficiente de Gini
+
+.pull-left[
+```{r, echo=F, message=F, warning=F}
+library(ggplot2)
+library(ineq)
+
+# Simulación de datos de ingreso
+set.seed(123)
+ingresos <- sort(rlnorm(1000, meanlog = log(300000), sdlog = 1))
+
+# Calcular curva de Lorenz
+L <- Lc(ingresos)
+
+# Convertir a data frame
+df_lorenz <- data.frame(
+  p = L$p,   # Proporción de la población
+  Lp = L$L   # Proporción del ingreso acumulado
+)
+
+# Gráfico con elementos explicativos
+ggplot(df_lorenz, aes(x = p, y = Lp)) +
+  
+  # Curva de Lorenz
+  geom_line(color = "#331234", size = 1.2) +
+  
+  # Línea de igualdad perfecta (45°)
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+  
+  # Área del Índice de Gini (sombreado)
+  geom_ribbon(aes(ymin = Lp, ymax = p), fill = "#6A0DAD", alpha = 0.3) +
+  
+    annotate("text", x = 0.8, y = 0.5, label = "Área = Índice de Gini", color = "#6A0DAD", fontface = "bold") +
+  annotate("text", x = 0.9, y = 0.9, label = "Línea de Igualdad", color = "gray", fontface = "bold", angle = 45) +
+  
+
+  
+  # Ejes y título
+  labs(
+    title = "Curva de Lorenz",
+    subtitle = "El área sombreada representa el Índice de Gini",
+    x = "Proporción de la Población",
+    y = "Proporción del Ingreso Acumulado"
+  ) +
+  
+  theme_minimal(base_size = 14)
+```
+]
+
+
+.pull-right[
+
+
+- .bold[Igualdad Perfecta]: Si hubiera igualdad perfecta en la distribución del ingreso, es decir la Curva de Lorenz coincidiría con la línea diagonal.
+
+- La distancia entre la curva de Lorenz y la línea de igualdad refleja la desigualdad dentro de la sociedad. 
+
+- A medida que aumenta la desigualdad, la curva se aleja más de la línea de igualdad perfecta y crece el área contenida entre ambas lineas.
+
+<br>
+El .bold[coeficiente de Gini] calcula como el área entre la línea de igualdad perfecta y la Curva de Lorenz, dividida por el área total debajo de la línea de igualdad perfecta.
+
+]
+
+
+
+---
+## Curva de Lorenz & Coeficiente de Gini
+
+.pull-left[
+```{r, echo=F, message=F, warning=F}
+library(ggplot2)
+library(ineq)
+
+# Simulación de datos de ingreso
+set.seed(123)
+ingresos <- sort(rlnorm(1000, meanlog = log(300000), sdlog = 1))
+
+# Calcular curva de Lorenz
+L <- Lc(ingresos)
+
+# Convertir a data frame
+df_lorenz <- data.frame(
+  p = L$p,   # Proporción de la población
+  Lp = L$L   # Proporción del ingreso acumulado
+)
+
+# Gráfico con elementos explicativos
+ggplot(df_lorenz, aes(x = p, y = Lp)) +
+  
+  # Curva de Lorenz
+  geom_line(color = "#331234", size = 1.2) +
+  
+  # Línea de igualdad perfecta (45°)
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+  
+  # Área del Índice de Gini (sombreado)
+  geom_ribbon(aes(ymin = Lp, ymax = p), fill = "#6A0DAD", alpha = 0.3) +
+  
+    annotate("text", x = 0.8, y = 0.5, label = "Área = Índice de Gini", color = "#6A0DAD", fontface = "bold") +
+  annotate("text", x = 0.9, y = 0.9, label = "Línea de Igualdad", color = "gray", fontface = "bold", angle = 45) +
+  
+
+  
+  # Ejes y título
+  labs(
+    title = "Curva de Lorenz",
+    subtitle = "El área sombreada representa el Índice de Gini",
+    x = "Proporción de la Población",
+    y = "Proporción del Ingreso Acumulado"
+  ) +
+  
+  theme_minimal(base_size = 14)
+```
+]
+
+
+.pull-right[
+
+.bold[Fórmula:]
+
+$$G = \frac{A}{A + B}$$
+Donde:
+- **A** es el área entre la **Curva de Lorenz** y la **línea de igualdad perfecta**.
+- **B** es el área debajo de la **Curva de Lorenz**.
+
+.bold[Propiedades]:
+
+1. **Rango**: El valor de $G$ varía entre 0 (igualdad perfecta) y 1 (desigualdad total).
+
+2. **Sensibilidad a la concentración**: El índice de Gini es más sensible a los cambios en las partes bajas de la distribución que en las partes altas.
+
+3. **Invarianza a escalas**: Si se multiplican todos los ingresos por una constante, el índice de Gini no cambia.
+
+]
+
+---
+class: inverse, center, middle
+
+##Hasta la próxima clase!
+
+<br>
+Mauricio Bucca <br>
+https://mebucca.github.io/

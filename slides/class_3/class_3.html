@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sociología de la Desigualdad (SOL186S)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="  Mauricio Bucca   github.com/mebucca   mebucca@uc.cl" />
+    <script src="libs/header-attrs-2.27/header-attrs.js"></script>
+    <link rel="stylesheet" href="gentle-r.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Sociología de la Desigualdad (SOL186S)
+]
+.subtitle[
+## Desigualdad: conceptos y medición
+]
+.author[
+### <br> Mauricio Bucca <br> <a href="https://github.com/mebucca">github.com/mebucca</a> <br> <a href="mailto:mebucca@uc.cl" class="email">mebucca@uc.cl</a>
+]
+.date[
+### 31 March, 2025
+]
+
+---
+
+
+
+
+class: inverse, center, middle
+
+# Conceptos de desigualdad
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+![income](https://irpp.org/wp-content/uploads/2017/02/income-inequality-coins.jpg)
+]
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+![segreg](https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20220607075756965-0486:S0023879100006038:S0023879100006038-g4.png)
+]
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+![health](https://s3-eu-central-1.amazonaws.com/cartoons-s3/styles/product_detail_image/s3/arman55.jpg?itok=M2CRRXA6)
+]
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+.center[
+![justice](https://scontent.fscl22-1.fna.fbcdn.net/v/t39.30808-6/472331992_944848241084899_154278352269234686_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=cc71e4&amp;_nc_eui2=AeFu5epXu7W3FLvBzyhPRvBvhylKKExt-5yHKUooTG37nN-B4wOKsxIMR8CUWK3m6bc&amp;_nc_ohc=JtYw3RbbTgwQ7kNvgGye9Wa&amp;_nc_oc=Adk9GmFbFXRBNl5OKPPnu8S_QwUxUn0cR9u4JZQQSeaNSwpUf5kJcVk-rMYD2il9ycY&amp;_nc_zt=23&amp;_nc_ht=scontent.fscl22-1.fna&amp;_nc_gid=9NyLFBu7urNP7bvhOIKRhQ&amp;oh=00_AYFXB3c9-n6MlTnvM3EbGZ-mMSB7d73mcKJfLzP7bC5Edg&amp;oe=67EF64B1)
+]
+
+
+
+---
+## ¿Desigualdad con respecto a qué? 
+
+&lt;br&gt;
+--
+
+
+- Ingresos
+
+- Logro educacional
+
+- Ocupaciones (clases sociales)
+
+- Riqueza
+
+- Consumo (bienes privados y públicos)
+
+- Capital social (redes)
+
+- Capital cultural
+
+- Prestigio social (status)
+
+- Salud
+
+- etc ...
+
+---
+## ¿Desigualdad entre quienes? 
+
+&lt;br&gt;
+--
+
+.pull-left[
+
+- Individuos
+
+- Grupos (género, raza, paises, etc.)
+
+]
+
+.pull-right[
+![tilly](tilly.png)
+]
+
+
+
+---
+## Desigualdad de resultados 
+
+&lt;br&gt;
+--
+
+Cuando hablamos de "desigualdad" nos referimos a la distribución (entre individuos, grupos, paises, etc.) de un determinado .bold[resultado] socioconómico.
+
+&lt;br&gt;
+--
+
+.bold[Definición general:]
+
+
+- `\(i: \{1,2,3, \dots, n\}\)` individuos (u otra unidad)
+
+- `\(\mathbf{y}\)` es algún resultado socioeconómico (educación, ingresos, felicidad)
+
+- Cada resultado individual `\(y_i\)` es una realización de una distribución de probabilidad
+
+
+&lt;br&gt;
+--
+
+.bold[Ejemplo: distribución de ingresos]
+
+- `\(y_i\)` representa el ingreso del individuo `\(i\)` en un país
+
+- Los `\(y_i\)`'s son diferentes entre si (por aleatoridad o factores sistemáticos)
+
+
+---
+## Distribución de Ingresos: Ilustración
+
+.pull-left[
+&lt;img src="class_3_files/figure-html/unnamed-chunk-1-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-left[
+&lt;br&gt;
+
+- ¿Cuán desigual es la distrbución del ingreso?
+
+- ¿Cual es la forma de la desigualdad?
+
+]
+
+
+---
+class: inverse, center, middle
+
+# Medidas de desigualdad
+
+---
+## Medidas de desigualdad
+
+
+&lt;br&gt;
+
+- Las medidas de desigualdad son herramientas cuantitativas utilizadas para evaluar la distribución de un recurso (como el ingreso o la riqueza) dentro de una población.
+
+- Específicamente, cuantifican el grado de dispersión o concentración de un recurso.
+
+
+- Permiten comparar la desigualdad entre diferentes sociedades, grupos o períodos de tiempo.
+
+
+---
+## Medidas de desigualdad
+
+&lt;br&gt;
+
+Ejemplos de medidas de desigualdad:
+
+- Coeficiente de variación
+
+- Razón 90/10
+
+- Índice de Gini
+
+- Entropía de Theil
+
+- etc.
+
+&lt;br&gt;
+--
+
+- Distintas medidas tienes distintas propiedades
+
+- La elección de la medida depende del contexto y del tipo de análisis que se quiera realizar.
+
+
+---
+## Medidas de desigualdad
+
+&lt;br&gt;
+
+
+Algunas propiedades deseables para que una medida de desigualdad sea adecuada (Allison (1978):
+
+1. .bold[Invariante a la escala]: La medida no debe cambiar si todos los ingresos se multiplican por una constante.
+
+2. .bold[Principio de transferencia] (Pigou-Dalton): Si un ingreso se transfiere de una persona más rica a una más pobre sin alterar su orden relativo, la desigualdad debe disminuir.
+
+
+3. .bold[Descomponibilidad]: Debe ser posible descomponer la desigualdad en partes atribuibles a diferentes subgrupos de la población.
+
+
+---
+## Medidas de desigualdad: ejemplo
+
+.pull-left[
+&lt;img src="class_3_files/figure-html/unnamed-chunk-2-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-right[
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+- ¿Que estadístico típicamente usamos para medir el grado de dispersón en una distribución?
+
+]
+
+
+
+---
+## Desviación Estándar
+
+.pull-left[
+&lt;img src="class_3_files/figure-html/unnamed-chunk-3-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-right[
+
+`$$\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}$$`
+
+Donde:
+
+- `\(x_i\)` es el ingreso de la persona `\(i\)`.
+
+- `\(\mu\)` es la media de los ingresos
+
+&lt;br&gt;
+
+La desviación estándar (σ) mide la dispersión .bold[respecto a la media]
+]
+
+---
+## Desviación Estándar
+
+.pull-left[
+&lt;img src="class_3_files/figure-html/unnamed-chunk-4-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-right[
+
+- Supongamos que los ingresos de todas las personas del país crecen en 50% entre un período y otro
+
+- En otras palabras: todos los ingresos son multiplicados por 1.5
+
+- ¿Cambia el grado de desigualdad? 
+
+- ¿Cambia la desviación estándar?
+
+]
+
+---
+## Desviación Estándar
+
+.pull-left[
+
+.bold[País en período 1]
+&lt;img src="class_3_files/figure-html/unnamed-chunk-5-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-right[
+
+.bold[País en período 2]
+&lt;img src="class_3_files/figure-html/unnamed-chunk-6-1.png" width="500px" /&gt;
+
+]
+
+---
+## Desviación Estándar
+
+.pull-left[
+&lt;img src="class_3_files/figure-html/unnamed-chunk-7-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-right[
+
+.bold[Problema:]
+
+- La desviación estándar no es invariante a la escala
+
+]
+
+
+
+---
+##Coeficiente de Variación (CV)
+
+.pull-left[
+&lt;img src="class_3_files/figure-html/unnamed-chunk-8-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-right[
+
+- Para transformar la información contenida en la desviación estándar ajustando por la escala de los datos se usa típicamente el .bold[coeficiente de variación (CV)]:
+
+
+`$$CV = \frac{\sigma}{\mu} \times 100\%$$`
+
+Donde:
+
+- `\(x_i\)` es el ingreso de la persona `\(i\)`
+
+- `\(\sigma\)` es la desviación estándar
+
+- `\(\mu\)` es la media de los ingresos
+
+&lt;br&gt;
+
+El CV mide dispersión relativa que expresa la desviación estándar como un porcentaje de la media.
+
+]
+
+
+---
+##Coeficiente de Variación (CV)
+
+.pull-left[
+&lt;img src="class_3_files/figure-html/unnamed-chunk-9-1.png" width="500px" /&gt;
+]
+
+--
+
+.pull-right[
+
+.bold[Problema:] No respeta estríctamente el principio de transferencia.
+
+- En particular: sin consideramos 2 personas por encima (o por debajo) de la media, donde la persona más rica le transfiere ingresos a la persona más pobre, el `\(CV\)` no disminuye.
+
+
+]
+
+---
+## Curva de Lorenz 
+
+
+.pull-left[
+![](class_3_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+]
+
+
+.pull-right[
+- La **Curva de Lorenz** representa la distribución acumulada del ingreso en una población.
+
+- Ordena a los individuos de menor a mayor ingreso y muestra el porcentaje acumulado de ingreso en función del porcentaje acumulado de la población.
+
+- Si hubiera .bold[igualdad perfecta] la curva del Lorenz sería un linea de 45°: 
+
+  - "el 1% de la población acumula del 1% de los ingresos" ...
+  - "el 2% de la población acumula del 2% de los ingresos" ...
+  - "el p% de la población acumula del p% de los ingresos" ...
+
+
+]
+
+
+
+
+---
+
+## Curva de Lorenz &amp; Coeficiente de Gini
+
+.pull-left[
+![](class_3_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+]
+
+
+.pull-right[
+
+**Fórmula general:**
+
+$$
+L(p) = \frac{\int_0^p F^{-1}(x)dx}{\int_0^1 F^{-1}(x)dx}
+$$
+
+Donde:
+
+- `\(L(p)\)` es la fracción acumulada del ingreso hasta el percentil `\(p\)`.
+
+- `\(F^{-1}(x)\)` es la función cuantil del ingreso.
+
+]
+
+
+---
+## Curva de Lorenz &amp; Coeficiente de Gini
+
+.pull-left[
+![](class_3_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+]
+
+
+.pull-right[
+
+
+- .bold[Igualdad Perfecta]: Si hubiera igualdad perfecta en la distribución del ingreso, es decir la Curva de Lorenz coincidiría con la línea diagonal.
+
+- La distancia entre la curva de Lorenz y la línea de igualdad refleja la desigualdad dentro de la sociedad. 
+
+- A medida que aumenta la desigualdad, la curva se aleja más de la línea de igualdad perfecta y crece el área contenida entre ambas lineas.
+
+&lt;br&gt;
+El .bold[coeficiente de Gini] calcula como el área entre la línea de igualdad perfecta y la Curva de Lorenz, dividida por el área total debajo de la línea de igualdad perfecta.
+
+]
+
+
+
+---
+## Curva de Lorenz &amp; Coeficiente de Gini
+
+.pull-left[
+![](class_3_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+]
+
+
+.pull-right[
+
+.bold[Fórmula:]
+
+`$$G = \frac{A}{A + B}$$`
+Donde:
+- **A** es el área entre la **Curva de Lorenz** y la **línea de igualdad perfecta**.
+- **B** es el área debajo de la **Curva de Lorenz**.
+
+.bold[Propiedades]:
+
+1. **Rango**: El valor de `\(G\)` varía entre 0 (igualdad perfecta) y 1 (desigualdad total).
+
+2. **Sensibilidad a la concentración**: El índice de Gini es más sensible a los cambios en las partes bajas de la distribución que en las partes altas.
+
+3. **Invarianza a escalas**: Si se multiplican todos los ingresos por una constante, el índice de Gini no cambia.
+
+]
+
+---
+class: inverse, center, middle
+
+##Hasta la próxima clase!
+
+&lt;br&gt;
+Mauricio Bucca &lt;br&gt;
+https://mebucca.github.io/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

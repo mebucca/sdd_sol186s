@@ -17,7 +17,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 03: Pobreza: conceptos, medición y debates (24 de marzo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_2/class_2#1)  [`[Brady 2019]`](readings/Brady_2019.pdf) [`[Desmond 2018]`](readings/Desmond_2018.pdf) [`[Han 2018]`](readings/Han_2018.pdf)
 
-- Semana 04: Desigualdad económica: conceptos y medición (31 de marzo): [`[Blau 1977]`](readings/Blau_1977.pdf) [`[Tilly 1998]`](readings/Tilly_1998.pdf) [`[Allison 1978]`](readings/Allison_1978.pdf)
+- Semana 04: Desigualdad económica: conceptos y medición (31 de marzo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_3/class_3#1)  [`[Blau 1977]`](readings/Blau_1977.pdf) [`[Tilly 1998]`](readings/Tilly_1998.pdf) [`[Allison 1978]`](readings/Allison_1978.pdf)
 
 - Semana 05: Desigualdad económica: tendencias y debates (7 de abril): [`[Piketty & Saez 2014]`](readings/Piketty_2014.pdf) [`[Piketty 2018]`](readings/Piketty_2018.pdf) [`[Gasparini & Lustig 2011]`](readings/Gasparini_2011.pdf)
 
