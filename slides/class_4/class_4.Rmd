@@ -1,0 +1,54 @@
+---
+title: "Sociología de la Desigualdad (SOL186S)"
+subtitle: "Desigualdad: tendencias y debates"
+author: "<br> Mauricio Bucca <br> [github.com/mebucca](https://github.com/mebucca) <br> mebucca@uc.cl"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["gentle-r.css", "xaringan-themer.css"]
+    df_print: default
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(xaringanthemer)
+primary_color = "#9D7352"    # Weathered terracotta (muted orange-brown)
+secondary_color = "#5A7F9C"  # Pond reflection blue (softened and desaturated)
+background_color = "#F8F4ED" # Canvas cream (slightly cooler off-white)
+link_color = "#6F9B6F"       # Willow green (ashy natural accent)
+
+header_font = google_font("Archivo")
+text_font = google_font("Inconsolata")
+
+style_duo_accent(primary_color=primary_color, 
+                 secondary_color=secondary_color,
+                 background_color=background_color,
+                 header_font_google=header_font,
+                 text_font_google=text_font, 
+                 link_color=link_color)
+
+options(digits=3, scipen = 100)
+
+```
+
+class: inverse, center, middle
+
+# Tendecias
+
+---
+class: inverse, center, middle
+
+## Hasta la próxima clase!
+
+<br>
+Mauricio Bucca <br>
+https://mebucca.github.io/
