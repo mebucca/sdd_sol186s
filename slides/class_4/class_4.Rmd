@@ -45,6 +45,254 @@ class: inverse, center, middle
 # Tendecias
 
 ---
+## Desigualdad en el (muy) largo plazo
+
+
+.pull-left[
+![wealth_long](wealth_long.png)
+]
+
+--
+
+.pull-right[
+
+- La desigualdad de y riqueza ha aumentado de forma sostenida durante los últimos 700 años, con dos excepciones: tras la Peste Negra (1347–1352) y entre la Primera Guerra Mundial y mediados de los años 70.
+
+- Las tendencias en desigualdad están profundamente moldeadas por las instituciones y las decisiones humanas que las crean y transforman a lo largo del tiempo.
+
+]
+
+
+---
+## Desigualdad en el largo plazo
+
+.pull-left[
+![wealthinc_10](wealthinc_10.png)
+]
+
+.pull-right[
+
+<br>
+
+- Durante el siglo XIX, la concentración de riqueza alcanzó niveles históricos, con el 10% más rico poseyendo hasta el 85% en Francia y más del 90% en el Reino Unido hacia 1913.
+
+- Las guerras mundiales redujeron drásticamente la desigualdad en Europa y Norteamérica, afectando especialmente a los patrimonios más grandes.
+
+- Desde los años 80, la desigualdad volvió a crecer, especialmente entrelos países anglosajones.
+]
+
+---
+class: inverse, center, middle
+
+# Debates
+
+
+---
+## La curva de Kutzner y la evolución de la desigualdad
+
+
+.pull-left[
+
+<br>
+
+![curve](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kuznets_curve-en.svg/2560px-Kuznets_curve-en.svg.png)
+]
+
+.pull-right[
+
+La desigualdad económica seguiría una curva en U invertida en función del ingreso per cápita. A medida que un país se desarrolla:
+
+1. **Etapa temprana del crecimiento**:  
+   - El **ingreso per cápita aumenta**, pero también lo hace la **desigualdad**.  
+   - Razones: migración rural-urbana, concentración de capital, poca cobertura estatal.
+
+2. **Etapa avanzada**:  
+   - El **ingreso per cápita sigue creciendo**, pero la **desigualdad disminuye**.  
+   - Razones: impuestos progresivos, educación, derechos laborales, Estado de bienestar.
+]
+
+---
+## La curva de Kutzner y la evolución de la desigualdad
+
+
+.pull-left[
+![ineq_s20_1](ineq_s20_1.jpeg)
+]
+
+.pull-right[
+
+La desigualdad económica seguiría una curva en U invertida en función del ingreso per cápita. A medida que un país se desarrolla:
+
+1. **Etapa temprana del crecimiento**:  
+   - El **ingreso per cápita aumenta**, pero también lo hace la **desigualdad**.  
+   - Razones: migración rural-urbana, concentración de capital, poca cobertura estatal.
+
+2. **Etapa avanzada**:  
+   - El **ingreso per cápita sigue creciendo**, pero la **desigualdad disminuye**.  
+   - Razones: impuestos progresivos, educación, derechos laborales, Estado de bienestar.
+]
+
+---
+## La curva de Kutzner y la evolución de la desigualdad (¿?)
+
+
+.pull-left[
+![ineq_s20](ineq_s20.jpeg)
+]
+
+.pull-right[
+
+¿Cómo explicamos el aumento de la desigualdad post 70s?
+
+![harold](https://www.meme-arsenal.com/memes/b3c9ad1d7006f8c2a05e0e34d5a686ac.jpg)
+]
+
+
+---
+## Skill-Biased Technological Change (SBTC)
+
+.pull-left[
+<br>
+
+![computers](https://s1.elespanol.com/2017/05/03/actualidad/actualidad_213240798_129867025_1706x1280.jpg)
+]
+
+--
+
+.pull-right[
+- .bold[Avances tecnológicos] (computadoras, IA, automatización) aumentan demanda de trabajadores altamente cualificados y disminuyen demanda de trabajadores menos cualificados.
+
+- La tecnología complementa y hace _más productivos_ trabajadores con educación superior y habilidades técnicas, mientras sustituye trabajos rutinarios y menos cualificados.
+
+- Correlación entre adopción de tecnologías digitales y aumento de salarios para trabajadores educados. Ha contribuido a la creciente desigualdad salarial en economías avanzadas desde los 70/80s.
+
+- Mercado laboral polarizado: crecimiento en trabajos muy cualificados (bien pagados) y poco cualificados (mal pagados), con disminución de empleos de cualificación media.
+]
+
+---
+## $r > g$:  Crecimiento del Capital y Desigualdad (Piketty)
+
+
+.pull-left[
+![piketty](https://www.infomoney.com.br/wp-content/uploads/2019/06/thomas-piketty-1.jpg?fit=685%2C1024&quality=50&strip=all)
+]
+
+.pull-right[
+
+- Cuando el rendimiento del capital (r) supera el crecimiento económico (g), la desigualdad aumenta inevitablemente
+
+- **Evidencia histórica:**
+
+  - Siglo XIX: Alta concentración de riqueza por reinversión continua del capital
+  
+  - 1945-1975: Período excepcional de reducción de desigualdad (altos impuestos, gasto social)
+  
+  - 1980-Presente: Retorno a la concentración por recortes fiscales y desregulación
+  
+<br>
+
+- La concentración de riqueza es el estado natural del capitalismo sin intervención
+
+- .bold[Propuesta]: Impuestos progresivos sobre el capital para contrarrestar este fenómeno
+
+]
+
+---
+## Extracción de Rentas como motor de desigualdad
+
+.bold[Tesis]: La creciente desigualdad refleja principalmente el poder para extraer _rentas_, no diferencias reales de productividad.
+
+- .bold[¿Qué son las rentas económicas?]:  ganancias por encima del nivel competitivo de mercado.
+
+--
+
+.pull-left[
+
+.bold[Mecanismos contemporáneos de extracción de rentas]:
+
+  - Compensación ejecutiva desproporcionada: Salarios de CEOs creciendo 940% desde 1978 vs. 12% para trabajadores promedio.
+  
+  - Barreras ocupacionales: Licencias profesionales excesivas que limitan entrada a profesiones lucrativas
+  
+  - Financiarización: Sector financiero capturando valor sin crear productividad proporcional
+  
+  - Concentración corporativa: Oligopolios que elevan precios y reducen salarios
+
+
+]
+
+.pull-right[
+
+![rents](https://s3.amazonaws.com/nightjarprod/content/uploads/sites/238/2023/08/23151410/pWHf4khOloNVfCxscsXFj3jj6gP-718x1024.jpg)
+
+]
+
+---
+##La Desigualdad como decisión social y política
+
+- La desigualdad no es inevitable: es el resultado de decisiones colectivas.
+
+- Países con niveles similares de desarrollo económico muestran desigualdades muy distintas. 
+
+- Mismos avances tecnológicos generan distintos resultados.
+
+- Las políticas públicas moldean las tendencias de desigualdad: impuestos, leyes laborales y regimenes de bienestar.
+
+--
+
+.pull-left[
+- .bold[El papel de las instituciones]:
+
+  - Sistemas tributarios (progresivos vs. regresivos)  
+
+  - Regulación de los mercados laborales y financieros  
+
+  - Políticas de bienestar y protección social
+
+]
+
+.pull-right[
+![welfare](https://cdn.slidesharecdn.com/ss_thumbnails/swedendone-120615071500-phpapp01-thumbnail.jpg?width=560&fit=bounds)
+
+]
+
+---
+
+##La Desigualdad como decisión social y política
+
+.pull-left[
+<br>
+
+Variedades de capitalismo y bienestar en el s.XX:
+
+- .bold[New Deal y Estados de Bienestar (1930s–1970s)]:
+  - La fuerte intervención del Estado redujo la desigualdad.
+
+- .bold[Giro Neoliberal (1980s–presente)]:  
+  - Desregulación, austeridad y privatización ampliaron las brechas de riqueza.
+
+]
+
+.pull-right[
+![neol](https://www.irishtimes.com/resizer/e1XFEDbKiihtq-M2CK-j-7-93_k=/arc-photo-irishtimes/eu-central-1-prod/public/TR4P4EA4R6F6WLXN3HJSGIP5WM.jpg)
+]
+
+å---
+## Desigualdad en America Latina en el largo plazo
+
+.center[
+![ineq_LA](ineq_LA.png)
+]
+---
+## Conclusión
+
+- Múltiples fuerzas contribuyen al aumento de la desigualdad de ingresos.
+
+- Diferentes teorías destacan factores económicos, políticos e institucionales.
+
+- Las intervenciones políticas pueden moldear las futuras tendencias de desigualdad.
+
+---
 class: inverse, center, middle
 
 ## Hasta la próxima clase!
