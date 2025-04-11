@@ -21,7 +21,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 05: Desigualdad económica: tendencias y debates (7 de abril): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_4/class_4#1) [`[Piketty & Saez 2014]`](readings/Piketty_2014.pdf) [`[Piketty 2018]`](readings/Piketty_2018.pdf) [`[Gasparini & Lustig 2011]`](readings/Gasparini_2011.pdf)
 
-- Semana 06: Movilidad social: conceptos y medición (14 de abril): [`[Torche 2014]`](readings/Torche_2014.pdf) [`[Breen 2010]`](readings/Breen_2010.pdf)
+- Semana 06: Movilidad social: conceptos y medición (14 de abril): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_5/class_5#1) [`[Torche 2014]`](readings/Torche_2014.pdf) [`[Breen 2010]`](readings/Breen_2010.pdf)
 
 - Semana 07: Movilidad social: tendencias y debates (21 de abril): [`[Hout 2014]`](readings/Hout_2014.pdf) [`[Chetty 2017]`](readings/Chetty_2017.pdf) [`[Zimmerman 2019]`](readings/Zimmerman_2019.pdf)
 
