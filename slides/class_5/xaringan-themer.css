@@ -15,24 +15,24 @@
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
- *  Version: 0.4.1
+ *  Version: 0.4.2
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Lato&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Martel:300,400&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Archivo&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap);
 
 
 :root {
   /* Fonts */
-  --text-font-family: Lato;
+  --text-font-family: Inconsolata;
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: Martel;
+  --header-font-family: Archivo;
   --header-font-is-google: 1;
   --header-font-family-fallback: Georgia, serif;
-  --code-font-family: 'Fira Mono';
+  --code-font-family: 'Source Code Pro';
   --code-font-is-google: 1;
   --base-font-size: 20px;
   --text-font-size: 1rem;
@@ -43,22 +43,24 @@
   --header-h3-font-size: 1.75rem;
 
   /* Colors */
-  --text-color: #333333;
-  --header-color: #333333;
-  --background-color: #FDF7E9;
-  --link-color: #4466B0;
-  --text-bold-color: #454545;
+  --text-color: #000000;
+  --header-color: #A52A2A;
+  --background-color: #f8f7f3;
+  --link-color: #FFFFFF;
+  --text-bold-color: #A52A2A;
   --code-highlight-color: rgba(255,255,0,0.5);
-  --inverse-text-color: #FDF7E9;
-  --inverse-background-color: #EFBE43;
-  --inverse-header-color: #FDF7E9;
-  --inverse-link-color: #4466B0;
-  --title-slide-background-color: #FDF7E9;
-  --title-slide-text-color: #4466B0;
-  --header-background-color: #333333;
-  --header-background-text-color: #FDF7E9;
-  --primary: #FDF7E9;
-  --secondary: #EFBE43;
+  --inverse-text-color: #000000;
+  --inverse-background-color: #50C878;
+  --inverse-header-color: #000000;
+  --inverse-link-color: #FFFFFF;
+  --title-slide-background-color: #A52A2A;
+  --title-slide-text-color: #FFFFFF;
+  --header-background-color: #A52A2A;
+  --header-background-text-color: #f8f7f3;
+  --primary: #A52A2A;
+  --secondary: #50C878;
+  --white: #FFFFFF;
+  --black: #000000;
 }
 
 html {
@@ -99,10 +101,10 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #454545;
+  color: #A52A2A;
 }
 .remark-slide-number {
-  color: #333333;
+  color: #A52A2A;
   opacity: 1;
   font-size: 0.9rem;
 }
@@ -150,10 +152,10 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #EFBE4399;
+  color: #A52A2A99;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #EFBE43;
+  color: #A52A2A;
 }
 .right-column {
   width: 75%;
@@ -175,7 +177,7 @@ img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px #EFBE4380;
+  border-left: solid 5px #50C87880;
   padding-left: 1em;
 }
 .remark-slide table {
@@ -189,8 +191,10 @@ blockquote {
 th, td {
   padding: 5px;
 }
-.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
-  background: #FEFEFC;
+.remark-slide table:not(.table-unshaded) thead,
+.remark-slide table:not(.table-unshaded) tfoot,
+.remark-slide table:not(.table-unshaded) tr:nth-child(even) {
+  background: #DCF4E4;
 }
 table.dataTable tbody {
   background-color: var(--background-color);
@@ -200,7 +204,7 @@ table.dataTable.display tbody tr.odd {
   background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
-  background-color: #FEFEFC;
+  background-color: #DCF4E4;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -281,5 +285,17 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 }
 .bg-secondary {
   background-color: var(--secondary);
+}
+.white {
+  color: var(--white);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.black {
+  color: var(--black);
+}
+.bg-black {
+  background-color: var(--black);
 }
 

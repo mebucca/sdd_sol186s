@@ -3,11 +3,10 @@
   <head>
     <title>Sociología de la Desigualdad (SOL186S)</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Mauricio Bucca, Sociología UC" />
-    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <meta name="author" content="  Mauricio Bucca   github.com/mebucca   mebucca@uc.cl" />
+    <script src="libs/header-attrs-2.27/header-attrs.js"></script>
     <link rel="stylesheet" href="gentle-r.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -20,47 +19,88 @@ class: center, middle, inverse, title-slide
 ## Movilidad social: conceptos y medición
 ]
 .author[
-### Mauricio Bucca, Sociología UC
+### <br> Mauricio Bucca <br> <a href="https://github.com/mebucca">github.com/mebucca</a> <br> <a href="mailto:mebucca@uc.cl" class="email">mebucca@uc.cl</a>
+]
+.date[
+### 11 April, 2025
 ]
 
 ---
 
+class: inverse, center, middle
+
+
+
+# ¿Qué entendemos por movilidad social?
+
+
+---
 class: center, middle
+
 
 
 ![ad](am_dream.jpeg)
 
 
 ---
-## Confusiones comunes sobre movilidad social en discurso público
+## Nociones recurrentes en discurso público
 
 &lt;br&gt;
 &lt;br&gt;
 --
 
-- Movilidad social = movilidad social ascendente, American Dream, Land of Opportunity, 'rags-to-riches'  
+- Movilidad social ascendente
 
-
+&lt;br&gt;
 --
 
-- Movilidad social para todos
+- "American Dream", movilidad ascendente larga ("rags-to-riches")  
 
-
+&lt;br&gt;
 --
 
-- (más sutil) Movilidad social = igualdad de oportunidades, meritocracia. 
+- Movilidad social para todos, "Land of Opportunity"
+
+
+&lt;br&gt;
+--
+
+- (más sutil)  igualdad de oportunidades, meritocracia. 
 
   - Movilidad como alternativa a desigualdad 
 
 ---
 class: inverse, center, middle
 
-## Movilidad social/económica intergeneracional 
+## Movilidad social intergeneracional 
+
 
 ---
-### Sociedad A
+## Dos tipos de movilidad 
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+--
+
+  - .bold[Movilidad absoluta:] comparación con respecto a posición de los padres (ascendente,inmovil, descendente): quién se mueve, cuánto y hacia donde. 
+  
+&lt;br&gt;
+--
+
+- .bold[Movilidad relativa:] comparación con respecto a posición relativa de los padres: ¿Cuán importante son los "accidentes de la cuna" para determinar el destino de una persona?
+
+
+---
+## Sociedad A
 
 .pull-left[
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
 |   **Padres**  |   **Hijos**   |
 |:-------------:|:-------------:|
 |  5 (rank = 2) | 10 (rank = 2) |
@@ -81,9 +121,14 @@ class: inverse, center, middle
 ]
 
 ---
-### Sociedad B
+## Sociedad B
 
 .pull-left[
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
 |   **Padres**  |   **Hijos**   |
 |:-------------:|:-------------:|
 |  5 (rank = 2) | 10 (rank = 2) |
@@ -98,18 +143,10 @@ class: inverse, center, middle
 
 - Algunos individuos tienen una mejor situación social/económica que sus padres y otras una peor situación. En esta sociedad algunos experimentan .bold[movilidad absoluta] ascendente y otros .bold[movilidad absoluta] descendente.
 
-- Todos los individuos tienen el mismo "ranking" social/económico de sus padres. En esta sociedad no hay .bold[movilidad relativa].
+- Todos los individuos tienen un "ranking" social/económico  distinto al de sus padres. En esta sociedad hay .bold[movilidad relativa] perfecta.
 
 
 ]
-
----
-## Dos tipos de movilidad social/económica
-
-
-  - Movilidad social absoluta: comparación con respecto a posición de los padres (ascendente,inmovil, descendente): quién se mueve, cuánto y hacia donde. 
-  
-  - Movilidad social absoluta: comparación con respecto a posición relativa de los padres: ¿Cuán son los "accidentes de la cuna" para determinar el destino de una persona?
 
 
 ---
@@ -127,31 +164,269 @@ class: inverse, center, middle
 
 - Riqueza
 
-- Salud, etc. 
+- Salud,
+
+- Posición política, etc. 
+
 
 
 ---
 class: inverse, center, middle
 
-# Medidas de movilidad social relativa
-## Elasticidad intergeneracional de ingresos
+# Movilidad Intergeneracional de Clases
+
+---
+# Esquemas de clase
+
+--
+
+&lt;br&gt;
+.pull-left[
+![marx](https://arboldelademocracia.cuaieed.unam.mx/wp-content/uploads/2022/05/ADD_028-KARL-MARX-min.png)
+]
+
+--
+
+.pull-right[
+![class](classes.png)
+]
+
+
+---
+## Tablas de movilidad
+
+
+
+--
+
+.pull-left[
+.bold[Recuentos]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM 1275 1159  666
+##   LoM   272 2046 1632
+##   Farm   17   52  646
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM  474  601   76
+##   LoM   124 1789  295
+##   Farm   11   37  191
+```
+
+]
+
+--
+
+.pull-right[
+.bold[Probabilidades]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.16 0.15 0.09 0.40
+##   LoM  0.04 0.26 0.21 0.51
+##   Farm 0.00 0.01 0.08 0.09
+##   Sum  0.20 0.42 0.38 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.13 0.17 0.02 0.32
+##   LoM  0.03 0.50 0.08 0.61
+##   Farm 0.00 0.01 0.05 0.07
+##   Sum  0.17 0.67 0.16 1.00
+```
+
+]
+
+---
+## Tablas de movilidad: movilidad absoluta 
+
+
+.pull-left[
+.bold[Probabilidades]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.16 0.15 0.09 0.40
+##   LoM  0.04 0.26 0.21 0.51
+##   Farm 0.00 0.01 0.08 0.09
+##   Sum  0.20 0.42 0.38 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.13 0.17 0.02 0.32
+##   LoM  0.03 0.50 0.08 0.61
+##   Farm 0.00 0.01 0.05 0.07
+##   Sum  0.17 0.67 0.16 1.00
+```
+
+]
+
+--
+
+.pull-right[
+.bold[P(Destino | Origen)]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM 0.82 0.36 0.23
+##   LoM  0.17 0.63 0.55
+##   Farm 0.01 0.02 0.22
+##   Sum  1.00 1.00 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM 0.78 0.25 0.14
+##   LoM  0.20 0.74 0.52
+##   Farm 0.02 0.02 0.34
+##   Sum  1.00 1.00 1.00
+```
+
+]
+
+* Para hablar de movilidad "ascendente" o "descendente" debemos hacer supuestos sobre el ordenamiento de las clases (no siempre evidente).
+
+
+---
+## Tablas de movilidad: movilidad relativa (fluidez)
+
+
+.pull-left[
+.bold[Probabilidades]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.16 0.15 0.09 0.40
+##   LoM  0.04 0.26 0.21 0.51
+##   Farm 0.00 0.01 0.08 0.09
+##   Sum  0.20 0.42 0.38 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.13 0.17 0.02 0.32
+##   LoM  0.03 0.50 0.08 0.61
+##   Farm 0.00 0.01 0.05 0.07
+##   Sum  0.17 0.67 0.16 1.00
+```
+
+]
+
+--
+
+.pull-right[
+.bold[Margins-free]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son          UpNM        LoM       Farm
+##   UpNM  37.590319  -6.634307 -24.325580
+##   LoM  -29.635560  17.902937   6.288612
+##   Farm -12.429771 -19.717299  30.329287
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son          UpNM        LoM       Farm
+##   UpNM  26.610390 -13.379698 -10.217567
+##   LoM  -22.802360  21.894321  -4.704735
+##   Farm  -5.258359 -17.748019  28.337020
+```
+
+]
+
+---
+class: inverse, center, middle
+
+# Movilidad Intergeneracional de Ingresos
+
+---
+class: center, middle
+
+## Medición 1: Elasticidad intergeneracional de ingresos
 
 ---
 ## Elasticidad intergeneracional de ingresos
 
-&lt;br&gt;
 
-`$$y^{\text{child}} = \alpha + \beta y^{\text{par}} + \varepsilon$$`
+`$$\log y^{\text{child}} = \alpha + \beta \log y^{\text{par}} + \varepsilon$$`
 &lt;br&gt;
 --
+
+- `\(\alpha\)` desplazamiento constante de ingresos entre una generación y la otra (ej. crecimiento)
 
 - `\(y^{\text{child}}\)` ingreso permanente hijo
 
 - `\(y^{\text{par}}\)` ingreso permanente padres
 
+- `\(\varepsilon\)` lo que el dinero de los padres no explica
+
 --
 
-- `\(\beta = \frac{\%\Delta y^{\text{child}}}{\%\Delta y^{\text{par}}}\)` (elasticidad)
+- `\(IGE: \beta = \frac{\%\Delta y^{\text{child}}}{\%\Delta y^{\text{par}}}\)` (elasticidad, IGE)
 
 --
 
@@ -163,95 +438,93 @@ class: inverse, center, middle
 
 
 
+```
+## 
+## Attaching package: 'cowplot'
+```
+
+```
+## The following object is masked from 'package:lubridate':
+## 
+##     stamp
+```
 
 .bold[Inmovilidad relativa perfecta]: `\(\beta=1\)`
 
-![](class_6_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+![](class_5_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
 
 ---
 ## Elasticidad intergeneracional de ingresos
 
 .bold[Movilidad relativa perfecta]: `\(\beta=0\)`
 
-![](class_6_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+![](class_5_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
 
 ---
 ## Elasticidad intergeneracional de ingresos
 
 .bold[Baja tasa de movilidad relativa]: `\(\beta=0.5\)`
 
-![](class_6_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+![](class_5_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
 
 ---
 ## Movilidad relativa y movilidad absoluta
 
 .pull-left[
-`\(\beta\)`=0.5 + crecimiento
-![](class_6_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+`\(\beta\)` = 0.5 + crecimiento
+
+![](class_5_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
 ]
 
 .pull-right[
-`\(\beta\)`=0.5 + decrecimiento
-![](class_6_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
-]
 
+`\(\beta\)` = 0.5 + decrecimiento
 
----
-## Movilidad social en el largo plazo: Dinastias
-
-.pull-left[
-![presid](presid.jpeg)
-
-]
-.pull-right[
-![olig](olig.png)
-]
-
-
----
-## Movilidad social en el largo plazo: Dinastias
-
-- En teoría, regresión a la media (proceso Markoviano)
-
-.pull-left[
-![markov](markov.png)
-
-]
-
-.pull.right[
-![](class_6_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+![](class_5_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
 ]
 
 ---
-## Movilidad social en el largo plazo: Dinastias
-
-- Creciéntemente se está estudiando la movilidad social como un proceso multigeneracional y con influencias más allá de familia nuclear.
+## Elasticidad intergeneracional de ingresos: ventajas y limitaciones
 
 .pull-left[
-![non_markov](non_markov.png)
+![gatsby](https://milescorak.com/wp-content/uploads/2017/06/great-gatsby-curve-22-countries-for-world-bank.png)
 ]
+
+--
 
 .pull-right[
-![net](net.png)
+
+- Simple y comparable
+
+- No captura patrones, sólo nivel
+
+
 ]
 
 ---
-class: inverse, center, middle
+class: center, middle
 
-# Medidas de movilidad social relativa
-## Correlaciones entre hermanos
+## Medición 2: Correlaciones entre herman@s
 
 ---
-## Correlaciones entre hermanos
+## Correlaciones entre herman@s
 
+.center[
 ![botero](botero.jpeg)
----
-## Correlaciones entre hermanos
-
-![](class_6_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+]
 
 ---
-##Correlaciones entre hermanos
+## Correlaciones entre herman@s
+
+.center[
+![](class_5_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+
+]
+
+
+---
+##Correlaciones entre herman@s
 
 &lt;br&gt;
 .bold[Intuición]:
@@ -259,11 +532,11 @@ class: inverse, center, middle
 --
 &lt;br&gt;
 
-- Hermanos comparten genes y ambiente (por ejemplo, familia, escuela, barrio).
+- herman@s comparten genes y ambiente (por ejemplo, familia, escuela, barrio).
 
 --
 
-- Si ambiente y factores genéticos son importantes para la obtención de resultados socioeconómico, los hermanos obtendrían resultados similares entre sí.
+- Si ambiente y factores genéticos son importantes para la obtención de resultados socioeconómico, los herman@s obtendrían resultados similares entre sí.
 
 --
 
@@ -271,7 +544,7 @@ class: inverse, center, middle
 
 
 ---
-## Correlaciones entre hermanos
+## Correlaciones entre herman@s
 
 `$$y_{ij} = \underbrace{a_{j}}_{\text{componente familiar}} + \underbrace{\mu_{ij}}_{\text{componente idiosincrático}}$$`
 &lt;br&gt;
@@ -286,47 +559,46 @@ class: inverse, center, middle
 &lt;br&gt;
 --
 
-- Correlación entre hermanos proporciona un límite superior para la influencia intergeneracional combinada de los factores genéticos y ambientales.
+- Correlación entre herman@s proporciona un límite superior para la influencia intergeneracional combinada de los factores genéticos y ambientales.
 
 - Generalmente arroja un mejor poder predictivo que la IGE.
 
-- *Limitaciones
 
 ---
-## Otras medidas importantes
+##  Correlaciones entre herman@s: ventajas y limitaciones
 
 
-- Modelos log-lineales para tablas de contigencia cross-clasificando clase social del origen y denstino.
 
-- Matrices de transiciones 
+.pull-left[
+![sibcor](sibcor.png)
+]
+
+--
+
+.pull-right[
+
+- Simple y comparable
+
+- No captura patrones, sólo nivel
+
+- Asume que hijos experimentan mismos padres y entorno
+
+- Asume que factores no compartidos son idiosincráticos
 
 
----
-## Material del curso
-
-Todo el material del curso será almacenado y actualizado regularmente en repositorio `Github`:
-
-&lt;br&gt;
-.center[
-
-![github](github.jpg)
-
-https://github.com/mebucca/sdd_sol186s
 ]
 
 
 ---
 class: inverse, center, middle
 
-.huge[
-**Hasta la próxima clase. Gracias!**
-]
+##Hasta la próxima clase. Gracias!
+
 
 &lt;br&gt;
 Mauricio Bucca &lt;br&gt;
-https://mebucca.github.io/
-
-
+https://mebucca.github.io/ &lt;br&gt;
+github.com/mebucca
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

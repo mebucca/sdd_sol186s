@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Frontiers in Social Mobility Research</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="  Mauricio Bucca   github.com/mebucca   mebucca@uc.cl" />
+    <script src="libs/header-attrs-2.27/header-attrs.js"></script>
+    <link rel="stylesheet" href="gentle-r.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Frontiers in Social Mobility Research
+]
+.subtitle[
+## #1: Introducción
+]
+.author[
+### <br> Mauricio Bucca <br> <a href="https://github.com/mebucca">github.com/mebucca</a> <br> <a href="mailto:mebucca@uc.cl" class="email">mebucca@uc.cl</a>
+]
+.date[
+### 07 April, 2025
+]
+
+---
+
+class: inverse, center, middle
+
+
+
+# ¿Qué entendemos por movilidad social?
+
+
+---
+class: center, middle
+
+
+
+![ad](am_dream.jpeg)
+
+
+---
+## Nociones recurrentes en discurso público
+
+&lt;br&gt;
+&lt;br&gt;
+--
+
+- Movilidad social ascendente
+
+&lt;br&gt;
+--
+
+- "American Dream", movilidad ascendente larga ("rags-to-riches")  
+
+&lt;br&gt;
+--
+
+- Movilidad social para todos, "Land of Opportunity"
+
+
+&lt;br&gt;
+--
+
+- (más sutil)  igualdad de oportunidades, meritocracia. 
+
+  - Movilidad como alternativa a desigualdad 
+
+---
+class: inverse, center, middle
+
+## Movilidad social intergeneracional 
+
+
+---
+## Dos tipos de movilidad 
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+--
+
+  - .bold[Movilidad absoluta:] comparación con respecto a posición de los padres (ascendente,inmovil, descendente): quién se mueve, cuánto y hacia donde. 
+  
+&lt;br&gt;
+--
+
+- .bold[Movilidad relativa:] comparación con respecto a posición relativa de los padres: ¿Cuán importante son los "accidentes de la cuna" para determinar el destino de una persona?
+
+
+---
+## Sociedad A
+
+.pull-left[
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+|   **Padres**  |   **Hijos**   |
+|:-------------:|:-------------:|
+|  5 (rank = 2) | 10 (rank = 2) |
+| 10 (rank = 1) | 20 (rank = 1) |
+]
+
+--
+
+.pull-right[
+
+- Misma desigualdad económica en ambas generaciones (2:1).
+
+- Todos los individuos tienen una mejor situación social/económica que sus padres. En esta sociedad todos experimentan .bold[movilidad absoluta] ascendente.
+
+- Todos los individuos tienen el mismo "ranking" social/económico de sus padres. En esta sociedad no hay .bold[movilidad relativa].
+
+
+]
+
+---
+## Sociedad B
+
+.pull-left[
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+|   **Padres**  |   **Hijos**   |
+|:-------------:|:-------------:|
+|  5 (rank = 2) | 10 (rank = 2) |
+| 10 (rank = 1) | 5  (rank = 1) |
+]
+
+--
+
+.pull-right[
+
+- Misma desigualdad económica en ambas generaciones (2:1).
+
+- Algunos individuos tienen una mejor situación social/económica que sus padres y otras una peor situación. En esta sociedad algunos experimentan .bold[movilidad absoluta] ascendente y otros .bold[movilidad absoluta] descendente.
+
+- Todos los individuos tienen un "ranking" social/económico  distinto al de sus padres. En esta sociedad hay .bold[movilidad relativa] perfecta.
+
+
+]
+
+
+---
+## ¿Movilidad social con respecto a que?
+
+&lt;br&gt;
+
+- Clase social (clase ocupacional)
+
+- Status (prestigio)
+
+- Educación
+
+- Ingresos 
+
+- Riqueza
+
+- Salud,
+
+- Posición política, etc. 
+
+
+
+---
+class: inverse, center, middle
+
+# Movilidad Intergeneracional de Clases
+
+---
+# Esquemas de clase
+
+--
+
+&lt;br&gt;
+.pull-left[
+![marx](https://arboldelademocracia.cuaieed.unam.mx/wp-content/uploads/2022/05/ADD_028-KARL-MARX-min.png)
+]
+
+--
+
+.pull-right[
+![class](classes.png)
+]
+
+
+---
+## Tablas de movilidad
+
+
+
+--
+
+.pull-left[
+.bold[Recuentos]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM 1275 1159  666
+##   LoM   272 2046 1632
+##   Farm   17   52  646
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM  474  601   76
+##   LoM   124 1789  295
+##   Farm   11   37  191
+```
+
+]
+
+--
+
+.pull-right[
+.bold[Probabilidades]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.16 0.15 0.09 0.40
+##   LoM  0.04 0.26 0.21 0.51
+##   Farm 0.00 0.01 0.08 0.09
+##   Sum  0.20 0.42 0.38 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.13 0.17 0.02 0.32
+##   LoM  0.03 0.50 0.08 0.61
+##   Farm 0.00 0.01 0.05 0.07
+##   Sum  0.17 0.67 0.16 1.00
+```
+
+]
+
+---
+## Tablas de movilidad: movilidad absoluta 
+
+
+.pull-left[
+.bold[Probabilidades]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.16 0.15 0.09 0.40
+##   LoM  0.04 0.26 0.21 0.51
+##   Farm 0.00 0.01 0.08 0.09
+##   Sum  0.20 0.42 0.38 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.13 0.17 0.02 0.32
+##   LoM  0.03 0.50 0.08 0.61
+##   Farm 0.00 0.01 0.05 0.07
+##   Sum  0.17 0.67 0.16 1.00
+```
+
+]
+
+--
+
+.pull-right[
+.bold[P(Destino | Origen)]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM 0.82 0.36 0.23
+##   LoM  0.17 0.63 0.55
+##   Farm 0.01 0.02 0.22
+##   Sum  1.00 1.00 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm
+##   UpNM 0.78 0.25 0.14
+##   LoM  0.20 0.74 0.52
+##   Farm 0.02 0.02 0.34
+##   Sum  1.00 1.00 1.00
+```
+
+]
+
+* Para hablar de movilidad "ascendente" o "descendente" debemos hacer supuestos sobre el ordenamiento de las clases (no siempre evidente).
+
+
+---
+## Tablas de movilidad: movilidad relativa (fluidez)
+
+
+.pull-left[
+.bold[Probabilidades]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.16 0.15 0.09 0.40
+##   LoM  0.04 0.26 0.21 0.51
+##   Farm 0.00 0.01 0.08 0.09
+##   Sum  0.20 0.42 0.38 1.00
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son    UpNM  LoM Farm  Sum
+##   UpNM 0.13 0.17 0.02 0.32
+##   LoM  0.03 0.50 0.08 0.61
+##   Farm 0.00 0.01 0.05 0.07
+##   Sum  0.17 0.67 0.16 1.00
+```
+
+]
+
+--
+
+.pull-right[
+.bold[Margins-free]
+
+```
+## USA
+```
+
+```
+##       Father
+## Son          UpNM        LoM       Farm
+##   UpNM  37.590319  -6.634307 -24.325580
+##   LoM  -29.635560  17.902937   6.288612
+##   Farm -12.429771 -19.717299  30.329287
+```
+
+```
+## UK
+```
+
+```
+##       Father
+## Son          UpNM        LoM       Farm
+##   UpNM  26.610390 -13.379698 -10.217567
+##   LoM  -22.802360  21.894321  -4.704735
+##   Farm  -5.258359 -17.748019  28.337020
+```
+
+]
+
+---
+## Modelos log-lineales para tablas de movilidad
+
+&lt;br&gt;
+
+.bold[Modelo Saturado:]
+
+
+.pull-left[
+`$$\log(\mu_{ij}) = \lambda + \underbrace{\lambda_i^X + \lambda_j^Y}_{\text{márgenes}} + \overbrace{\lambda_{ij}^{XY}}^{\text{fluidez}}$$`
+
+]
+
+.pull-right[
+
+|   | Y=1 | Y=2 | ... | Y=j |
+|---|-----|-----|-----|-----|
+| X=1 | `\(\mu_{11}\)` | `\(\mu_{12}\)` | ... | `\(\mu_{1j}\)` |
+| X=2 | `\(\mu_{21}\)` | `\(\mu_{22}\)` | ... | `\(\mu_{2j}\)` |
+| ... | ... | ... | ... | ... |
+| X=i | `\(\mu_{i1}\)` | `\(\mu_{i2}\)` | ... | `\(\mu_{ij}\)` |
+
+]
+
+&lt;br&gt;
+
+Donde,
+
+- `\(\mu_{ij}\)` es el recuento esperado para la celda en el nivel `\(i\)` de la variable `\(X\)` y el nivel `\(j\)` de la variable `\(Y\)`.
+- `\(\lambda_i^X\)` es el efecto del nivel `\(i\)` de `\(X\)`.
+- `\(\lambda_j^Y\)` es el efecto del nivel `\(j\)` de `\(Y\)`.
+- `\(\lambda_{ij}^{XY}\)` representa interacción entre `\(X_i\)` y `\(Y_j\)`.
+- `\(\lambda\)`'s corresponden a odd-ratios
+
+
+---
+## Modelos log-lineales para tablas de movilidad
+
+.bold[Patrón de fluidez] (topologias). Ejemplos:
+
+
+.pull-left[
+
+|   | Y=1 | Y=2 | ... | Y=j |
+|---|-----|-----|-----|-----|
+| X=1 | 1 | 0 | ... | 0 |
+| X=2 | 0 | 1 | ... | 0 |
+| ... | ... | ... | 1 | ... |
+| X=i | 0 | 0 | ... | 1 |
+
+
+]
+.pull-right[
+
+|   | Y=1 | Y=2 | ... | Y=j |
+|---|-----|-----|-----|-----|
+| X=1 | 1 | 0 | ... | 0 |
+| X=2 | 0 | 2 | ... | 0 |
+| ... | ... | ... | 3 | ... |
+| X=i | 0 | 0 | ... | i |
+
+]
+
+&lt;br&gt;
+--
+
+.center[
+&lt;img src="gof.png" style="width: 50%;" alt="gof"&gt;
+]
+
+---
+## Patrón y fuerza de la fluidez
+
+.center[
+![loglinear](https://journals.sagepub.com/cms/10.1177/2378023119899219/asset/images/large/10.1177_2378023119899219-fig1.jpeg)
+]
+
+---
+class: inverse, center, middle
+
+# Movilidad Intergeneracional de Ingresos
+
+---
+class: center, middle
+
+## Medición 1: Elasticidad intergeneracional de ingresos
+
+---
+## Elasticidad intergeneracional de ingresos
+
+
+`$$\log y^{\text{child}} = \alpha + \beta \log y^{\text{par}} + \varepsilon$$`
+&lt;br&gt;
+--
+
+- `\(\alpha\)` desplazamiento constante de ingresos entre una generación y la otra (ej. crecimiento)
+
+- `\(y^{\text{child}}\)` ingreso permanente hijo
+
+- `\(y^{\text{par}}\)` ingreso permanente padres
+
+- `\(\varepsilon\)` lo que el dinero de los padres no explica
+
+--
+
+- `\(IGE: \beta = \frac{\%\Delta y^{\text{child}}}{\%\Delta y^{\text{par}}}\)` (elasticidad, IGE)
+
+--
+
+- `\((1 - \beta)\)` es un índice de movilidad social.
+
+--
+
+Notar que:
+
+- `\(\text{IGE} = \underbrace{\rho}_{\text{correlación intergeneracional del ingresos}} \times  \frac{\sigma_{y^{\text{child}}}}{\sigma_{y^{\text{par}}}}\)`
+
+---
+## Elasticidad intergeneracional de ingresos
+
+
+
+```
+## 
+## Attaching package: 'cowplot'
+```
+
+```
+## The following object is masked from 'package:lubridate':
+## 
+##     stamp
+```
+
+.bold[Inmovilidad relativa perfecta]: `\(\beta=1\)`
+
+![](class_1_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+---
+## Elasticidad intergeneracional de ingresos
+
+.bold[Movilidad relativa perfecta]: `\(\beta=0\)`
+
+![](class_1_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+
+---
+## Elasticidad intergeneracional de ingresos
+
+.bold[Baja tasa de movilidad relativa]: `\(\beta=0.5\)`
+
+![](class_1_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+
+---
+## Movilidad relativa y movilidad absoluta
+
+.pull-left[
+
+`\(\beta\)` = 0.5 + crecimiento
+
+![](class_1_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+`\(\beta\)` = 0.5 + decrecimiento
+
+![](class_1_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+]
+
+---
+## Elasticidad intergeneracional de ingresos: ventajas y limitaciones
+
+.pull-left[
+![gatsby](https://milescorak.com/wp-content/uploads/2017/06/great-gatsby-curve-22-countries-for-world-bank.png)
+]
+
+--
+
+.pull-right[
+
+- Simple y comparable
+
+- No captura patrones, sólo nivel
+
+
+]
+
+---
+class: center, middle
+
+## Medición 2: Correlaciones entre herman@s
+
+---
+## Correlaciones entre herman@s
+
+.center[
+![botero](botero.jpeg)
+]
+
+---
+## Correlaciones entre herman@s
+
+.center[
+![](class_1_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+
+]
+
+
+---
+##Correlaciones entre herman@s
+
+&lt;br&gt;
+.bold[Intuición]:
+
+--
+&lt;br&gt;
+
+- herman@s comparten genes y ambiente (por ejemplo, familia, escuela, barrio).
+
+--
+
+- Si ambiente y factores genéticos son importantes para la obtención de resultados socioeconómico, los herman@s obtendrían resultados similares entre sí.
+
+--
+
+- Mayor similitud en resultados indicaría mayor influencia atribuible a los antecedentes familiares y comunitarios.
+
+
+---
+## Correlaciones entre herman@s
+
+`$$y_{ij} = \underbrace{a_{j}}_{\text{componente familiar}} + \underbrace{\mu_{ij}}_{\text{componente idiosincrático}}$$`
+&lt;br&gt;
+&lt;br&gt;
+--
+
+¿Que fracción de la variabilidad en ingresos occurre dentro de las familias (en vez de entre-familias)?
+
+&lt;br&gt;
+
+`$$\rho = \frac{\sigma^{2}_{a}}{\sigma^{2}_{a}+\sigma^{2}_{\mu}}$$`
+&lt;br&gt;
+--
+
+- Correlación entre herman@s proporciona un límite superior para la influencia intergeneracional combinada de los factores genéticos y ambientales.
+
+- Generalmente arroja un mejor poder predictivo que la IGE.
+
+
+---
+##  Correlaciones entre herman@s: ventajas y limitaciones
+
+
+
+.pull-left[
+![sibcor](sibcor.png)
+]
+
+--
+
+.pull-right[
+
+- Simple y comparable
+
+- No captura patrones, sólo nivel
+
+- Asume que hijos experimentan mismos padres y entorno
+
+- Asume que factores no compartidos son idiosincráticos
+
+
+]
+
+
+---
+class: inverse, center, middle
+
+##Hasta la próxima clase. Gracias!
+
+
+&lt;br&gt;
+Mauricio Bucca &lt;br&gt;
+https://mebucca.github.io/ &lt;br&gt;
+github.com/mebucca
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
