@@ -1,0 +1,217 @@
+---
+title: "Sociología de la Desigualdad (SOL186S)"
+subtitle: "Movilidad social: tendencias y debates"
+author: "<br> Mauricio Bucca <br> [github.com/mebucca](https://github.com/mebucca) <br> mebucca@uc.cl"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["gentle-r.css","xaringan-themer.css"]
+    df_print: default
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunz_output_type: console
+---  
+class: inverse, center, middle
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(xaringanthemer)
+style_duo_accent(primary_color = "#DD5230" , secondary_color = "#5AAA78",
+                 background_color = "#f8f7f3",
+                 header_font_google = google_font("Archivo"),
+                 text_font_google   = google_font("Inconsolata"), 
+                 link_color= "#FFFAAF"
+
+)
+```
+
+![oxford](oxford.jpg)
+
+---
+class: inverse, center, middle
+
+## Modelos teóricos - mecanísmos
+
+---
+## Movilidad social: origen-destino
+
+
+.center[![od](od.png)]
+
+<br>
+--
+
+Por ejemplo, transmisión intergeneracional de ingresos:
+$$D = \alpha + \beta O$$
+
+<br>
+donde $\beta$ es la "elasticidad intergenacioal de ingresos"
+
+
+---
+## Triángulo OED (origen-educación-destino)
+
+
+.center[![ode](ode.png)]
+
+<br>
+--
+
+Constinuando con el ejemplo de transmisión intergeneracional de ingresos:
+$$E = \theta O$$
+$$D = \delta E + \lambda O = \underbrace{(\delta  \theta + \lambda) }_{\beta} O $$
+
+<br>
+donde $\beta$ es la "elasticidad intergenacioal de ingresos"
+
+---
+## Modelo Wisconsin de logro de Status (Sewell & Portes, 70's)
+
+
+![wisconsin](wisconsin.jpg)
+---
+## Modelo Becker-Tomes (80's)
+
+.center[![becker](becker.png)]
+
+https://milescorak.files.wordpress.com/2018/05/econ_87100_lecture_4_intergenerational_mobility_in_theory.pdf
+
+---
+## Algunas fuentes de variación en tasas de movilidad a través del tipo y lugares
+
+.center[![eqs](eqs.png)]
+
+---
+## Algunas fuentes de variación en tasas de movilidad a través del tipo y lugares
+
+<br>
+
+4 factores:
+
+- Importancia de transmisión mecánica de ventajas/desventajas (genes, prácticas de crianza, etc.)
+
+- Eficacia de inversión en capital humano
+
+- Progresividad de inversión pública en capital humano
+
+- Retornos económicos del capital humano
+
+---
+### Es un grado universitario un igualador oportunidades?
+
+Hout 1980 & Torche 2011
+
+.center[![college_eq](college_eq.png)]
+
+---
+class: inverse, center, middle
+
+## Tendencias temporales
+
+---
+## Tendencias históricas: movilidad absoluta de clase
+
+.pull-left[.bold[Hombres]
+
+![abs_men](abs_men.png)
+]
+.pull-right[.bold[Mujeres]
+
+![abs_women](abs_women.png)
+]
+
+---
+## Tendencias históricas: movilidad absoluta de ingresos
+
+
+.center[![abs_inc](abs_inc.png)]
+
+
+---
+## Tendencias históricas: movilidad relativa de clase
+
+<br>
+.center[.bold[Hombres]
+
+![rel_men](rel_men.png)
+]
+
+---
+## Tendencias históricas: movilidad relativa de clase
+
+<br>
+.center[.bold[Mujeres]
+
+![rel_women](rel_women.png)
+]
+
+---
+class: inverse, center, middle
+
+## Variación de lugar a lugar
+
+---
+## Comparaciones internacionales movilidad relativa de ingresos
+
+Jantti et al 2006: American Exceptionalism?
+
+.center[![american_excep](american_excep.png)]
+
+
+---
+## Comparaciones internacionales movilidad relativa de ingresos
+
+Bladen 2013
+.center[![iges](rank_ige.png)]
+
+---
+## Comparaciones internacionales movilidad relativa de ingresos
+
+Y Chile? Meneses 2022
+
+.center[![latam_ige](latam_ige.png)]
+
+
+---
+## Comparaciones internacionales movilidad relativa de clase
+
+- Golthorpe and Eriksson (1992) - The Constant Flux, Class Mobility in Industrial Societies
+
+.center[![unidiff](unidiff.png)]
+
+.bold[I] Service class I (top class); .bold[II] Service class II (lower-grade professionals); .bold[III] Routine non manual; .bold[IVa] Self-empl with employees; .bold[IVb] Self-empl with no empoyees; .bold[IVc] Farmers; .bold[VI] Skilled workers; .bold[VIIa] Unskilled workers; .bold[VIIb] Farm labours. 
+
+
+---
+## Material del curso
+
+Todo el material del curso será almacenado y actualizado regularmente en repositorio `Github`:
+
+<br>
+.center[
+
+![github](github.jpg)
+
+https://github.com/mebucca/sdd_sol186s
+]
+
+
+---
+class: inverse, center, middle
+
+.huge[
+**Hasta la próxima clase. Gracias!**
+]
+
+<br>
+Mauricio Bucca <br>
+https://mebucca.github.io/
+
+
+

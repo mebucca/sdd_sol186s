@@ -23,7 +23,7 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 06: Movilidad social: conceptos y medición (14 de abril): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_5/class_5#1) [`[Torche 2014]`](readings/Torche_2014.pdf) [`[Breen 2010]`](readings/Breen_2010.pdf)
 
-- Semana 07: Movilidad social: tendencias y debates (21 de abril): [`[Hout 2014]`](readings/Hout_2014.pdf) [`[Chetty 2017]`](readings/Chetty_2017.pdf) [`[Zimmerman 2019]`](readings/Zimmerman_2019.pdf)
+- Semana 07: Movilidad social: tendencias y debates (21 de abril): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_6/class_6#1) [`[Hout 2014]`](readings/Hout_2014.pdf) [`[Chetty 2017]`](readings/Chetty_2017.pdf) [`[Zimmerman 2019]`](readings/Zimmerman_2019.pdf)
 
 - Semana 08: Relación entre pobreza, desigualdad y movilidad (5 de mayo): [`[Bourguignon 2004]`](readings/Bourguignon_2004.pdf) [`[Corak 2013]`](readings/Corak_2013.pdf) [`[Torche 2005]`](readings/Torche_2005.pdf)
 
