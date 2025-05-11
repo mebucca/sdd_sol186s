@@ -1,0 +1,234 @@
+---
+title: "Sociología de la Desigualdad (SOL186S)"
+subtitle: "Consecuencias de la Desigualdad"
+author: "<br> Mauricio Bucca <br> [github.com/mebucca](https://github.com/mebucca) <br> mebucca@uc.cl"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["gentle-r.css","xaringan-themer.css"]
+    df_print: default
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunz_output_type: console
+---  
+class: inverse, center, middle
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(ineq)
+library(xaringanthemer)
+
+style_duo_accent(
+  secondary_color = "#0033A0",  # Russian flag blue (deep blue)
+  primary_color = "#D52B1E",  # Russian flag red (vivid red)
+  background_color = "#FFFFFF", # White background, matching top of flag
+  header_font_google = google_font("Archivo"),
+  text_font_google   = google_font("Inconsolata"),
+  link_color = "#D52B1E"        # Optional: use blue for links
+)
+
+theme_set(theme_bw())
+options(digits=3, scipen = 100)
+```
+
+
+## ¿Importa la desigualad?
+
+---
+## ¿Importa la desigualad?
+
+.pull-left[
+![kaiser](kaiser.png)
+]
+
+.pull-right[
+![tirania](https://www.megalibros.cl/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/a/kaiser.jpg)
+]
+
+---
+##¿Importa la desigualad?
+
+.pull-left[
+![kaiser](kaiser.png)
+]
+
+
+.pull-right[
+
+<br><br><br>
+
+![nailed](nailedit.jpeg)
+]
+
+
+
+
+## ¿Por qué estudiar las consecuencias?
+
+- La desigualdad no es solo un número:  
+
+  - Afecta salud, bienestar, cohesión y democracia.
+
+- Pero: **Correlación ≠ Causalidad**.  
+  - Ejemplo: Países con alta desigualdad tienen más crimen, pero eso no prueba causalidad.
+
+---
+
+## 1. Salud y Esperanza de Vida
+
+<br>
+
+.pull-left[
+.bold[Asociación empírica]: 
+
+- Sociedades más desiguales → peores indicadores de salud (Wilkinson & Pickett, 2009).  
+
+- Ej.: EE.UU. vs. Suecia.
+
+.bold[Mecanismos causales]:  
+
+1. **Psicosocial**: Estrés crónico por comparación social (Wilkinson, 2005).  
+
+2. **Material**: Acceso desigual a salud, alimentación, vivienda (Lynch et al., 2000).  
+
+
+.bold[Confounders y mediadores]:  
+- Nivel medio de ingreso, gasto en salud.
+]
+
+.pull-right[
+![Salud vs. Desigualdad](spiritlevel.png)
+]
+
+---
+
+## 2. Movilidad Social
+
+<br>
+
+**Asociación empírica**
+
+- Alta desigualdad → menor movilidad intergeneracional ("Curva de Gatsby").
+
+
+.bold[Mecanismos causales]:
+
+1. **Inversión educativa desigual** (Chetty et al., 2014).  
+
+2. **Segregación residencial y escolar**.  
+
+
+.bold[Confounders y mediadores]:  
+
+- Historia colonial, calidad institucional, tamaño del Estado.
+
+---
+
+## 3. Crimen y Violencia
+
+<br>
+
+
+.bold[Asociación empírica] 
+
+- Mayor desigualdad se asocia a más homicidios (Fajnzylber et al., 2002).
+
+.bold[Mecanismos causales]:
+
+1. **Privación relativa**: Frustración por comparación social → agresión (Daly, 2016).  
+
+2. **Material**: Menor vigilancia y oportunidades en zonas pobres (Sampson et al., 1997).  
+
+.bold[Confounders y mediadores]: 
+
+- Urbanización, narcotráfico, edad promedio, políticas de armas.
+
+---
+
+## 4. Felicidad y Bienestar Subjetivo
+
+<br>
+
+
+.bold[Asociación empírica]:
+
+- Más desigualdad → menor felicidad media (Alesina et al., 2004).  
+
+.bold[Mecanismos causales]:  
+
+1. **Psicosocial**: Comparación social genera insatisfacción (Layte, 2011).  
+
+2. **Material**: Acceso desigual a ocio, tiempo libre, seguridad económica.  
+
+.bold[Confounders y mediadores]:  
+
+- Cultura nacional, individualismo vs. colectivismo, religiosidad.
+
+---
+## 5. Estabilidad Política
+
+<br>
+
+.bold[Asociación empírica] 
+
+- Sociedades desiguales tienen mayor riesgo de inestabilidad y conflicto (Boix, 2003).
+
+.bold[Mecanismos causales]: 
+
+1. **Captura institucional por élites** (Acemoglu & Robinson, 2008).  
+
+2. **Descontento y protesta social** (Andersen, 2012).
+
+.bold[Confounders y mediadores]:  
+- Régimen político, desarrollo económico, densidad poblacional.
+
+---
+
+## Resumen: ¿Qué sabemos con certeza?
+
+<br>
+
+
+.pull-left[
+
+✔ **Correlaciones**:  
+- Salud, crimen, felicidad, Movilidad, conflicto asociado con desigualdad.
+
+
+🧠 **Mecanismos plausibles**:  
+- Psicosociales y materiales operan en paralelo.  
+
+]
+
+--
+
+.pull-right[
+.bold[Distinción clave]
+
+- Correlación ≠ Causalidad  
+
+- Mediadores ≠ Confounders  
+
+- Evidencia observacional ≠ Experimentos naturales
+
+]
+
+---
+class: inverse, center, middle
+
+
+#Hasta la próxima clase!
+
+
+<br>
+Mauricio Bucca <br>
+https://mebucca.github.io/
+
+
+

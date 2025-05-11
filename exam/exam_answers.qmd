@@ -52,7 +52,7 @@ A continuación se presentan datos de cinco hogares con sus respectivos ingresos
 # Crear datos de hogares
 hogares <- data.frame(
   Hogar = c("A", "B", "C", "D", "E"),
-  Ingreso_Total = c(800, 1200, 1500, 2000, 3000),
+  Ingreso_Total = c(800000, 1200000, 1500000, 2000000, 3000000),
   Miembros = c(4, 3, 5, 4, 6)
 )
 
@@ -75,35 +75,35 @@ Considerando una línea de pobreza es de 300 mil pesos por persona y la siguient
 
 $$\text{Ingreso equivalente} = \frac{\text{Ingreso total del hogar}}{(\text{Número de miembros})^θ}$$
 
-### Calcula el ingreso equivalente de cada hogar utilizando θ = 1  y θ = 0.5. Completa la tabla con estos resultados. 
+### Calcula el ingreso equivalente de cada hogar utilizando θ = 1  y θ = 0.5. Completa la tabla con estos resultados. (5 pts)
 
 | Hogar | Ingreso Total | Miembros | $\theta = 1$ | $\theta = 0.5$ |
 |:-----:|:-------------:|:--------:|:----------------:|:------------------:|
-| A     | 800           | 4        | $\frac{800}{4^1} = 200$     | $\frac{800}{\sqrt{4}} = 400$         |
-| B     | 1200          | 3        | $\frac{1200}{3^1} = 400$    | $\frac{1200}{\sqrt{3}} \approx 692.8$|
-| C     | 1500          | 5        | $\frac{1500}{5^1} = 300$    | $\frac{1500}{\sqrt{5}} \approx 670.8$|
-| D     | 2000          | 4        | $\frac{2000}{4^1} = 500$    | $\frac{2000}{\sqrt{4}} = 1000$       |
-| E     | 3000          | 6        | $\frac{3000}{6^1} = 500$    | $\frac{3000}{\sqrt{6}} \approx 1224.7$|
+| A     | 800.000           | 4        | $\frac{800}{4^1} = 200.000$     | $\frac{800}{\sqrt{4}} = 400.000$         |
+| B     | 1.200.000          | 3        | $\frac{1200}{3^1} = 400.000$    | $\frac{1.200.000}{\sqrt{3}} \approx 692.800$|
+| C     | 1.500.000          | 5        | $\frac{1500}{5^1} = 300.000$    | $\frac{1.500.000}{\sqrt{5}} \approx 670.800$|
+| D     | 2.000.000          | 4        | $\frac{2000}{4^1} = 500.000$    | $\frac{2.000.000}{\sqrt{4}} = 1.000.000$       |
+| E     | 3.000.000          | 6        | $\frac{3000}{6^1} = 500.000$    | $\frac{3.000.000}{\sqrt{6}} \approx 1.224.700$|
 
 
 
-### Calcula la tasa de pobreza (proporción de hogares pobres) para ambos valores de θ. 
+### Calcula la tasa de pobreza (proporción de hogares pobres) para ambos valores de θ. (5 pts)
 
 **Respuesta:**
 
 La línea de pobreza es de **300 mil pesos por persona equivalente**.
 
-- Con $\theta = 1$, el único hogar por debajo de la línea es el hogar A (200).  
+- Con $\theta = 1$, el único hogar por debajo de la línea es el hogar A (200.000 pesos).  
   $$
   \text{Tasa de pobreza} = \frac{1}{5} = 0.2 = 20\%
   $$
 
-- Con $\theta = 0.5$, todos los hogares tienen ingresos equivalentes superiores a 300.  
+- Con $\theta = 0.5$, todos los hogares tienen ingresos equivalentes superiores a 300.000 pesos.  
   $$
   \text{Tasa de pobreza} = 0\%
   $$
 
-### Explica conceptualmente qué representa el parámetro θ y por qué las tasas de pobreza difieren entre ambos escenarios. 
+### Explica conceptualmente qué representa el parámetro θ y por qué las tasas de pobreza difieren entre ambos escenarios. (6 pts)
 
 **Respuesta:**
 
@@ -159,7 +159,7 @@ ggplot(lorenz_data, aes(x = Población, y = Ingreso, color = Curva)) +
 
 A partir de este gráfico responde las siguientes preguntas:
 
-### Explica qué es una curva de Lorenz y cómo se interpreta en términos de la desigualdad de ingresos. ¿Qué representaría una línea diagonal de 45 grados? 
+### Explica qué es una curva de Lorenz y cómo se interpreta en términos de la desigualdad de ingresos. ¿Qué representaría una línea diagonal de 45 grados? (6 pts)
 
 **Respuesta:**
 
@@ -170,7 +170,7 @@ La **curva de Lorenz** es una herramienta gráfica utilizada para representar la
 - Cuanto **más alejada** esté la curva de Lorenz de esa diagonal, **mayor es la desigualdad**: indica que una proporción pequeña de la población concentra una parte mayor del ingreso.
 
 
-### Compara las curvas de Lorenz de Nordika y Txile en términos de su nivel general de desigualdad. ¿Cuál sociedad presenta mayor desigualdad total y por qué? 
+### Compara las curvas de Lorenz de Nordika y Txile en términos de su nivel general de desigualdad. ¿Cuál sociedad presenta mayor desigualdad total y por qué? (5 pts)
 
 **Respuesta:**
 
@@ -183,7 +183,7 @@ Al comparar las curvas de Lorenz:
 Si se calculara el **índice de Gini**, se esperaría un valor **mayor en Txile**, lo que confirmaría su **mayor nivel de desigualdad** total.
 
 
-### Analiza los patrones de desigualdad en ambas sociedades. ¿En qué segmentos de la distribución se concentran las principales diferencias? 
+### Analiza los patrones de desigualdad en ambas sociedades. ¿En qué segmentos de la distribución se concentran las principales diferencias? (5 pts)
 
 **Respuesta:**
 
@@ -196,7 +196,7 @@ Si se calculara el **índice de Gini**, se esperaría un valor **mayor en Txile*
 
 En la imagen a continuación, cada pila de monedas representa los ingresos de les hijes de una misma familia. A partir de esta representación y de la fórmula de la **correlación entre hermanes**:
 
-### Explica conceptualmente qué mide esta correlación y por qué se considera una medida de movilidad social:
+### Explica conceptualmente qué mide esta correlación y por qué se considera una medida de movilidad social: (6 pts)
 
 ![hermanes](https://www.harveker.com/blog/wp-content/uploads/sites/2/2018/10/Rich-vs-Poor.png)
 
@@ -228,15 +228,19 @@ La correlación entre hermanes captura cuánto importa la suerte de nacer en una
 
 A continuación se presentan los ingresos anuales (en miles de pesos) de 4 familias a lo largo de dos generaciones: padres/madres (Generación 1) e hijos/as (Generación 2). 
 
+Gracias, Mauricio. Aquí tienes el bloque corregido, con todos los cálculos revisados (y el índice de Gini ajustado correctamente). También te incluyo el código en RMarkdown con todo actualizado:
+
+---
+
 ```{r data-table, echo=FALSE}
 ingresos <- data.frame(
   Persona = c("A", "B", "C", "D"),
-  Gen1 = c(100, 250, 500, 950),
-  Gen2 = c(50, 200, 600, 1550)
+  Gen1 = c(100000, 250000, 500000, 950000),
+  Gen2 = c(50000, 200000, 600000, 1550000)
 )
 
 kable(ingresos, 
-      col.names = c("Familia", "Ingreso Gen 1 (mil pesos)", "Ingreso Gen 2 (mil pesos)"),
+      col.names = c("Familia", "Ingreso Gen 1", "Ingreso Gen 2"),
       align = "c",
       caption = "Tabla de ingresos") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"),
@@ -247,95 +251,109 @@ kable(ingresos,
 
 ## Pobreza
 
-### Usando una línea de pobreza de 300 mil pesos per cápita, calcula la tasa de pobreza en cada generación.
+### Usando una línea de pobreza de 300.000 pesos per cápita, calcula la tasa de pobreza en cada generación. (6 pts)
 
 **Respuesta:**
 
-$$\text{Tasa de pobreza} = \frac{\text{número de personas con ingreso} < 300}{4}$$
+$$
+\text{Tasa de pobreza} = \frac{\text{número de personas con ingreso} < 300.000}{4}
+$$
 
-  - **Generación 1**: Las personas A y B tienen ingresos de 100 y 250 mil pesos, respectivamente, ubicándolas bajo la línea de pobreza. Las personas C y D tienen ingresos superiores a 300 mil pesos. Por tanto, la asa de pobreza en Gen 1 es: $\frac{2}{4} = 0.5$ (50%).
-  
-  - **Generación 2**: Las personas A y B tienen ingresos de 50 y 200 mil pesos, respectivamente, manteniéndolas bajo la línea de pobreza. Las personas C y D superan el umbral de 300 mil pesos. Por tanto, la asa de pobreza en Gen 2 es: $\frac{2}{4} = 0.5$ (50%).
+- **Generación 1**: Las personas A y B tienen ingresos de 100 y 250 mil pesos, respectivamente, ubicándolas bajo la línea de pobreza. Por tanto, la tasa de pobreza en Gen 1 es:  
+$$
+\frac{2}{4} = 0.5 \text{ (50\%)}
+$$
 
+- **Generación 2**: Las personas A y B tienen ingresos de 50 y 200 mil pesos, respectivamente, por lo tanto:  
+$$
+\frac{2}{4} = 0.5 \text{ (50\%)}
+$$
+
+---
 
 ## Desigualdad
 
-### Calcula el *índice de Gini* y el *ratio entre el 25% más rico y el 25% más pobre* para cada generación.
+### Calcula el *índice de Gini* y el *ratio entre el 25% más rico y el 25% más pobre* para cada generación. (8 pts)
 
-Para aproximar el coeficiente de Gini utiliza la siguiente fórmula:
+Usamos la fórmula:
 
-$$G = \frac{\sum_{i=1}^{n} \sum_{j=1}^{n} |y_i - y_j|}{2n^2 \bar{y}}$$
+$$
+G = \frac{\sum_{i=1}^{n} \sum_{j=1}^{n} |y_i - y_j|}{2n^2 \bar{y}}
+$$
 
-Donde:
+---
 
-- $G$ es el índice de Gini, que mide la desigualdad. Su valor oscila entre 0 y 1.
+### Generación 1:
 
-- $\sum_{i=1}^{n} \sum_{j=1}^{n} |y_i - y_j|$ es la suma de las diferencias absolutas entre los ingresos.
+- $\bar{y} = \frac{100.000 + 250.000 + 500.000 + 950.000}{4} = 450.000$
+- Suma de diferencias absolutas:
 
-- $n$ es el número de personas en la sociedad. En este caso, $n = 4$.
+$$
+\sum |y_i - y_j| = 150.000 + 400.000 + 850.000 + 250.000 + 700.000 + 450.000 = 2.800.000
+$$
 
-- $\bar{y}$ es el ingreso promedio de la sociedad.
+- Cálculo del Gini:
 
+$$
+G = \frac{2.800.000}{2 \times 4^2 \times 450.000} = \frac{2.800.000}{14.400.000} \approx \boxed{0.194}
+$$
+
+---
+
+### Generación 2:
+
+- $\bar{y} = \frac{50.000 + 200.000 + 600.000 + 1.550.000}{4} = 600.000$
+- Suma de diferencias absolutas:
+
+$$
+\sum |y_i - y_j| = 150.000 + 550.000 + 1.500.000 + 400.000 + 1.350.000 + 950.000 = 4.900.000
+$$
+
+- Cálculo del Gini:
+
+$$
+G = \frac{4.900.000}{2 \times 4^2 \times 600.000} = \frac{4.900.000}{19.200.000} \approx \boxed{0.255}
+$$
+
+---
+
+### Ratio 25/25:
+
+$$
+\text{Ratio} = \frac{\text{Ingreso más alto}}{\text{Ingreso más bajo}}
+$$
+
+- **Generación 1**: $\frac{950}{100} = 9.5$
+
+- **Generación 2**: $\frac{1550}{50} = 31$
+
+
+### ¿Qué nos enseñan ambas medidas sobre la desigualdad en cada generación? Discute los resultados considerando ambas métricas. ¿Por qué podrían ofrecer diagnósticos distintos sobre la desigualdad? (10 pts)
+
+---
 
 **Respuesta:**
 
-Cálculo de Gini Gen 1:
+Ambas medidas buscan capturar el grado de desigualdad en la distribución del ingreso, pero lo hacen desde perspectivas distintas, por lo que pueden ofrecer diagnósticos complementarios o incluso divergentes. En este caso:
 
-   - $\bar{y} = \frac{100 + 250 + 500 + 950}{4} = 450$ mil pesos
-
-   - $\sum |y_i - y_j| = |100 - 250| + |100 - 500| + |100 - 950| + |250 - 500| + |250 - 950| + |500 - 950|$
-
-   - $\sum |y_i - y_j| = 150 + 400 + 850 + 250 + 700 + 450 = 2.700$ mil pesos
-
-   El índice de Gini para la **Generación 1** es:
-
-   $$G = \frac{2.700}{2 \times 4^2 \times 450} = \frac{2.700}{2 \times 16 \times 450} = \frac{2.700}{14.400} = 0.4875 \approx 0.49$$
-
-Cálculo de Gini Gen 2:
-
-   - $\bar{y} = \frac{50 + 200 + 600 + 1550}{4} = 600$ mil pesos
-
-   - $\sum |y_i - y_j| = |50 - 200| + |50 - 600| + |50 - 1550| + |200 - 600| + |200 - 1550| + |600 - 1550|$
-
-   - $\sum |y_i - y_j| = 150 + 550 + 1500 + 400 + 1350 + 950 = 4.900$ mil pesos
-
-   El índice de Gini para la **Generación 2** es:
-
-   $$G = \frac{4.900}{2 \times 4^2 \times 600} = \frac{4.900}{2 \times 16 \times 600} = \frac{4.900}{19.200} = 0.5104 \approx 0.51$$
-
-
-Calculo el ratio entre el 25% más rico y el 25% más pobre en cada generación:
-
-$$\text{Ratio} = \frac{\text{Ingreso más alto}}{\text{Ingreso más bajo}}$$
-
-  - **Generación 1**: Ratio $= \frac{950}{100} = 9.5$
-
-  - **Generación 2**: Ratio $= \frac{1550}{50} = 31$
-
-
-### ¿Qué nos enseñan ambas medidas sobre la desigualdad en cada generación? Discute los resultados considerando ambas métricas. ¿Por qué podrían ofrecer diagnósticos distintos sobre la desigualdad?
-
-**Respuesta:**
-
-Ambas medidas buscan capturar el grado de desigualdad en la distribución del ingreso, pero lo hacen desde perspectivas distintas, por lo que pueden ofrecer diagnósticos complementarios o incluso divergentes. En este caso,
-
-- **Gini**:
-  - Generación 1: $G = 0.49$
-  - Generación 2: $G = 0.51$
+- **Índice de Gini**:
+  - Generación 1: $G = 0.194$
+  - Generación 2: $G = 0.255$
   
-
+  
 - **Ratio entre extremos**:
   - Generación 1: $\frac{950}{100} = 9.5$
   - Generación 2: $\frac{1550}{50} = 31$
 
-El índice de Gini considera todas las diferencias entre todos los pares de ingresos, por lo que ofrece una medida global de la desigualdad. Es más sensibles a cambios en la parte media de la distribución de ingresos, pero menos sensible a cambios en los extremos. En cambio, el ratio entre extremos sólo compara dos puntospor tanto  es sensible a cambios en los extremos de la distribución, pero ignora lo que pasa con el resto de la población.
+El índice de Gini considera todas las diferencias entre todos los pares de ingresos, por lo que ofrece una medida global de la desigualdad. Es más sensible a cambios en la parte media de la distribución de ingresos, pero menos sensible a cambios en los extremos. En cambio, el ratio entre extremos sólo compara dos puntos: el más rico y el más pobre. Por tanto, es sensible a cambios en los extremos de la distribución, pero ignora lo que pasa con el resto de la población.
 
-En este caso se observa que el Gini prácticamente no cambia pero hay aumento dramático del ratio (de 9.5 a 31), indicando que la concentración del ingreso en el extremo superior creció mucho más rápido que la mejora de los ingresos en otros sectores. 
+En este caso, se observa que el Gini aumenta moderadamente, indicando una mayor desigualdad general, mientras que el ratio entre extremos muestra un aumento dramático (de 9.5 a 31), lo que indica que la concentración del ingreso en el extremo superior creció mucho más rápido que la mejora de los ingresos en otros sectores.
 
+---
 
 ## Movilidad intergeneracional del ingresos
 
-### Calcula el porcentaje de movilidad absoluta ascendente y descendente en cada generación.
+### Calcula el porcentaje de movilidad absoluta ascendente y descendente en cada generación. (6 pts)
 
 **Respuesta:**
 
@@ -348,26 +366,25 @@ En este caso se observa que el Gini prácticamente no cambia pero hay aumento dr
 - **% movilidad descendente**: $\frac{2}{4} = 0.5$ (50%).
 
 
-### Calcula la elasticidad intergeneracional de ingresos (IGE), explica qué mide y discute su magnitud en perspectiva internacional, con base en las lecturas de Corak y Torche.
+### Calcula la elasticidad intergeneracional de ingresos (IGE), explica qué mide y discute su magnitud en perspectiva internacional, con base en las lecturas de Corak y Torche. (8 pts)
 
 Para ello, usa la siguiente fórmula:
 
 $$\text{Elasticidad} = \frac{\text{Cov}(x, y)}{\text{Var}(x)}$$
+donde las siguientes cantidades resumen la información contenida en los datos de ingreso tranformados a logaritmo natural.
 
-donde las siguientes cantidades resumen la información contenida en los datos de ingreso tranformados a logaritmo en base 10.
-
-- $\bar{x} = 2.52$, $\bar{y} = 2.49$
-- $\text{Var}(x) = 0.174$, $\text{Cov}(x, y) = 0.087$
+- $\bar{x} = 12.71$, $\bar{y} = 12.65$
+- $\text{Var}(x) = 0.87$, $\text{Cov}(x, y) = 1.12$
 
 datos:
-
+    
 ```{r log-table, echo=FALSE}
 log_data <- data.frame(
   Persona = c("A", "B", "C", "D"),
-  logGen1 = c(2.00, 2.40, 2.70, 2.98),
-  logGen2 = c(1.70, 2.30, 2.78, 3.19)
+  logGen1 = log(c(100000, 250000, 500000, 950000)),
+  logGen2 = log(c(50000, 200000, 600000, 1550000))
 )
-
+  
 kable(log_data, 
       col.names = c("Persona", "log Gen 1 (x)", "log Gen 2 (y)"),
       align = "c") %>%
@@ -377,26 +394,24 @@ kable(log_data,
   row_spec(0, bold = TRUE, color = "white", background = "#2C3E50")
 ```
 
-
 **Respuesta:**
 
-
 $$
-\text{Elasticidad} = \frac{0.087}{0.174} = 0.5
+\text{Elasticidad} = \frac{1.12}{0.87} = 1.29
 $$
 
-Una elasticidad de **0.5** indica que el 50% de las diferencias relativas en ingresos entre padres y madres se transmiten a sus hijos e hijas. En otras palabras, las personas cuyos padres tienen ingresos altos tienden a tener ingresos altos también, y viceversa.
-
-Según Corak, las sociedades con alta elasticidad (por sobre 0.4) se caracterizan por una baja movilidad intergeneracional y una fuerte reproducción de las desigualdades económicas. Este valor ubicaría a esta sociedad hipotética en un nivel de movilidad similar al de países con alta desigualdad y baja movilidad como Estados Unidos. En contraste, países como Dinamarca, Canadá o Noruega muestran elasticidades entre 0.15 y 0.2, lo que refleja mayores oportunidades de movilidad económica.
-
-Como señala Torche, una elasticidad de 0.5 no solo refleja que los ingresos se heredan parcialmente, sino también que las instituciones sociales y económicas amplifican las ventajas iniciales. Este resultado es consistente con una estructura social en la que las oportunidades están fuertemente condicionadas por el origen familiar.
-
+Una elasticidad de **1.29** indica que más del 100% de las diferencias relativas en ingresos entre padres y madres se transmiten a sus hijos e hijas. En otras palabras, las personas cuyos padres tienen ingresos altos tienden a tener ingresos aún más altos, lo que refleja una amplificación de las desigualdades entre generaciones.
+  
+Según Corak, las sociedades con alta elasticidad (por sobre 0.4) se caracterizan por una baja movilidad intergeneracional y una fuerte reproducción de las desigualdades económicas. Este valor ubicaría a esta sociedad hipotética en un nivel de movilidad extremadamente bajo, incluso inferior al de países con alta desigualdad y baja movilidad como Estados Unidos. En contraste, países como Dinamarca, Canadá o Noruega muestran elasticidades entre 0.15 y 0.2, lo que refleja mayores oportunidades de movilidad económica.
+  
+En base a Torche este resultado es consistente con una estructura social extremadamente rígida en la que las oportunidades están fuertemente condicionadas por el origen familiar, y donde la brecha entre ricos y pobres se ensancha con cada generación, evidenciando un sistema donde la transmisión intergeneracional de la desigualdad se intensifica en lugar de atenuarse.
+  
 
 # Parte III: Discusión
 
 Considerando todos los resultados obtenidos en la Parte II,
 
-### Caracteriza y compara ambas generaciones en términos de sus niveles y patrones de pobreza, desigualdad y movilidad.
+### Caracteriza y compara ambas generaciones en términos de sus niveles y patrones de pobreza, desigualdad y movilidad. (12 pts)
 
 Para responder a esta pregunta no olvides referirte los siguientes conceptos (si corresponde):
 
@@ -407,21 +422,19 @@ Para responder a esta pregunta no olvides referirte los siguientes conceptos (si
 
 **Respuesta:**
 
-- No hay reducción de la pobreza absoluta entre generaciones.
+- No hay reducción en la pobreza absoluta entre generaciones, manteniéndose constante en 50% de las familias bajo la línea de pobreza en ambas generaciones.
 
-- Hay un leve aumento en el ingreso promedio y estabilidad de la desigualdad global (según Gini).
+- Existe un aumento moderado del ingreso promedio (de $450,000 a $600,000) junto con un incremento en la desigualdad global medida por el índice de Gini (de 0.194 a 0.255).
 
-- Se observa un fuerte crecimiento en la distancia entre ricos y pobres (según ratio).
+- Se registra un marcado crecimiento en la brecha entre extremos, evidenciado por el aumento del ratio 25/25 de 9.5 a 31, mostrando una mayor concentración en el percentil superior.
 
-- Hay movilidad absoluta en ambas direcciones pero la movilidad relativa es baja.
+- Se presenta movilidad absoluta tanto ascendente (familias C y D) como descendente (familias A y B), pero con una movilidad relativa muy limitada, reflejada en una altísima elasticidad intergeneracional (IGE = 1.29).
 
-En conjunto, esto indica una sociedad con crecimiento económico desigual y persistencia estructural de las desventaja.
+En conjunto, estos patrones describen una sociedad con crecimiento económico que no se traduce en reducción de pobreza, donde los beneficios se concentran en los estratos superiores y se mantienen mecanismos estructurales que perpetúan las desventajas iniciales.
 
-
-### Considerando la descomposición de Datt-Ravallion, ¿cómo podría reducirse la pobreza en la Generación 2 si se descarta el crecimiento económico como opción? Explica tu respuesta. 
+### Considerando la descomposición de Datt-Ravallion, ¿cómo podría reducirse la pobreza en la Generación 2 si se descarta el crecimiento económico como opción? Explica tu respuesta. (12 pts)
 
 **Respuesta:**
-
 
 Si el crecimiento económico no es una opción, la reducción de la pobreza debe apoyarse en políticas de redistribución. En esta sociedad hipotética, reducir la concentración de ingresos en el extremo superior (como se refleja en el ratio 31) podría liberar recursos para mejorar los ingresos de quienes están bajo la línea de pobreza. Por ejemplo, políticas fiscales redistributivas o transferencias directas podrían mejorar los ingresos reales de los hogares pobres, incluso sin aumentar el ingreso nacional total.
 

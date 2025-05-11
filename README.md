@@ -25,9 +25,9 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 07: Movilidad social: tendencias y debates (21 de abril): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_6/class_6#1) [`[Hout 2014]`](readings/Hout_2014.pdf) [`[Chetty 2017]`](readings/Chetty_2017.pdf) [`[Zimmerman 2019]`](readings/Zimmerman_2019.pdf)
 
-- Semana 08: Relación entre pobreza, desigualdad y movilidad (5 de mayo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_7/class_7#1) [`[Hout 2014]`] [`[Bourguignon 2004]`](readings/Bourguignon_2004.pdf) [`[Corak 2013]`](readings/Corak_2013.pdf) [`[Torche 2005]`](readings/Torche_2005.pdf)
+- Semana 08: Relación entre pobreza, desigualdad y movilidad (5 de mayo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_7/class_7#1)  [`[Bourguignon 2004]`](readings/Bourguignon_2004.pdf) [`[Corak 2013]`](readings/Corak_2013.pdf) [`[Torche 2005]`](readings/Torche_2005.pdf)
 
-- Semana 09: Consecuencias de las desigualdades (12 de mayo): [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[Bradbury & Triest 2016]`](readings/Bradbury_2016.pdf) [`[Scheve & Stasavage 2017]`](readings/Scheve_2017.pdf)
+- Semana 09: Consecuencias de las desigualdades (12 de mayo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_8/class_8#1) [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[Bradbury & Triest 2016]`](readings/Bradbury_2016.pdf) [`[Scheve & Stasavage 2017]`](readings/Scheve_2017.pdf)
 
 - Semana 10: Estado de bienestar (2 de junio): [`[Esping-Andersen 2001 (cap. 1-3)]`](readings/EspingAndersen_2001.pdf) [`[Esping-Andersen 2001 (cap. 8-9)]`](readings/EspingAndersen_2001.pdf)
 
