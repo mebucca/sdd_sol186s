@@ -29,14 +29,13 @@ Este repositorio contiene el material del curso SOL186S Sociología de la Desigu
 
 - Semana 09: Consecuencias de las desigualdades (12 de mayo): [`[Presentación]`](https://mebucca.github.io/sdd_sol186s/slides/class_8/class_8#1) [`[Jencks 2002]`](readings/Jencks_2002.pdf) [`[Bradbury & Triest 2016]`](readings/Bradbury_2016.pdf) [`[Scheve & Stasavage 2017]`](readings/Scheve_2017.pdf)
 
-- Semana 10: Estado de bienestar (2 de junio): [`[Esping-Andersen 2001 (cap. 1-3)]`](readings/EspingAndersen_2001.pdf) [`[Esping-Andersen 2001 (cap. 8-9)]`](readings/EspingAndersen_2001.pdf)
+- Semana 10: Ejercicio Empírico (19 de Mayo): [`[Larrañaga & Rodríguez]`](readings/Larranaga_2014.pdf) [`[Repetto 2016]`](readings/Repetto_2016.pdf)
 
-- Semana 11: Estado de bienestar y la paradoja de la redistribución (9 de junio): [`[Korpi & Palme 1998]`](readings/Korpi_1998.pdf) [`[Alesina & Glaeser 2004]`](readings/Alesina_2004.pdf)
+- Semana 11: Estado de bienestar (9 de junio): [`[Esping-Andersen 2001 (cap. 1-3)]`](readings/EspingAndersen_2001.pdf) [`[Esping-Andersen 2001 (cap. 8-9)]`](readings/EspingAndersen_2001.pdf)
 
-- Semana 12: Políticas Redistributivas: invitado sector público y privado (16 de junio): [`[Larrañaga & Rodríguez]`](readings/Larranaga_2014.pdf) [`[Repetto 2016]`](readings/Repetto_2016.pdf)
+- Semana 12: Estado de bienestar y la paradoja de la redistribución (16 de junio): [`[Korpi & Palme 1998]`](readings/Korpi_1998.pdf) [`[Alesina & Glaeser 2004]`](readings/Alesina_2004.pdf)
 
 - Semana 13: Cierre (23 de junio): [`[DiPrete & Fox-Williams 2021]`](readings/DiPrete_2021.pdf) [`[Grusky 2019]`](readings/Grusky_2019.pdf)
-
 
 ---
 
